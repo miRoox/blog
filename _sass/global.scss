@@ -76,10 +76,10 @@ h3 {
   padding: 6px 15px;
   margin-bottom: 20px;
   margin-top: 5px;
-  background:#B9D3EE;
+  background: $sky;
   /*0px right, 5px botton, 5px fuzzy*/
-  box-shadow: 0px 5px 5px #9FB6CD;
-  border-left: 6px solid #1874CD; 
+  box-shadow: 0px 5px 5px $steel-blue;
+  border-left: 6px solid $blue; 
   position:relative;
 }
 
