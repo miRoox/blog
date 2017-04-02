@@ -70,9 +70,9 @@
     padding: 6px 15px;
     margin-bottom: 20px;
     margin-top: 5px;
-    background: $sky;
-    box-shadow: 0px 5px 5px $steel-blue;
-    border-left: 6px solid $blue; 
+    background: $secondary-color;
+    box-shadow: 0px 5px 5px darken($primary-color, 32%);
+    border-left: 6px solid $primary-color; 
     position:relative;
   }
 
