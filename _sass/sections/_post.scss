@@ -70,8 +70,8 @@
     padding: 6px 15px;
     margin-bottom: 20px;
     margin-top: 5px;
-    background: $secondary-color;
-    box-shadow: 0px 5px 5px darken($primary-color, 32%);
+    background: lighten($secondary-color, 10%);
+    box-shadow: 0px 5px 5px darken($primary-color, 18%);
     border-left: 6px solid $primary-color; 
     position:relative;
   }
