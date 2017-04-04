@@ -12,6 +12,13 @@ title: 关于我
 <a href="http://bangumi.tv/user/miroox">Bangumi</a>、
 <a href="https://github.com/miRoox">GitHub</a>
 
+<hr/>
+
+<h1>关于本博客</h1>
+本博客基于 
+<a href="http://baixin.io">leopard</a> 和 
+<a href="http://vno.onevcat.com/">Vno-jekyll</a> 博客模版修改而成。
+
 
 {% include comments.html %}
 
