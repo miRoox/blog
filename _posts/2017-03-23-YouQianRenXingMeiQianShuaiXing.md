@@ -12,13 +12,13 @@ tag: 小说
 
 > 【率性】②形：由着性子，任性。
 > 
-> <span style="text-align:right"> ——《现代汉语词典》</span>
+> <p style="text-align:right"> ——《现代汉语词典》</p>
 
 ### Α.有钱就是任性
 
 > 经济基础决定上层建筑。
 > 
-> <span style="text-align:right">——马克思</span>
+> <p style="text-align:right">——马克思</p>
 
 “七万了。”他想。
 
@@ -37,7 +37,7 @@ tag: 小说
 
 > 世界是我的表象；世界是我的意志。
 > 
-> <span style="text-align:right">——叔本华</span>
+> <p style="text-align:right">——叔本华</p>
 
 他是一位思想者，一名艺术家。
 
@@ -54,7 +54,7 @@ tag: 小说
 
 > 在现代社会中，资本是独立的并有其性格， 而一个活着的人是非独立的且没有性格的。
 > 
-> <span style="text-align:right">——马克思</span>
+> <p style="text-align:right">——马克思</p>
 
 很奇怪。
 
@@ -85,7 +85,7 @@ tag: 小说
 
 > 人虽然能够做他想要做的，但不能要他所想要的。
 > 
-> <span style="text-align:right">——叔本华</span>
+> <p style="text-align:right">——叔本华</p>
 
 “还剩多少米？”父亲问。
 

@@ -234,7 +234,7 @@ to exist - 实体 - 单一物
 > 
 > 愿意的人，命运领着走；不愿意的人，命运牵着走。
 > 
-> <span style="text-align:right">——塞涅卡</span>
+> <p style="text-align:right">——塞涅卡</p>
 
 
 > 我是必然要死的，但难道我就必须呻吟而死吗？
@@ -244,7 +244,7 @@ to exist - 实体 - 单一物
 > “那么我把你锁起来”。你说什么？锁起我来？
 > 你可以锁住我的腿，但是我的意志是你锁不了的，连宙斯都无法驯服它。
 > 
-> <span style="text-align:right">——爱比克泰德</span>
+> <p style="text-align:right">——爱比克泰德</p>
 
 ### 3.3 怀疑主义
 
