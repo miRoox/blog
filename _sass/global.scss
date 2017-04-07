@@ -315,8 +315,12 @@ img::-moz-selection {
 }
 
 .excerpt {
+  border-left: 3px solid $primary-color; 
   margin: 0;
+  margin-right: 10px;
   font-size: .9em;
+  background-color: #FFF;
+  text-indent: 10px
   color: $gray-dark;
 }
 
