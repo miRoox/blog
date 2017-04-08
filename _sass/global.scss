@@ -98,7 +98,15 @@ h5 {
 
 p {
   margin-bottom: 1.3em;
+  margin-top: 5px;
   line-height: 1.7em;
+  padding-left: 20px;
+
+  a {
+    margin-left: 4px;
+    margin-right: 4px;
+    text-decoration: underline;
+  }
 }
 
 strong {
