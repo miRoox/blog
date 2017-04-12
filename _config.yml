@@ -1,3 +1,6 @@
+# markdown processor
+markdown: maruku
+
 # Basic
 title: miRoox
 subtitle: 博客
