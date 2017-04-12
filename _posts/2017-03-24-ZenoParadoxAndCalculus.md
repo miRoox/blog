@@ -281,76 +281,27 @@ tag: 数学
 
 ---
 
-### 注释与说明：
+### 参考资料：
+1. 【美】莫里斯·克莱因. 古今数学思想.第1册. 张理京，张锦炎，江泽涵译. 上海：上海科学技术出版社. 2002
+2. 【美】莫里斯·克莱因. 古今数学思想.第2册. 朱学贤等译. 上海：上海科学技术出版社. 2002
+3. 【美】莫里斯·克莱因. 古今数学思想.第4册. 邓东皋等译. 上海：上海科学技术出版社. 2002
+4. 韩雪涛. 从惊讶到思考：数学悖论奇景. 长沙：湖南科学技术出版社. 2007
+5. 陈天权. 数学分析讲义·第一册. 北京：北京大学出版社. 2009
+6. 【美】R·柯朗，H·罗宾. 什么是数学：对思想和方法的基本研究. I·斯图尔特修订. 左平，张饴慈译. 上海：复旦大学出版社. 2011
 
-[^0]: 这些主要是给知识水平在高中以下的读者参考的：
+---
 
-**集合** ： 
-朴素地， **集合** 就是一些东西的总体（这些东西中不应有重复（ *内涵* 与 *外延* 都相同），比如：`{1,1}`这种记法是错误的，但`{(1,0),1}`是合法的）。总体中的东西被称为这个集合的 **元素** （如：“`x`是集合`A`中的元素”，记作“`x∈A`”）。
-若两个集合的每个元素都相同，则这两个集合 **相等** 。
-如果一个集合的全部元素都属于另一个集合，则该集合称之为这另一个集合的 **子集** （如：集`A`是集`B`的子集，记作“`A⊆B`”）。
-两个集合的 **交集** ，即两个集合公共元素组成的集合（如：集`A`与集`B`的交集，记作“`A∩B`”）。
-两个集合的 **并集** ，即这两个集合所有元素组成的集合（如：集`A`与集`B`的并集，记作“`A∪B`”）。
-元素都是数的集合叫 **数集** ，本文中出现的集合都是数集。
-本文出现了的几个数集符号：自然数集`N`、正整数集`N+`、实数集`R`。
+（部分图片来自网络）
 
-**区间** ：
-集合的一种表现形式，都是实数集`R`的子集。`(a,b)`表示满足`a<x<b`的所有`x`组成的集合；`[a,b)`表示满足`a≤x<b`的所有`x`组成的集合；`(a,b]`表示满足`a<x≤b`的所有`x`组成的集合；`[a,b]`表示满足`a≤x≤b`的所有`x`组成的集合。
+---
 
-**函数** ：
-在本文中是指两个 *数集* 之间的对应关系，它使得其中一个数集的任何一个元素在另一个数集中都有 *唯一确定* 的一个元素与之对应。
-比如一个集`A`到集`B`的函数`f:A→B`是使得任何`x∈A`，都存在`y∈B`，满足`y=f(x)`的对应关系，这里，我们称集`A`为 **定义域** ，集`B`为 **值域** ，`x`为 **自变量** ，`y`为 **因变量** 。
-
-**分析**：
-与几何、代数等并列的数学主要分支之一。微积分是其基础。
-
-**矢量**：
-区别于标量（数量），它既有大小，又有方向，加减运算遵循平行四边形定则。
-
-![](https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=a9a4921280025aafc73f76999a84c001/14ce36d3d539b6004244db65eb50352ac75cb75e.jpg)
+[^0]: 这些主要是给知识水平在高中以下的读者参考的： <br/> **集合** ： 朴素地， **集合** 就是一些东西的总体（这些东西中不应有重复（ *内涵* 与 *外延* 都相同），比如：`{1,1}`这种记法是错误的，但`{(1,0),1}`是合法的）。总体中的东西被称为这个集合的 **元素** （如：“`x`是集合`A`中的元素”，记作“`x∈A`”）。若两个集合的每个元素都相同，则这两个集合 **相等** 。如果一个集合的全部元素都属于另一个集合，则该集合称之为这另一个集合的 **子集** （如：集`A`是集`B`的子集，记作“`A⊆B`”）。两个集合的 **交集** ，即两个集合公共元素组成的集合（如：集`A`与集`B`的交集，记作“`A∩B`”）。两个集合的 **并集** ，即这两个集合所有元素组成的集合（如：集`A`与集`B`的并集，记作“`A∪B`”）。元素都是数的集合叫 **数集** ，本文中出现的集合都是数集。本文出现了的几个数集符号：自然数集`N`、正整数集`N+`、实数集`R`。 <br/> **区间** ：集合的一种表现形式，都是实数集`R`的子集。`(a,b)`表示满足`a<x<b`的所有`x`组成的集合；`[a,b)`表示满足`a≤x<b`的所有`x`组成的集合；`(a,b]`表示满足`a<x≤b`的所有`x`组成的集合；`[a,b]`表示满足`a≤x≤b`的所有`x`组成的集合。 <br/> **函数** ：在本文中是指两个 *数集* 之间的对应关系，它使得其中一个数集的任何一个元素在另一个数集中都有 *唯一确定* 的一个元素与之对应。比如一个集`A`到集`B`的函数`f:A→B`是使得任何`x∈A`，都存在`y∈B`，满足`y=f(x)`的对应关系，这里，我们称集`A`为 **定义域** ，集`B`为 **值域** ，`x`为 **自变量** ，`y`为 **因变量** 。 <br/> **分析**：与几何、代数等并列的数学主要分支之一。微积分是其基础。 <br/> **矢量**：区别于标量（数量），它既有大小，又有方向，加减运算遵循平行四边形定则。![](https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=a9a4921280025aafc73f76999a84c001/14ce36d3d539b6004244db65eb50352ac75cb75e.jpg)
 
 [^1]: 芝诺原始的悖论讲的是阿喀琉斯追龟（阿喀琉斯是古希腊善跑的勇士），但问题的实质是一样的。另外，实际生活中的兔子要更快，乌龟要更慢。
 
 [^2]: 这个问题的数学解答：
 
-按芝诺的分法，记第`n`次兔子走过的路程为 ![](/images/posts/ZenoParadox/formula32.png) (m)，所花的时间为 ![](/images/posts/ZenoParadox/formula33.png) (s)，同时乌龟走过的路程为 ![](/images/posts/ZenoParadox/formula34.png) (m)，并记`n`次兔子走过的总距离 ![](/images/posts/ZenoParadox/formula35.png) (m)，所花的总时间 ![](/images/posts/ZenoParadox/formula36.png) ，这段时间乌龟走过的总路程 ![](/images/posts/ZenoParadox/formula37.png) 。
-
-由题设， ![](/images/posts/ZenoParadox/formula38.png) ，
-![](/images/posts/ZenoParadox/formula39.png) ，
-![](/images/posts/ZenoParadox/formula40.png) ，即
-![](/images/posts/ZenoParadox/formula41.png)
-
-并且，
-![](/images/posts/ZenoParadox/formula42.png)
-
-又
-![](/images/posts/ZenoParadox/formula43.png) ，
-故
-![](/images/posts/ZenoParadox/formula44.png) ，
-因而，
-![](/images/posts/ZenoParadox/formula45.png) ……①
-
-同理，
-![](/images/posts/ZenoParadox/formula46.png) ……②
-
-②-①，得 ![](/images/posts/ZenoParadox/formula47.png)
-
-又由①， ![](/images/posts/ZenoParadox/formula48.png)
-
-故
-![](/images/posts/ZenoParadox/formula49.png) ，
-![](/images/posts/ZenoParadox/formula50.png) ，
-![](/images/posts/ZenoParadox/formula51.png) 
-
-则
-![](/images/posts/ZenoParadox/formula52.png) ，
-![](/images/posts/ZenoParadox/formula53.png) ，
-![](/images/posts/ZenoParadox/formula54.png)
-
-龟兔间距离 ![](/images/posts/ZenoParadox/formula55.png) ，
-当`n→∞`， ![](/images/posts/ZenoParadox/formula56.png)
-
-故追击时间 ![](/images/posts/ZenoParadox/formula57.png)
+按芝诺的分法，记第`n`次兔子走过的路程为 ![](/images/posts/ZenoParadox/formula32.png) (m)，所花的时间为 ![](/images/posts/ZenoParadox/formula33.png) (s)，同时乌龟走过的路程为 ![](/images/posts/ZenoParadox/formula34.png) (m)，并记`n`次兔子走过的总距离 ![](/images/posts/ZenoParadox/formula35.png) (m)，所花的总时间 ![](/images/posts/ZenoParadox/formula36.png) ，这段时间乌龟走过的总路程 ![](/images/posts/ZenoParadox/formula37.png) 。 <br/> 由题设， ![](/images/posts/ZenoParadox/formula38.png) ，![](/images/posts/ZenoParadox/formula39.png) ，![](/images/posts/ZenoParadox/formula40.png) ，即![](/images/posts/ZenoParadox/formula41.png) <br/> 并且，![](/images/posts/ZenoParadox/formula42.png) <br/> 又![](/images/posts/ZenoParadox/formula43.png) ，故![](/images/posts/ZenoParadox/formula44.png) ，因而，![](/images/posts/ZenoParadox/formula45.png) ……① <br/> 同理，![](/images/posts/ZenoParadox/formula46.png) ……② <br/> ②-①，得 ![](/images/posts/ZenoParadox/formula47.png) <br/> 又由①， ![](/images/posts/ZenoParadox/formula48.png) <br/> 故![](/images/posts/ZenoParadox/formula49.png) ，![](/images/posts/ZenoParadox/formula50.png) ，![](/images/posts/ZenoParadox/formula51.png)  <br/> 则![](/images/posts/ZenoParadox/formula52.png) ，![](/images/posts/ZenoParadox/formula53.png) ，![](/images/posts/ZenoParadox/formula54.png) <br/> 龟兔间距离 ![](/images/posts/ZenoParadox/formula55.png) ，当`n→∞`， ![](/images/posts/ZenoParadox/formula56.png) <br/> 故追击时间 ![](/images/posts/ZenoParadox/formula57.png)
 
 [^3]: 这种说法并不准确。事实上，目前的量子力学、量子宇宙学都并没有否认时空的连续性，只是认为小于一定尺度（普朗克长度/普朗克时间）内发生的物理过程 *没有意义* 。
 
@@ -394,8 +345,7 @@ tag: 数学
 
 [^23]: 尽管如此，在勒贝格积分中我们引入了包含无穷大元素{±∞}的扩张了的实数集`R-`，在非标准分析中我们引入了含有无穷小数和无穷大数的超实数系`R*`，在集论中我们甚至有可以比较大小的“无限”——超穷基数。它们都是有明确数学意义的概念。
 
-[^24]: 事实上，极限也不能直接帮我们解决这个问题。虽然，无穷级数 ![](/images/posts/ZenoParadox/formula57.png) 。但根据极限的定义，这个级数的真正含义应当是
-![](/images/posts/ZenoParadox/formula57.png) ，并不允许“真正的”无限出现。这似乎让我们第一节中的解决办法难以在逻辑上站住脚。另一方面，这解释了[^5]和[^9]中的全部“芝诺时”只对应与我们固有时的`[0,1)` （单位：秒）的原因。
+[^24]: 事实上，极限也不能直接帮我们解决这个问题。虽然，无穷级数 ![](/images/posts/ZenoParadox/formula57.png) 。但根据极限的定义，这个级数的真正含义应当是 ![](/images/posts/ZenoParadox/formula57.png) ，并不允许“真正的”无限出现。这似乎让我们第一节中的解决办法难以在逻辑上站住脚。另一方面，这解释了[^5]和[^9]中的全部“芝诺时”只对应与我们固有时的`[0,1)` （单位：秒）的原因。
 
 [^25]: 在边界时，我们有左连续与右连续，分别对应于左极限与右极限的情况。
 
@@ -409,16 +359,3 @@ tag: 数学
 
 [^30]: 见[^3]。
 
----
-
-### 参考资料：
-1. 【美】莫里斯·克莱因. 古今数学思想.第1册. 张理京，张锦炎，江泽涵译. 上海：上海科学技术出版社. 2002
-2. 【美】莫里斯·克莱因. 古今数学思想.第2册. 朱学贤等译. 上海：上海科学技术出版社. 2002
-3. 【美】莫里斯·克莱因. 古今数学思想.第4册. 邓东皋等译. 上海：上海科学技术出版社. 2002
-4. 韩雪涛. 从惊讶到思考：数学悖论奇景. 长沙：湖南科学技术出版社. 2007
-5. 陈天权. 数学分析讲义·第一册. 北京：北京大学出版社. 2009
-6. 【美】R·柯朗，H·罗宾. 什么是数学：对思想和方法的基本研究. I·斯图尔特修订. 左平，张饴慈译. 上海：复旦大学出版社. 2011
-
----
-
-（部分图片来自网络）
