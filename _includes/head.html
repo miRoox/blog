@@ -5,7 +5,7 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author" content="miRoox">
+  <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
@@ -60,6 +60,9 @@
   {% if page.use_math %}
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
+		TeX: { 
+		equationNumbers: { autoNumber: "AMS" } 
+		},
         tex2jax: {
         inlineMath: [ ['$','$'], ['\(', '\)'] ]
         }
