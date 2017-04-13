@@ -4,6 +4,7 @@ title: "旧作：低观点下的线性微分方程的解法"
 date: 2017-04-13 20:30:14
 description: "一种不涉及线性微分方程解的结构的方法。"
 tag: 数学
+use_math: true
 ---
 
 <p style="text-align:right">——低观点的话，就只能上技巧了吧？</p>
