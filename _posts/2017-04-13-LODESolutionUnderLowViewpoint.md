@@ -102,7 +102,7 @@ $$
 \end{equation}
 $$
 
-**若 $r_{1}\neq r_{2}$ **
+**若 $r_{1}\neq r_{2}$ ：**
 
 对( \ref{eq:2lh-1stInt} )式两边同时乘 $\mathit{e}^{-r_{1}x}$ ，则有
 
@@ -122,7 +122,7 @@ $$
 \end{equation}
 $$
 
-**若 $r_{1}=r_{2}$ ，记作$r$ **
+**若 $r_{1}=r_{2}$ ，记作$r$ ：**
 
 对( \ref{eq:2lh-1stInt} )式两边同时乘 $\mathit{e}^{-rx}$ ，则
 
