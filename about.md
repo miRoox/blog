@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 关于我 
+use_math: true
 ---
 
 
@@ -30,6 +31,8 @@ $$
     \end{array} \right)
 \end{align*}
 $$
+
+test $\sum_{i=1}^n n = \frac{n(n+1)}{2}$ 
 
 ----
 
