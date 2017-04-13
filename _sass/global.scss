@@ -228,6 +228,25 @@ td:last-child {
   padding-right: 10px;
 }
 
+dl {
+    margin-top: 0;
+    margin-bottom: 21px;
+}
+
+dt, dd {
+    margin-top: 5px;
+    margin-bottom: 5px;
+	line-height: 1.45;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 40px;
+}
+
 /*pager start----------------*/
 .post-container 
 .pager li{ 
