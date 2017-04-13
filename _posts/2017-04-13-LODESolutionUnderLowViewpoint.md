@@ -46,7 +46,7 @@ $$
 \end{equation}
 $$
 
-比对公式( $\ref{eq:mult}$ )，$f(x)$ 应满足 $f'(x)=-p(x)f(x)$
+比对公式( \ref{eq:mult} )，$f(x)$ 应满足 $f'(x)=-p(x)f(x)$
 
 容易解得
 
@@ -58,7 +58,7 @@ $$
 
 （任意常数显然没有必要）
 
-则( $\ref{eq:1ln-mult}$ )式可以化成 $(y\cdot f(x))'=q(x)f(x)$，解得
+则( \ref{eq:1ln-mult} )式可以化成 $(y\cdot f(x))'=q(x)f(x)$，解得
 
 $$
 \begin{equation}
@@ -66,7 +66,7 @@ $$
 \end{equation}
 $$
 
-再带入( $\ref{eq:1ln-fx}$ )，即有
+再带入( \ref{eq:1ln-fx} )，即有
 
 $$
 \begin{equation}
@@ -104,7 +104,7 @@ $$
 
 **若 $r_{1}\neq r_{2}$ **
 
-对( $\ref{eq:2lh-1stInt}$ )式两边同时乘 $\mathit{e}^{-r_{1}x}$ ，则有
+对( \ref{eq:2lh-1stInt} )式两边同时乘 $\mathit{e}^{-r_{1}x}$ ，则有
 
 $$
 \begin{align}
@@ -124,7 +124,7 @@ $$
 
 **若 $r_{1}=r_{2}$ ，记作$r$ **
 
-对( $\ref{eq:2lh-1stInt}$ )式两边同时乘 $\mathit{e}^{-rx}$ ，则
+对( \ref{eq:2lh-1stInt} )式两边同时乘 $\mathit{e}^{-rx}$ ，则
 
 $$
 \begin{align}
@@ -134,7 +134,7 @@ $$
 \end{align}
 $$
 
-事实上，对( $\ref{eq:2lh-2ndInt1}$ )式取极限 $r_{2}\rightarrow r_{1}=r$ 亦可得到( $\ref{eq:2lh-2ndInt2}$ )式。
+事实上，对( \ref{eq:2lh-2ndInt1} )式取极限 $r_{2}\rightarrow r_{1}=r$ 亦可得到( \ref{eq:2lh-2ndInt2} )式。
 
 ### 二阶常系数线性非齐次方程一般形式
 
@@ -193,7 +193,7 @@ $$
 
 其中，$T(x)$也是$n$次多项式。
 
-由此不难得到，对式( $\ref{eq:2lns-org}$ )
+由此不难得到，对式( \ref{eq:2lns-org} )
 
 **若$\alpha +\imath \beta $是方程$x^{2}+px+q=0$的二重根**
 
