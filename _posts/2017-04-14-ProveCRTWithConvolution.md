@@ -14,8 +14,9 @@ use_math: true
 ## 引言
 
 > Everyone believes in it: experimentalists believing that it is a mathematical theorem, mathematicians believing that it is an empirical fact.
+> {: style="text-align:left"}
 > 
-> --Henri Poincaré [^2] 
+> ——Henri Poincaré [^2] 
   {: style="text-align:right"}
 
 对中心极限定理的研究实质上始于1733年棣莫弗（A. de Moirvre）对二项分布的极限分布的研究，并得到了拉普拉斯（P.-S. Laplace）、泊松（S.-D. Possion）、贝塞尔（A.L. Bessel）、柯西（A.-L. Cauchy）等人的进一步研究和推广。但总体上，由于当时概率论不太受数学家重视，中心极限定理在很长一段时间没有得到一个完整的严格证明，直到1901年李雅普诺夫（A.M. Lyapunov）借助特征函数的工具才有了一个条件较为宽松的严格证明。[^3]
@@ -186,7 +187,7 @@ $$
 
 [^1]: 王勇主编   2014   大学数学. 概率论与数理统计 (北京：高等教育出版社) 第141页
 
-[^2]: JinZhihui   2013   正态分布的前世今生(下)  <http://cos.name/2013/01/story-of-normal-distribution-2/>
+[^2]: JinZhihui   2013   正态分布的前世今生（下）  <http://cos.name/2013/01/story-of-normal-distribution-2/>
 
 [^3]: 杨静, 邓明立   2013   中心极限定理的创立与发展   科学   Vol.65 No.5
 
