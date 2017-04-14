@@ -14,13 +14,15 @@ use_math: true
 ## 引言
 
 > Everyone believes in it: experimentalists believing that it is a mathematical theorem, mathematicians believing that it is an empirical fact.
-> <p style="text-align:right"> --Henri Poincaré [^2] </p>
+> 
+> --Henri Poincaré [^2] 
+  {: style="text-align:right"}
 
 对中心极限定理的研究实质上始于1733年棣莫弗（A. de Moirvre）对二项分布的极限分布的研究，并得到了拉普拉斯（P.-S. Laplace）、泊松（S.-D. Possion）、贝塞尔（A.L. Bessel）、柯西（A.-L. Cauchy）等人的进一步研究和推广。但总体上，由于当时概率论不太受数学家重视，中心极限定理在很长一段时间没有得到一个完整的严格证明，直到1901年李雅普诺夫（A.M. Lyapunov）借助特征函数的工具才有了一个条件较为宽松的严格证明。[^3]
 
 一个常用的中心极限定理如下：[^1]
 
-**定理 1 (独立同分布的中心极限定理)** 
+**定理 1 （独立同分布的中心极限定理）** 
 *如果随机变量序列 $X_{1},X_{2},\cdots ,X_{n},\cdots$ 独立同分布，并且具有有限的数学期望和方差 $E(X_{i})=\mu ,D(X_{i})=\sigma ^{2}>0 (i=1,2,3,\cdots )$ ，则对一切 $x\in {\rm\bf{R}}$ 有*
 
 $$
@@ -37,7 +39,7 @@ $$
 
 在傅里叶变换的语境下，卷积的概念如下：[^4]
 
-**定义 1 (卷积)** 
+**定义 1 （卷积）** 
 *给定定义在 $(-\infty,+\infty)$ 上的函数 $f_{1}(t)$ 与 $f_{2}(t)$ ，称由含参变量 $t$ 的广义积分所确定的函数*
 
 $$
@@ -84,7 +86,7 @@ $$
 
 众所周知，傅里叶变换可以将函数的卷积变换为像函数的乘积，即所谓的卷积定理[^5]
 
-**定理 2 (卷积定理)** 
+**定理 2 （卷积定理）** 
 *给定两个函数$f_{1}(t),f_{2}(t)$，记$F_{1}(\omega)=\mathcal{F} [f_{1}(t)],F_{2}(\omega)=\mathcal{F} [f_{2}(t)]$，则*
 
 $$
@@ -132,7 +134,7 @@ $$
 \end{equation}
 $$
 
-注意到$|e^{-\imath\frac{\omega}{\sqrt{n}}x}|=1$，故上述积分绝对收敛。
+注意到$\vert e^{-\imath\frac{\omega}{\sqrt{n}}x}\vert =1$，故上述积分绝对收敛。
 
 对$e^{-\imath\frac{\omega}{\sqrt{n}}x}$做泰勒展开
 
