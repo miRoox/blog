@@ -13,13 +13,16 @@ layout: default
         <time datetime="{{post.date | date: date_to_xmlschema}}" class="post-list__meta--date date">
           <img src="/images/calendar.png" width="20px" /> 
           {{ post.date | date: "%F"}}</time> 
+      {% for tag in post.tags %}
         <span class = "tag-img-icon">
           <img src="/images/tag-icon.svg" width="20px" /> 
         </span>
         <a href="/tags">
           <span class = "post-list-icon-mate">
-            <span class="post-list__meta--tags-right">{{ post.tags }}</span>
+            <span class="post-list__meta--tags-right">{{ tag }}</span>
           </span>
+        </a>
+      {% endfor %}
           <span class = "post-list-small-mate">
           <a class="btn-border-small" href={{ post.url }}>阅读全文 » </a>
           </span>
