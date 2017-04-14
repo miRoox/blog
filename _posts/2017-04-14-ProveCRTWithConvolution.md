@@ -3,7 +3,7 @@ layout: post
 title: "旧作：借助卷积定理证明中心极限定理"
 date: 2017-04-14 18:44:34
 description: "中心极限定理, 傅里叶变换, 卷积定理"
-tag: 数学
+tag: "数学"
 use_math: true
 ---
 

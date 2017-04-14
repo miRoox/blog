@@ -3,7 +3,7 @@ layout: post
 title: "旧作：【翻译】CSF文件格式"
 date: 2017-03-25 09:07:42
 description: "红色警戒等游戏中的CSF文件格式"
-tag: 红警 翻译
+tag: ["红警", "翻译"]
 ---
 
 [原文链接](http://modenc.renegadeprojects.com/CSF_File_Format)
