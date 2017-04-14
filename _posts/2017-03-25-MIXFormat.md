@@ -3,7 +3,7 @@ layout: post
 title: "旧作：【翻译】MIX 文件格式"
 date: 2017-03-25 10:12:33
 description: "红色警戒等游戏中的MIX文件格式"
-tag: 红警
+tag: 红警 翻译
 ---
 
 原文地址 [XCC Homepage](http://xhp.xwis.net/) 中 [Documents](http://xhp.xwis.net/documents/) -> [MIX File format](http://xhp.xwis.net/documents/MIX_Format.html) 。

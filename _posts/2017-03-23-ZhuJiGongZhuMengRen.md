@@ -3,7 +3,7 @@ layout: post
 title: "旧作：筑基工，筑梦人"
 date: 2017-03-23 21:02:14
 description: "高三时写的作文"
-tag: 小说
+tag: 小说 作文
 ---
 
 （这是一篇高三时写的作文）
