@@ -14,13 +14,6 @@ title: 关于我
 [GitHub](https://github.com/miRoox)
 
 
-----
-
-# 关于本博客
-
-本博客基于 
-[leopard](http://baixin.io) 和 
-[Vno-jekyll](http://vno.onevcat.com) 博客模版修改而成。
 
 
 {% include comments.html %}

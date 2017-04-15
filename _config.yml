@@ -1,10 +1,8 @@
-# markdown processor
-# markdown: maruku
-
 # Basic
 title: miRoox
-subtitle: 博客
-description: 我唯一知道的就是我一无所知 --苏格拉底
+subtitle: 个人博客
+description: 啥都会一点，又好像啥都不懂
+welcome_message: 我唯一知道的就是我一无所知 ——苏格拉底
 # 头像里面的标题
 avatarTitle: miRoox
 # 头像里面的描述
@@ -13,14 +11,13 @@ url: "http://miRoox.github.io"
 
 # Comment
 comment:
-    # disqus: leopard
-    # duoshuo: miRoox 
+    # disqus: 
+    # duoshuo: 
 
 # Social
 social:
     weibo: MiFantasy000 
     github: miRoox
-    # bangumi: miroox
     # twitter: 
     mail: miroox@outlook.com
 
@@ -63,7 +60,7 @@ blog_button:
 nav:
     - {title: 时间线, description: archive, url: '/archive'}   
     - {title: 标签, description: tags, url: '/tags'}      
-    - {title: 关于, description: about, url: '/about'}      
+    - {title: 关于我, description: about, url: '/about'}      
     
 
 # Pagination
