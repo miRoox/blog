@@ -164,8 +164,8 @@ ul {
 
 code {
   padding: .1em .4em;
-  background: lighten($secondary-color, 32%);
-  border: 1px solid lighten($secondary-color, 25%);
+  background: $gray-lighter;
+  border: 1px solid $gray-light;
   border-radius: $border-radius;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: 1.0em;
