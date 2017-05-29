@@ -7,7 +7,7 @@ tag: ["编程", "Haskell", "翻译"]
 use_math: true
 ---
 
-[原文链接](http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/)、
+[原文链接](http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/)
 
 ---
 
@@ -286,7 +286,7 @@ a -> () === ()
 这意味着只存在唯一的一个函数 `a -> ()` —— 特别地，它就是 `const ()` 。这两条规则的算术形式是
 
 $$
-a^{1} = a
+a^{1} = a \\
 1^{a} = 1
 $$
 
