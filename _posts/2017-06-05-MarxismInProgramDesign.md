@@ -50,7 +50,7 @@ tag: ["程序设计", "哲学", "马克思主义"]
 对于其它设计模式，这里就不再赘述了，只想用下面这幅图来展示普遍联系的观点是如何在设计模式中运用的
 （图中每一个方框都代表这一种设计模式，箭头表达了设计模式间是如何联系与转化的）。
 
-![设计模式之间的关系](/images/posts/MarxismInProgramDesign)
+![设计模式之间的关系](/images/posts/MarxismInProgramDesign/connection.png)
 
 （上图摘自《设计模式：可复用面向对象软件的基础》）
 
