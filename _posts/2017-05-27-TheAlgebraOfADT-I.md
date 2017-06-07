@@ -135,7 +135,7 @@ from :: a -> b
 to   :: b -> a
 ```
 
-它将 *a* 的值与 *b* 的值配对，因此下面的等式总是成立的（这里的 `==` 是真正的Haskell风格的相等）
+它将 *a* 的值与 *b* 的值配对，因此下面的等式总是成立的（这里的 `==` 是真正的Haskell式的相等）
 
 ```haskell
 to (from a) == a
@@ -199,7 +199,7 @@ Mul () a === a
 Mul a b === Mul b a
 ```
 
-意味着你乘积是什么次序无关紧要。这些法则更让人熟悉的形式是
+意味着你做乘积是什么次序无关紧要。这些法则更让人熟悉的形式是
 
 $$
 0 \cdot x = 0 \\
@@ -231,24 +231,24 @@ $$
 ### 函数类型
 
 除了像 `Int` 和 `Bool` 这样的实体类型，Haskell 中还有 *函数* 类型，如 `Int -> Bool` 或 `Double -> String` 。
-如何将它们也融入到这种代数里面？
+如何将它们也纳入到这种代数里面？
 
 为了解决这个问题，我们重新回到计数法。类型 *a → b* 包含多少种函数？
 
 让我们具体来看，把 *a* 和 *b* 都定为 `Bool`。值 `False` 可以映射到 `True` 或者 `False`，对于值 `True` 也是如此 —— 因此，有 $2 \cdot 2 = 2 ^{2} = 4$ 种可能的 `Bool -> Bool` 函数。为了真正的明确它们，我们可以将其枚举如下
 
 ```haskell
-f1 :: Bool -> Bool -- equivalent to 'id'
+f1 :: Bool -> Bool -- 等价于 'id'
 f1 True  = True
 f1 False = False
 
-f2 :: Bool -> Bool -- equivalent to 'const False'
+f2 :: Bool -> Bool -- 等价于 'const False'
 f2 _     = False
 
-f3 :: Bool -> Bool -- equivalent to 'const True'
+f3 :: Bool -> Bool -- 等价于 'const True'
 f3 _     = True
 
-f4 :: Bool -> Bool -- equivalent to 'not'
+f4 :: Bool -> Bool -- 等价于 'not'
 f4 True  = False
 f4 False = True
 ```
@@ -267,7 +267,7 @@ $$
 B^{A}
 $$
 
-这说明了作为函数类型的常用术语 *指数类型* 的理由。
+这说明了使用 *指数类型* 作为函数类型的常用术语的理由。
 
 #### 函数的运算法则
 
@@ -324,7 +324,7 @@ a -> b -> c === (a,b) -> c
 
 ### 下一篇
 
-在下一篇文章中我将着眼于递归类型，比如列表和二叉树，并展示如何在以各种方式推导关于类型的有趣事实中滥用类型代数。
+在下一篇文章中我将着眼于递归类型，比如列表和二叉树，并展示如何在以各种方式使用类型代数来推导出关于类型的有趣事实。
 
 ---
 
