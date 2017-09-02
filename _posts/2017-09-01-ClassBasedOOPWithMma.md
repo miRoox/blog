@@ -189,7 +189,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 `Module` 开始声明了这几个局部变量
 
 ```mma
-    {$self,$base,$public,privDecls},
+    {$self,$base,privDecls},
 ```
 
 `$` 开头约定为内部符号，避免名称冲突。
@@ -200,9 +200,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 `$base` 是基类对象。用于实现继承机制。
 
-`$public` 是一个语法糖，后面讲解。
-
-`privDecls` 即用户定义的私有成员，注意它是 `class` 传参进来的，这似乎限制了 `Module` 的自动改名能力。
+`privDecls` 即用户定义的私有成员，注意它是 `class` 传参进来的，这似乎可以限制 `Module` 的自动改名能力。
 
 ```mma
     $base=new[baseClass];(*inheritance*)
@@ -212,8 +210,8 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 这两段就是实现继承多态的核心部分。学过设计模式的话很容易可以看出这其实就是一种 
 [责任链模式](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern) 。
 责任链模式简单的说就是向一条候选的对象链发出请求，根据请求以及运行时的情况决定一个对象是响应请求还是将其传递给下一级。
-在这里，就是将 `$self` 处理不了的成员调用传递给 `$base` 从而实现继承。而对于基类定义过的方法，在派生类中重写即可实现
-多态（准确地说，还需要类型约束）。
+在这里，就是将 `$self` 处理不了的成员调用传递给 `$base` 从而实现继承。而对于基类定义过的方法，在派生类中重写即可实现多态
+（准确地说，还需要类型约束）。
 
 ```mma
     $self@type=identifier;(*type*)
