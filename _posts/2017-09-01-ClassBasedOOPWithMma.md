@@ -21,7 +21,7 @@ Mathematica 通常被宣传为 *符号式* 、 *函数式* 的编程语言，不
 
 好，废话不多说，先上代码。
 
-```mathematica
+```mma
 (*nil*)
 SetAttributes[nil,ReadProtected];
 nil[___]=nil;(*default*)
@@ -69,7 +69,7 @@ class[identifier_Symbol,baseClass_?classQ,{privDecls___Symbol},body_]:=With[
 
 定义一个基类
 
-```mathematica
+```mma
 class[testBase,
   {text},
   (*initialize*)
@@ -83,7 +83,7 @@ class[testBase,
 
 再定义一个派生类
 
-```mathematica
+```mma
 class[testDerived,testBase,
   {},
   public@print[]:=Print["This is derived. The text is "<>self@getText[]]
@@ -92,13 +92,13 @@ class[testDerived,testBase,
 
 最后定义一个（带类型约束的）测试函数（注：`testBaseQ` 由 `class` 自动生成）
 
-```mathematica
+```mma
 testFun[obj_?testBaseQ]:=obj@print[];
 ```
 
 对于一个基类对象执行
 
-```mathematica
+```mma
 obj1=new[testBase];
 testFun[obj1]
 ```
@@ -111,7 +111,7 @@ This is base. The text is Base
 
 而对于一个派生类对象执行
 
-```mathematica
+```mma
 obj2=new[testDerived];
 obj2@setText["Derived"];
 testFun[obj2]
@@ -131,7 +131,7 @@ This is derived. The text is Derived
 然后看代码的开始，定义了一个 `nil` 。它的定位大概类似于 C++ 中的 `nullptr` ，表示一个“空”对象。
 略有不同的是， `nil` 既是对象又是类型，这是 Mathematica 符号式编程的优势。
 
-```mathematica
+```mma
 nil[___]=nil;(*default*)
 ```
 
@@ -141,7 +141,7 @@ nil[___]=nil;(*default*)
 
 接下来是 `new` 。设计上，它的意义同 C++ 基本是一致的。
 
-```mathematica
+```mma
 new[nil]=nil;
 ```
 
@@ -149,7 +149,7 @@ new[nil]=nil;
 
 而后是 `typeOf` ，一个获取类型的辅助函数。由于 Mathematica 的动态性，它可以对应于 C++ 中的 `decltype()` 或者 `typeof()` 。
 
-```mathematica
+```mma
 typeOf[obj_]:=If[Evaluate[obj@type]===nil,nil,obj@type,Head[obj]];(*to make sure every expression has a type*)
 ```
 
@@ -158,7 +158,7 @@ typeOf[obj_]:=If[Evaluate[obj@type]===nil,nil,obj@type,Head[obj]];(*to make sure
 
 接着是 `classQ` ，同样也是个类型判断的辅助类，用于约束 `class` 的参数。
 
-```mathematica
+```mma
 classQ[obj_]:=typeOf[obj]==class||typeOf[obj]==nil;(*nil is a special class*)
 ```
 
@@ -166,7 +166,7 @@ classQ[obj_]:=typeOf[obj]==class||typeOf[obj]==nil;(*nil is a special class*)
 
 然后终于进入正题 `class` 了。
 
-```mathematica
+```mma
 class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privDecls},body];
 ```
 
@@ -174,7 +174,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 中间略过一些细枝末节，直接看到 `(*'type'Q*)` 那里。
 
-```mathematica
+```mma
   Evaluate[Symbol[className<>"Q"]][obj_]:=If[
     obj[Evaluate[Symbol["is"<>upperClassName]]],
     True,False,False
@@ -188,7 +188,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 `Module` 开始声明了这几个局部变量
 
-```mathematica
+```mma
     {$self,$base,$public,privDecls},
 ```
 
@@ -204,7 +204,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 `privDecls` 即用户定义的私有成员，注意它是 `class` 传参进来的，这似乎限制了 `Module` 的自动改名能力。
 
-```mathematica
+```mma
     $base=new[baseClass];(*inheritance*)
     $self[mem_]:=$base@mem;(*polymorphism*)
 ```
@@ -215,13 +215,13 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 在这里，就是将 `$self` 处理不了的成员调用传递给 `$base` 从而实现继承。而对于基类定义过的方法，在派生类中重写即可实现
 多态（准确地说，还需要类型约束）。
 
-```mathematica
+```mma
     $self@type=identifier;(*type*)
 ```
 
 没什么好说的。
 
-```mathematica
+```mma
     $self[Evaluate[Symbol["is"<>upperClassName]]]=True;(*subtyping*)
 ```
 
@@ -230,7 +230,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 最后是类定义的主体。
 
-```mathematica
+```mma
     ReleaseHold[Hold[body]/.{self->$self,base->$base,public->$self}];
 ```
 
@@ -238,7 +238,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 `public->$self` 就是一个语法糖。
 
-```mathematica
+```mma
     $self(*reference semantics*)
 ```
 
