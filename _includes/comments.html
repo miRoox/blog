@@ -34,6 +34,12 @@
         })();
     </script>
     
+  {% elsif site.comment.uyan %}
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?{{ site.comment.uyan }}"></script>
+    <!-- UY END -->
+    
   {% else %}
     <p style="text-align:center"><em>暂无评论功能</em> <strong>(:</strong></p>
   {% endif %}
