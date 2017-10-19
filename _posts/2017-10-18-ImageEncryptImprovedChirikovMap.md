@@ -50,41 +50,41 @@ Chirikov标准映射表达式为：
 包含有一个 _k_ 参数.
 
 <table>
-<caption> 不同参数 <em>k<em> 对应的映射的迭代轨迹 </caption>
+<caption align="center"> 不同参数 <em>k<em> 对应的映射的迭代轨迹 </caption>
 <tr>
   <td align="center">
-  
-  ![k=0.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=0.5.png) <br/> _k_=0.5
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=0.5.png"  alt="k=0.5" />
+  <br/>
+  <em>k</em>=0.5
   </td>
   <td align="center">
-  
-  ![k=1.2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=1.2.png) <br/> _k_=1.2
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=1.2.png"  alt="k=1.2" />
+  <br/>
+  <em>k</em>=1.2
   </td>
 </tr>
 <tr>
   <td align="center">
-  
-  ![k=4.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=4.5.png) <br/> _k_=4.5
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=4.5.png"  alt="k=4.5" />
+  <br/>
+  <em>k</em>=4.5
   </td>
   <td align="center">
-  
-  ![k=6.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=6.5.png) <br/> _k_=6.5
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=6.5.png"  alt="k=6.5" />
+  <br/>
+  <em>k</em>=6.5
   </td>
 </tr>
 <tr>
   <td align="center">
-  
-  ![k=8.2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=8.2.png) <br/> _k_=8.2
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=8.2.png"  alt="k=8.2" />
+  <br/>
+  <em>k</em>=8.2
   </td>
   <td align="center">
-  
-  ![k=10](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=10.png) <br/> _k_=10
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=10.png"  alt="k=10" />
+  <br/>
+  <em>k</em>=10
   </td>
 </tr>
 </table>
@@ -99,51 +99,51 @@ Chirikov标准映射表达式为：
 包含了 _k_ 和 _h_ 两个参数.
 
 <table>
-<caption> 不同 <em>h</em>、<em>k</em> 参数对应的映射的迭代轨迹 </caption>
+<caption align="center"> 不同 <em>h</em>、<em>k</em> 参数对应的映射的迭代轨迹 </caption>
 <tr>
   <td align="center">
   
   </td>
   <td align="center">
-  
-  ![h=1,k=2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1,k=2.png) <br/> _h_=1 _k_=2
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1,k=2.png"  alt="h=1,k=2" />
+  <br/>
+  <em>h</em>=1,<em>k</em>=2
   </td>
 </tr>
 <tr>
   <td align="center">
-  
-  ![h=1.5,k=0.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1.5,k=0.5.png) <br/> _h_=1.5 _k_=0.5
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1.5,k=0.5.png"  alt="h=1.5,k=0.5" />
+  <br/>
+  <em>h</em>=1.5,<em>k</em>=0.5
   </td>
   <td align="center">
-  
-  ![h=1.5,k=2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1.5,k=2.png) <br/> _h_=1.5 _k_=2
-  
-  </td>
-</tr>
-<tr>
-  <td align="center">
-  
-  ![h=2,k=0.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=2,k=0.5.png) <br/> _h_=2 _k_=0.5
-  
-  </td>
-  <td align="center">
-  
-  ![h=2,k=1](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=2,k=1.png) <br/> _h_=2 _k_=1
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1.5,k=2.png"  alt="h=1.5,k=2" />
+  <br/>
+  <em>h</em>=1.5,<em>k</em>=2
   </td>
 </tr>
 <tr>
   <td align="center">
-  
-  ![h=3.5,k=1](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=3.5,k=1.png) <br/> _h_=3.5 _k_=1
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=2,k=0.5.png"  alt="h=2,k=0.5" />
+  <br/>
+  <em>h</em>=2,<em>k</em>=0.5
   </td>
   <td align="center">
-  
-  ![h=3.5,k=2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=3.5,k=2.png) <br/> _h_=3.5 _k_=2
-  
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=2,k=1.png"  alt="h=2,k=1" />
+  <br/>
+  <em>h</em>=2,<em>k</em>=1
+  </td>
+</tr>
+<tr>
+  <td align="center">
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=3.5,k=1.png"  alt="h=3.5,k=1" />
+  <br/>
+  <em>h</em>=3.5,<em>k</em>=1
+  </td>
+  <td align="center">
+  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=3.5,k=2.png"  alt="h=3.5,k=2" />
+  <br/>
+  <em>h</em>=3.5,<em>k</em>=2
   </td>
 </tr>
 </table>
