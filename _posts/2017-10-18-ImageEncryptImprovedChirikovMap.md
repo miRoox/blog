@@ -171,7 +171,7 @@ Chirikov标准映射表达式为：
 ```mathematica
 (*shuffle list with improved chirikov map*)
 (*parameters: k, h, x, y, source-data*)
-encryptShuffle=Compile[{{k,_Real},{h,_Real},{x,_Real},{y,_Real},{source,_Integer,1}},
+encryptShuffle=Compile[{ {k,_Real},{h,_Real},{x,_Real},{y,_Real},{source,_Integer,1} },
 Block[{data,pos},data=source;
     pos=(NestList[ (*nest to generate a list of the position need to shuttle*)
              Mod[#[[2]]+k Sin[#[[1]]]+{h #[[1]],0},2. Pi]&, (*improved Chirikov map*)
