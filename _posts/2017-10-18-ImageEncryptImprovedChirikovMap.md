@@ -6,6 +6,8 @@ description: "基于改进的Chirikov映射的彩色图像加密算法"
 tag: ["图像加密", "混沌映射", "算法"]
 ---
 
+{% assign resource_url = "https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource" %}
+
 这是上学期的一篇课程报告。
 
 项目见 [GitHub](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map)
@@ -45,108 +47,31 @@ tag: ["图像加密", "混沌映射", "算法"]
 
 Chirikov标准映射表达式为：
 
-![Chrikov map](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/chirikov.png)
+![Chrikov map]({{resource_url}}/chirikov.png)
 
 包含有一个 _k_ 参数.
 
-<table>
-<caption align="center"> 不同参数 <em>k<em> 对应的映射的迭代轨迹 </caption>
-<tr>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=0.5.png"  alt="k=0.5" />
-  <br/>
-  <em>k</em>=0.5
-  </td>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=1.2.png"  alt="k=1.2" />
-  <br/>
-  <em>k</em>=1.2
-  </td>
-</tr>
-<tr>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=4.5.png"  alt="k=4.5" />
-  <br/>
-  <em>k</em>=4.5
-  </td>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=6.5.png"  alt="k=6.5" />
-  <br/>
-  <em>k</em>=6.5
-  </td>
-</tr>
-<tr>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=8.2.png"  alt="k=8.2" />
-  <br/>
-  <em>k</em>=8.2
-  </td>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/k=10.png"  alt="k=10" />
-  <br/>
-  <em>k</em>=10
-  </td>
-</tr>
-</table>
+| ![k=0.5]({{resource_url}}/k=0.5.png) <br/> _k_=0.5 | ![k=1.2]({{resource_url}}/k=1.2.png) <br/> _k_=1.2 |
+| ![k=4.5]({{resource_url}}/k=4.5.png) <br/> _k_=4.5 | ![k=6.5]({{resource_url}}/k=6.5.png) <br/> _k_=6.5 |
+| ![k=8.2]({{resource_url}}/k=8.2.png) <br/> _k_=8.2 | ![k=10]({{resource_url}}/k=10.png) <br/> _k_=10    |
 
+**不同参数 _k_ 对应的映射的迭代轨迹**
 
 从映射图像可以看出，只有当 _k_ 的大小超过某一阈值后，映射才会变得混沌，均匀充满整个相空间。
 为此，我们在其中添加了一个参数 _h_ ，增加了混沌映射输入参数的任意性。
 改进后的Chirikov映射表达式：
 
-![improved Chrikov map](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/improved-chirikov.png)
+![improved Chrikov map]({{resource_url}}/improved-chirikov.png)
 
 包含了 _k_ 和 _h_ 两个参数.
 
-<table>
-<caption align="center"> 不同 <em>h</em>、<em>k</em> 参数对应的映射的迭代轨迹 </caption>
-<tr>
-  <td align="center">
-  
-  </td>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1,k=2.png"  alt="h=1,k=2" />
-  <br/>
-  <em>h</em>=1,<em>k</em>=2
-  </td>
-</tr>
-<tr>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1.5,k=0.5.png"  alt="h=1.5,k=0.5" />
-  <br/>
-  <em>h</em>=1.5,<em>k</em>=0.5
-  </td>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=1.5,k=2.png"  alt="h=1.5,k=2" />
-  <br/>
-  <em>h</em>=1.5,<em>k</em>=2
-  </td>
-</tr>
-<tr>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=2,k=0.5.png"  alt="h=2,k=0.5" />
-  <br/>
-  <em>h</em>=2,<em>k</em>=0.5
-  </td>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=2,k=1.png"  alt="h=2,k=1" />
-  <br/>
-  <em>h</em>=2,<em>k</em>=1
-  </td>
-</tr>
-<tr>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=3.5,k=1.png"  alt="h=3.5,k=1" />
-  <br/>
-  <em>h</em>=3.5,<em>k</em>=1
-  </td>
-  <td align="center">
-  <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/h=3.5,k=2.png"  alt="h=3.5,k=2" />
-  <br/>
-  <em>h</em>=3.5,<em>k</em>=2
-  </td>
-</tr>
-</table>
+| | ![h=1,k=2]({{resource_url}}/h=1,k=2.png) <br/> _h_=1 _k_=2 |
+| ![h=1.5,k=0.5]({{resource_url}}/h=1.5,k=0.5.png) <br/> _h_=1.5 _k_=0.5 | ![h=1.5,k=2]({{resource_url}}/h=1.5,k=2.png) <br/> _h_=1.5 _k_=2 |
+| ![h=2,k=0.5]({{resource_url}}/h=2,k=0.5.png) <br/> _h_=2 _k_=0.5 | ![h=2,k=0.5]({{resource_url}}/h=2,k=0.5.png) <br/> _h_=2 _k_=0.5 |
+| ![h=2,k=1]({{resource_url}}/h=2,k=1.png) <br/> _h_=2 _k_=1 | ![h=2,k=1]({{resource_url}}/h=2,k=1.png) <br/> _h_=2 _k_=1 |
+| ![h=3.5,k=1]({{resource_url}}/h=3.5,k=1.png) <br/> _h_=3.5 _k_=1 | ![h=3.5,k=2]({{resource_url}}/h=3.5,k=2.png) <br/> _h_=3.5 _k_=2 |
+
+**不同 _h_、_k_ 参数对应的映射的迭代轨迹**
 
 #### 2.2 用于图像加密基本算法
 
@@ -187,24 +112,11 @@ Block[{data,pos},data=source;
 
 | 原图像 | 加密图像 | 解密图像 |
 |:------:|:--------:|:--------:|
-| ![origin](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/origin.png) | ![encrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/encrypted.png) | ![decrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/origin.png) |
+| ![origin]({{resource_url}}/origin.png) | ![encrypted]({{resource_url}}/encrypted.png) | ![decrypted]({{resource_url}}/origin.png) |
 
-<table>
-<tbody>
-  <tr>
-    <td align="center">
-    <img src="https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/histogram.png"  alt="histogram" />
-    </td>
-  </tr>
-</tbody>
-<tfoot>
-  <tr>
-    <td align="center">
-    <b>原图像素和加密像素分布直方图</b>
-    </td>
-  </tr>
-</tfoot>
-</table>
+| ![histogram]({{resource_url}}/histogram.png) |
+|=====
+| *原图像素和加密像素分布直方图* |
 
 由直方图可以看出，加密算法将图片的像素分布均匀化，有效的增加了原图像素的熵值。
 基本排除通过加密图像就能看出原图像的大概轮廓的可能性。
@@ -215,7 +127,7 @@ Block[{data,pos},data=source;
 
 | 保持其它参数不变，改变 _h_ | 保持其它参数不变，改变 _k_ |
 |:--------------------------:|:--------------------------:|
-| ![MSE-h](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/mse-h.png) | ![MSE-k](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/mse-k.png) |
+| ![MSE-h]({{resource_url}}/mse-h.png) | ![MSE-k]({{resource_url}}/mse-k.png) |
 
 MSE(means square error)为均方误差，表征原始图像与解密图像的差异。MSE=0时表示两图像相等。
 由上图可知，密钥参数取值范围进入到一个很小的区间（ 10 <sup>-15</sup> 数量级）时，才有可能将图片解密出来。
@@ -225,8 +137,8 @@ MSE(means square error)为均方误差，表征原始图像与解密图像的差
 
 | 被遮挡的加密图像 | 对应的解密图像 |
 |:----------------:|:--------------:|
-| ![25cover-encrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/25cover-encrypted.png) | ![25cover-decrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/25cover-decrypted.png) |
-| ![50cover-encrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/50cover-encrypted.png) | ![50cover-decrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource/50cover-decrypted.png) |
+| ![25cover-encrypted]({{resource_url}}/25cover-encrypted.png) | ![25cover-decrypted]({{resource_url}}/25cover-decrypted.png) |
+| ![50cover-encrypted]({{resource_url}}/50cover-encrypted.png) | ![50cover-decrypted]({{resource_url}}/50cover-decrypted.png) |
 
 上表显示对应对加密图像不同遮挡面积的还原效果。
 遮挡方法是用绘图工具在加密图像上填充了一个多边形。
