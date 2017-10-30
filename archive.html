@@ -10,3 +10,25 @@ group: navigation
 <div class="page card">
 {% include JB/posts_collate %}
 </div>
+
+<hr/>
+
+<h1 class="post-title">标签</h1>
+
+<ul class="tag_box inline">
+  {% assign tags_list = site.tags %}
+  {% include JB/tags_list %}
+</ul>
+
+<div class = "card">
+{% for tag in site.tags %}
+
+  <h3 id="{{ tag[0] }}-ref">{{ tag[0] }}</h3>
+  <ul>
+    {% assign pages_list = tag[1] %}
+    {% include JB/pages_list %}
+  </ul>
+
+
+{% endfor %}
+</div>

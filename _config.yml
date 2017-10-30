@@ -11,26 +11,26 @@ url: "http://miRoox.github.io"
 
 # Comment
 comment:
-    # disqus: 
-    # duoshuo: 
+    # disqus:
+    # duoshuo:
 
 # Social
 social:
-    weibo: MiFantasy000 
+    weibo: MiFantasy000
     github: miRoox
-    # twitter: 
+    # twitter:
     mail: miroox@outlook.com
 
-# 百度统计 
-# 使用博客模板请去掉或者更换 id 
+# 百度统计
+# 使用博客模板请去掉或者更换 id
 # baidu:
-    # id: 8ba1c6be0953b6f9c2ba38e57f615421  
+    # id: 8ba1c6be0953b6f9c2ba38e57f615421
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
 # ga:
-    # id: UA-84134159-3   
-    # host: auto  
+    # id: UA-84134159-3
+    # host: auto
 
 
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
@@ -55,13 +55,14 @@ cover_color: blue
 # The blog button should not be removed.
 blog_button:
     title: 主页
+    description: 访问博客主页
 
 # Navigation buttons in the front page.s
 nav:
-    - {title: 时间线, description: archive, url: '/archive'}   
-    - {title: 标签, description: tags, url: '/tags'}      
-    - {title: 关于我, description: about, url: '/about'}      
-    
+    - {title: 文章, description: 文章归档, url: '/archive'}
+    - {title: 项目, description: 我的项目, url: '/projects'}
+    - {title: 关于, description: 关于我, url: '/about'}
+
 
 # Pagination
 gems: [jekyll-paginate,jekyll-sitemap]
