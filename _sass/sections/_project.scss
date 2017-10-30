@@ -1,0 +1,42 @@
+// ------------------------------
+// SINGLE POST STYLES
+// ------------------------------
+
+.project {
+
+  div {
+    margin: 5px;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: $border-radius;
+  }
+
+  hr {
+    display: block;
+    margin: 0.5em 0;
+    border-top: 1px solid $gray-light;
+  }
+  
+  h3 {
+    padding: 10px 20px;
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+    font-size: 1.5em; 
+    font-weight: bold;
+    text-indent: 4px; 
+    background: lighten($secondary-color, 15%);
+    box-shadow: 0px 5px 5px darken($primary-color, 15%);
+    position:relative;
+    color: $primary-color;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+      color: darken($primary-color, 15%);
+      border-color: darken($primary-color, 15%);
+    }
+  }
+
+}
