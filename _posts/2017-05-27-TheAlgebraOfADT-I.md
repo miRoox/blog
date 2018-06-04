@@ -5,6 +5,7 @@ date: 2017-05-27 21:44:34
 description: "代数数据类型"
 tag: ["编程", "Haskell", "翻译"]
 use_math: true
+nocopyright : true
 ---
 
 [原文链接](http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/)
