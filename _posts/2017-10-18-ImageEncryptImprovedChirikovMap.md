@@ -6,7 +6,7 @@ description: "基于改进的Chirikov映射的彩色图像加密算法"
 tag: ["图像加密", "混沌映射", "算法"]
 ---
 
-{% assign resource_url = "https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/master/resource" %}
+{% assign resource_url = "https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource" %}
 
 这是上学期的一篇课程报告。
 
