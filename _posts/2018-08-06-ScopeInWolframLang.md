@@ -17,9 +17,9 @@ Wolfram语言中的作用域结构主要有如下5种:
 1.  [Block](#Block)
 1.  [With](#With)
 1.  [DynamicModule](#DynamicModule)
-1.  [命名空间](#命名空间)
+1.  [命名空间](#Namespace)
 
-### [Module](http://reference.wolfram.com/language/ref/Module.html)
+### [Module](http://reference.wolfram.com/language/ref/Module.html) ### {#Module}
 
 按照[文档](http://reference.wolfram.com/language/tutorial/BlocksComparedWithModules.html)中的说法，
 `Module`提供变量的词法(lexical)定界。
@@ -76,7 +76,7 @@ Print[x]
 [模块和局部变量](http://reference.wolfram.com/language/tutorial/ModulesAndLocalVariables.html)、
 [模块工作方式](http://reference.wolfram.com/language/tutorial/HowModulesWork.html)
 
-### [Block](http://reference.wolfram.com/language/ref/Block.html)
+### [Block](http://reference.wolfram.com/language/ref/Block.html) ### {#Block}
 
 与`Module`不同，`Block`提供变量的动态定界。
 它不产生新的变量，只是在作用域内临时地修改变量的值。
@@ -168,7 +168,7 @@ Print[x]
 [块与模块的比较](http://reference.wolfram.com/language/tutorial/BlocksComparedWithModules.html)、
 [块和局部值](http://reference.wolfram.com/language/tutorial/BlocksAndLocalValues.html)
 
-### [With](http://reference.wolfram.com/language/ref/With.html)
+### [With](http://reference.wolfram.com/language/ref/With.html) ### {#With}
 
 `With`的目的是实现局部常量，但它实质上不过是一个替换罢了。
 在大多数情况下
@@ -245,7 +245,7 @@ Unevaluated[Function[{x}, x + y]] /. {HoldPattern[y] -> x + a}
 [How To | 在 Dynamic 或 Manipulate 内部计算表达式](http://reference.wolfram.com/language/howto/EvaluateExpressionsInsideDynamicOrManipulate.html)、
 [纯函数和规则中的变量](http://reference.wolfram.com/language/tutorial/VariablesInPureFunctionsAndRules.html)
 
-### [DynamicModule](http://reference.wolfram.com/language/ref/DynamicModule.html)
+### [DynamicModule](http://reference.wolfram.com/language/ref/DynamicModule.html) ### {#DynamicModule}
 
 与`Module`类似，`DynamicModule`也建立变量的词法作用域，但两者又有不同：
 如果说`Module`将变量局域在一个*时间段*的话，那么`DynamicModule`将变量局域在其输出的一个*空间区域*上。
@@ -289,7 +289,7 @@ Module[{x}, Slider[Dynamic[x]]]
 [动态简介](http://reference.wolfram.com/language/tutorial/IntroductionToDynamic.html)、
 [高级动态功能](http://reference.wolfram.com/language/tutorial/AdvancedDynamicFunctionality.html)
 
-### [命名空间](http://reference.wolfram.com/language/guide/NamespaceManagement.html)
+### [命名空间](http://reference.wolfram.com/language/guide/NamespaceManagement.html) ### {#Namespace}
 
 命名空间也被称作上下文。
 顾名思义，它可以看作一段程序执行的语境，它影响符号的含义。
