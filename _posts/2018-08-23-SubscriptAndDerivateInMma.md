@@ -40,7 +40,7 @@ f/:f'=df
 > Wolfram语言就象求值运算`N`中`f`的上值一样来输入这一定义.
 
 下标的情况相对比较容易处理，
-类似<code>a<sub>n</sub></code>的结构在Wolfram语言中实质就是`Subscript[a,n]`，
+类似<code><span>a</span><sub>n</sub></code>的结构在Wolfram语言中实质就是`Subscript[a,n]`，
 我们只要把普通的赋值转化为`TagSet`即可，就如下面的代码所示
 
 ```mathematica
