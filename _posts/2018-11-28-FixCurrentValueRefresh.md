@@ -56,4 +56,4 @@ DynamicModule[{p},
 
 至此，`CurrentValue`等动态刷新无法控制的问题圆满解决。
 
-[^1]: https://www2.dmst.aueb.gr/dds/pubs/inbook/beautiful_code/html/Spi07g.html
+[^1]: <https://www2.dmst.aueb.gr/dds/pubs/inbook/beautiful_code/html/Spi07g.html>
