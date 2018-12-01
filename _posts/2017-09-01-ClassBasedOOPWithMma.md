@@ -3,7 +3,7 @@ layout: post
 title: "使用Mathematica实现基于类的面向对象"
 date: 2017-09-01 23:54:41
 description: "使用Mathematica实现基于类的面向对象"
-tag: ["编程", "Mathematica", "OOP"]
+tag: ["编程", "Wolfram", "OOP"]
 ---
 
 Mathematica 通常被宣传为 *符号式* 、 *函数式* 的编程语言，不过 

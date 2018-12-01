@@ -3,7 +3,7 @@ layout: post
 title: "Mathematica程序包的中文与Unicode处理"
 date: 2018-08-08 12:28:23
 description: ""
-tag: ["编程", "Mathematica"]
+tag: ["编程", "Wolfram"]
 ---
 
 Mathematica在处理字符时默认总会将所有字符转换为ASCII字符表示，

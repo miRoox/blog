@@ -3,7 +3,7 @@ layout: post
 title: "理解Wolfram语言（上）"
 date: 2018-06-04 14:02:10
 description: "Everything is an expression."
-tag: ["编程", "Mathematica"]
+tag: ["编程", "Wolfram"]
 use_math : true
 ---
 

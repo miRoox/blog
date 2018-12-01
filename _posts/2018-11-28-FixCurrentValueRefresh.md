@@ -3,7 +3,7 @@ layout: post
 title: "解决CurrentValue等动态刷新无法控制的问题"
 date: 2018-11-28 23:09:13
 description: "All problems in computer science can be solved by another level of indirection."
-tag: ["编程", "Mathematica"]
+tag: ["编程", "Wolfram"]
 ---
 
 > All problems in computer science can be solved by another level of indirection. [^1]

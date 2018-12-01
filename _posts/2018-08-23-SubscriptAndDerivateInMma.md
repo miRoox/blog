@@ -3,7 +3,7 @@ layout: post
 title: "Mathematica下标与导数赋值问题的解决方法"
 date: 2018-08-23 15:22:43
 description: "Subscript Derivative"
-tag: ["编程", "Mathematica"]
+tag: ["编程", "Wolfram"]
 ---
 
 众所周知，Mathematica中虽然使用下标形式非常方便，
