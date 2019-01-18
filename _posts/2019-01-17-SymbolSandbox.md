@@ -84,3 +84,29 @@ symbolSandbox[expr_]:=With[{syms=Unevaluated@@embeddedUserSymbols[expr]},
 ```
 
 这里需要注意的是``Internal`EmbeddedSymbols``获得的符号不能全部局域化，因此加入了`Select`滤过具有`Locked`和`Protected`属性的符号。
+
+然后我们可以给出一个更“安全”的`ValueQ`
+
+```mathematica
+SetAttributes[valueQ,HoldFirst]
+valueQ[expr_]:=Unevaluated[expr]=!=symbolSandbox[expr]
+```
+
+此时
+
+```mathematica
+x=0;
+y:=++x
+v=valueQ[y+0];
+{v,x}
+```
+
+会给出`{True, 0}`的结果，`x`因对`y`的求值而产生的改变被限制在`valueQ`的计算过程中。
+
+不过这种局域化仅限于符号，并不能限制诸如文件IO等其它方式的副作用，因此只能叫“符号沙盒”。
+
+-----
+
+**补充：**
+经过更多测试，发现``Internal`EmbeddedSymbols``似乎有不太稳定，有时会导致内核崩溃，而且似乎**不能**完全获取有关的符号。
+这部分可能有待改进。
