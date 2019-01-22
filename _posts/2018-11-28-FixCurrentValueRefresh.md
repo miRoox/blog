@@ -56,4 +56,11 @@ DynamicModule[{p},
 
 至此，`CurrentValue`等动态刷新无法控制的问题圆满解决。
 
+-----
+
+***2019年1月22日补充***：
+这大概确实是一个bug，在
+[SE上的这个问题](https://mathematica.stackexchange.com/questions/127454/currentvalue-and-mouseposition-do-not-respect-dynamics-options)
+中作者表示已经将这一情况向Wolfram公司提出了。
+
 [^1]: <https://www2.dmst.aueb.gr/dds/pubs/inbook/beautiful_code/html/Spi07g.html>
