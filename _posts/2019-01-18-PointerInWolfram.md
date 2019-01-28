@@ -129,4 +129,4 @@ Protect[Set];
 ```
 
 当然，对于一个真正实用的模块而言，还需要一些诸如错误处理之类的细节，但如果只考虑正确使用的话，实现指针语义的核心部分都已经列在这里了。
-一个相对实用的版本可以在 <https://github.com/miRoox/SymbolRef> 找到。
+一个相对实用的版本可以在 <https://github.com/miRoox/LValueRef> 找到。
