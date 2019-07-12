@@ -4,6 +4,7 @@ title: "基于规则的带步骤符号求导器"
 date: 2019-07-12 22:27:17
 description: "StepD"
 tag: ["编程", "Wolfram"]
+use_math: true
 ---
 
 我们知道，[Wolfram|Alpha](https://www.wolframalpha.com)
