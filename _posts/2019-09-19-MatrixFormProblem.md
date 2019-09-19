@@ -11,13 +11,13 @@ tag: ["编程", "Wolfram"]
 我们知道，赋值等过程中使用 `MatrixForm` 往往会导致后续的计算失效。
 比如：
 
-![a = {{1, 2}, {3, 4}} // MatrixForm](/image/posts/MatrixFormProblem/problem.svg)
+![a = {{1, 2}, {3, 4}} // MatrixForm](/images/posts/MatrixFormProblem/problem.svg)
 
 对于这个问题，最正统的解决办法当然是在赋值等计算过程中不使用 `MatrixForm`，而只在显示时以 `MatrixForm` 呈现[^1]。
 典型的方案是在输出部分才加上 `MatrixForm` 包装。
 不过对于既有代码的问题，一个个手动修改可能略显麻烦，这时可以借助 `EchoFunction` 在实现类似效果的同时保持代码结构基本不变：
 
-![a = {{1, 2}, {3, 4}} // EchoFunction[MatrixForm];](/image/posts/MatrixFormProblem/solution-echo.svg)
+![a = {{1, 2}, {3, 4}} // EchoFunction[MatrixForm];](/images/posts/MatrixFormProblem/solution-echo.svg)
 
 要将既有代码调整为这种方式，只需简单的文本替换就可以实现目标。
 
@@ -37,7 +37,7 @@ GeneralUtilities`BlockProtected[{Set},
 
 效果如图：
 
-![a = {{1, 2}, {3, 4}} // MatrixForm](/image/posts/MatrixFormProblem/solution.svg)
+![a = {{1, 2}, {3, 4}} // MatrixForm](/images/posts/MatrixFormProblem/solution.svg)
 
 {% endraw %}
 
