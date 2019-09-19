@@ -6,6 +6,7 @@ description: "MatrixForm"
 tag: ["编程", "Wolfram"]
 ---
 
+{% raw %}
 
 我们知道，赋值等过程中使用 `MatrixForm` 往往会导致后续的计算失效。
 比如：
@@ -37,6 +38,8 @@ GeneralUtilities`BlockProtected[{Set},
 效果如图：
 
 ![a = {{1, 2}, {3, 4}} // MatrixForm](/image/posts/MatrixFormProblem/solution.svg)
+
+{% endraw %}
 
 ----
 
