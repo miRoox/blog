@@ -61,7 +61,8 @@ blog_button:
 nav:
     - {title: 文章, description: 文章归档, url: '/archive'}
     - {title: 项目, description: 我的项目, url: '/projects'}
-    - {title: 关于, description: 关于我, url: '/about'}
+    - {title: 知识库, description: 个人知识库维基, url: '/wiki'}
+    - {title: 关于我, description: 关于我, url: '/about'}
 
 
 # Pagination
