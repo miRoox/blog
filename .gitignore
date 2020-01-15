@@ -1,7 +1,7 @@
-_site/
-_draft/
-.sass-cache/
-*.DS_Store
-.idea
-*.swp
-.Trashes
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
