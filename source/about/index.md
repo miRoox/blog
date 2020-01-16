@@ -39,7 +39,3 @@ title: 关于我
 0.	形式（几乎）是数学的全部内容。
 0.	<del>有关科学哲学方面的想法比较多，以后专门撰文来说。</del>坑放得太久，都已经忘了。
 0.  更多信息请见[个人知识库维基](https://miroox.github.io/wiki/#miRoox)
-
-
-{% include comments.html %}
-
