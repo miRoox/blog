@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "旧作：【翻译】CSF文件格式"
-date: 2017-03-25 09:07:42
+date: 2016-12-08 00:24:00
 description: "红色警戒等游戏中的CSF文件格式"
 tag: ["红警", "翻译"]
 nocopyright : true
