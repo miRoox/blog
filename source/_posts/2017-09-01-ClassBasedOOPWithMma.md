@@ -2,7 +2,6 @@
 layout: post
 title: "使用Mathematica实现基于类的面向对象"
 date: 2017-09-01 23:54:41
-description: "使用Mathematica实现基于类的面向对象"
 tag: ["编程", "Wolfram", "OOP"]
 ---
 
@@ -13,6 +12,8 @@ Mathematica 通常被宣传为 *符号式* 、 *函数式* 的编程语言，不
 
 比较理想的情况是能够以类似 C++ 或者 Java 那样的形式来创建和使用类与对象，以此为目标进行设计。
 
+<!--more-->
+
 首先考虑的当然是上网搜索，可惜网上的实现大多不完善，封装、继承、多态都不全。一番查找之下，
 [这篇文章](http://12000.org/my_notes/object_based_in_mathematica/v1.html) 
 给我的启发最大，让我确立了封装类的基本思路。而继承与多态受到 Lua 中利用元表来模拟继承的启发。
@@ -21,7 +22,7 @@ Mathematica 通常被宣传为 *符号式* 、 *函数式* 的编程语言，不
 
 好，废话不多说，先上代码。
 
-```mma
+```mathematica
 (*nil*)
 SetAttributes[nil,ReadProtected];
 nil[___]=nil;(*default*)
@@ -69,7 +70,7 @@ class[identifier_Symbol,baseClass_?classQ,{privDecls___Symbol},body_]:=With[
 
 定义一个基类
 
-```mma
+```mathematica
 class[testBase,
   {text},
   (*initialize*)
@@ -83,7 +84,7 @@ class[testBase,
 
 再定义一个派生类
 
-```mma
+```mathematica
 class[testDerived,testBase,
   {},
   public@print[]:=Print["This is derived. The text is "<>self@getText[]]
@@ -92,13 +93,13 @@ class[testDerived,testBase,
 
 最后定义一个（带类型约束的）测试函数（注：`testBaseQ` 由 `class` 自动生成）
 
-```mma
+```mathematica
 testFun[obj_?testBaseQ]:=obj@print[];
 ```
 
 对于一个基类对象执行
 
-```mma
+```mathematica
 obj1=new[testBase];
 testFun[obj1]
 ```
@@ -111,7 +112,7 @@ This is base. The text is Base
 
 而对于一个派生类对象执行
 
-```mma
+```mathematica
 obj2=new[testDerived];
 obj2@setText["Derived"];
 testFun[obj2]
@@ -131,7 +132,7 @@ This is derived. The text is Derived
 然后看代码的开始，定义了一个 `nil` 。它的定位大概类似于 C++ 中的 `nullptr` ，表示一个“空”对象。
 略有不同的是， `nil` 既是对象又是类型，这是 Mathematica 符号式编程的优势。
 
-```mma
+```mathematica
 nil[___]=nil;(*default*)
 ```
 
@@ -141,7 +142,7 @@ nil[___]=nil;(*default*)
 
 接下来是 `new` 。设计上，它的意义同 C++ 基本是一致的。
 
-```mma
+```mathematica
 new[nil]=nil;
 ```
 
@@ -149,7 +150,7 @@ new[nil]=nil;
 
 而后是 `typeOf` ，一个获取类型的辅助函数。由于 Mathematica 的动态性，它可以对应于 C++ 中的 `decltype()` 或者 `typeof()` 。
 
-```mma
+```mathematica
 typeOf[obj_]:=If[Evaluate[obj@type]===nil,nil,obj@type,Head[obj]];(*to make sure every expression has a type*)
 ```
 
@@ -158,7 +159,7 @@ typeOf[obj_]:=If[Evaluate[obj@type]===nil,nil,obj@type,Head[obj]];(*to make sure
 
 接着是 `classQ` ，同样也是个类型判断的辅助类，用于约束 `class` 的参数。
 
-```mma
+```mathematica
 classQ[obj_]:=typeOf[obj]==class||typeOf[obj]==nil;(*nil is a special class*)
 ```
 
@@ -166,7 +167,7 @@ classQ[obj_]:=typeOf[obj]==class||typeOf[obj]==nil;(*nil is a special class*)
 
 然后终于进入正题 `class` 了。
 
-```mma
+```mathematica
 class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privDecls},body];
 ```
 
@@ -174,7 +175,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 中间略过一些细枝末节，直接看到 `(*'type'Q*)` 那里。
 
-```mma
+```mathematica
   Evaluate[Symbol[className<>"Q"]][obj_]:=If[
     obj[Evaluate[Symbol["is"<>upperClassName]]],
     True,False,False
@@ -188,7 +189,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 `Module` 开始声明了这几个局部变量
 
-```mma
+```mathematica
     {$self,$base,privDecls},
 ```
 
@@ -202,7 +203,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 `privDecls` 即用户定义的私有成员，注意它是 `class` 传参进来的，这似乎可以限制 `Module` 的自动改名能力。
 
-```mma
+```mathematica
     $base=new[baseClass];(*inheritance*)
     $self[mem_]:=$base@mem;(*polymorphism*)
 ```
@@ -213,13 +214,13 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 在这里，就是将 `$self` 处理不了的成员调用传递给 `$base` 从而实现继承。而对于基类定义过的方法，在派生类中重写即可实现多态
 （准确地说，还需要类型约束）。
 
-```mma
+```mathematica
     $self@type=identifier;(*type*)
 ```
 
 没什么好说的。
 
-```mma
+```mathematica
     $self[Evaluate[Symbol["is"<>upperClassName]]]=True;(*subtyping*)
 ```
 
@@ -228,7 +229,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 最后是类定义的主体。
 
-```mma
+```mathematica
     ReleaseHold[Hold[body]/.{self->$self,base->$base,public->$self}];
 ```
 
@@ -236,7 +237,7 @@ class[identifier_Symbol,{privDecls___Symbol},body_]:=class[identifier,nil,{privD
 
 `public->$self` 就是一个语法糖。
 
-```mma
+```mathematica
     $self(*reference semantics*)
 ```
 

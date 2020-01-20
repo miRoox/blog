@@ -2,11 +2,12 @@
 layout: post
 title: "突然发现部分Wolfram演示项目支持在线运行了"
 date: 2018-12-01 20:09:39
-description: "Wolfram Demonstrations Project"
 tag: ["Wolfram"]
 ---
 
 如题，已经有**部分**Wolfram演示项目支持在线运行，尽管这个功能貌似还在测试中。
+
+<!--more-->
 
 甚至还支持以内联框架的形式嵌入网页。比如下面这个例子就来自
 <https://demonstrations.wolfram.com/FraunhoferDiffractionThroughARectangularAperture>。

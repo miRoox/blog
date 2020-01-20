@@ -2,7 +2,6 @@
 layout: post
 title: "Mathematica程序包的中文与Unicode处理"
 date: 2018-08-08 12:28:23
-description: ""
 tag: ["编程", "Wolfram"]
 ---
 
@@ -16,6 +15,8 @@ Mathematica在处理字符时默认总会将所有字符转换为ASCII字符表�
 
 为了方便在没有Mathematica的环境下也能方便的阅读程序包中的非ASCII的一般字符，
 下面脚本提供了将`\:nnnn`形式的转义序列转换为UTF-8编码下对应的Unicode字符的简单方法
+
+<!--more-->
 
 ```mathematica
 #!/usr/bin/env wolframscript

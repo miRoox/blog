@@ -2,11 +2,8 @@
 layout: post
 title: "基于改进的Chirikov映射的彩色图像加密算法"
 date: 2017-10-18 23:10:11
-description: "基于改进的Chirikov映射的彩色图像加密算法"
 tag: ["图像加密", "混沌映射", "算法"]
 ---
-
-这是上学期的一篇课程报告。
 
 项目见 [GitHub](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map)
 
@@ -21,6 +18,8 @@ tag: ["图像加密", "混沌映射", "算法"]
 ----
 
 *关键词：图像加密；混沌映射；数据安全*
+
+<!--more-->
 
 ## 1.引言
 

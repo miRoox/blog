@@ -2,9 +2,7 @@
 layout: post
 title: "【翻译】代数数据类型的代数结构（中）"
 date: 2017-07-02 22:54:34
-description: "代数数据类型"
 tag: ["编程", "Haskell", "翻译"]
-use_math: true
 nocopyright : true
 ---
 
@@ -15,6 +13,8 @@ nocopyright : true
 *我以此题目在2012年11月的伦敦Haskell会议上做了演讲。演讲的视频见 [YouTube](http://www.youtube.com/watch?v=YScIPA8RbVE) ，幻灯片见 [GitHub](https://github.com/chris-taylor/LondonHUG) 。这篇是系列的第二部分；你可以在[这里](https://miroox.github.io/2017/05/TheAlgebraOfADT-I/)阅读第一部分*
 
 上一次我介绍了单位类型 `Unit` 或者 `()` 以及零类型 `Void` 。我同时还介绍了类型运算符 `Add` 和 `Mul` ，以及函数类型 `a->b` 。
+
+<!--more-->
 
 在这篇文章中，我将同时使用Haskell记号和数学记号。下面这个表可以帮助你在这两者之间转换。
 

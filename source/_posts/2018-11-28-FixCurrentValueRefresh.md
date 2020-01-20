@@ -2,7 +2,6 @@
 layout: post
 title: "解决CurrentValue等动态刷新无法控制的问题"
 date: 2018-11-28 23:09:13
-description: "All problems in computer science can be solved by another level of indirection."
 tag: ["编程", "Wolfram"]
 ---
 
@@ -16,6 +15,8 @@ Dynamic[Refresh[CurrentValue["MousePosition"], None]]
 ```
 
 输出会不断刷新，并不受`Refresh[□, None]`结构控制。
+
+<!--more-->
 
 另一方面，同样被设计为“过分敏感”的`Clock`则受`Refresh`控制，
 

@@ -2,7 +2,6 @@
 layout: post
 title: "旧作：【翻译】MIX 文件格式"
 date: 2017-03-25 10:12:33
-description: "红色警戒等游戏中的MIX文件格式"
 tag: ["红警", "翻译"]
 nocopyright : true
 ---
@@ -30,6 +29,8 @@ You should have received a copy of the [GNU General Public License](http://xhp.x
 本文解释了命令与征服：泰伯利亚黎明、红色警戒、泰伯利亚之日使用的MIX文件的格式
 
 MIX文件用于存储其他文件，与ZIP文件相同，但没有压缩。我将在本文档中使用C++表示法。
+
+<!--more-->
 
 ```cpp
 typedef unsigned char byte;

@@ -2,12 +2,13 @@
 layout: post
 title: "基于Qt实现类似Notepad++的标签页拖放功能"
 date: 2017-08-16 11:31:23
-description: "基于Qt实现类似Notepad++的标签页拖放功能"
 tag: ["编程", "Qt", "拖放"]
 ---
 
 在我的常用软件中，Google Chrome 和 Notepad++ 都可以做到拖拽标签页在标签栏移动，在两个窗口间移动，以及创建新的窗口。
 作为 [这个项目](https://github.com/miRoox/Multiple-Document-Editor) 的一部分，打算实现一个功能类似的 Tab Widget 。
+
+<!--more-->
 
 ### 设计目标
 

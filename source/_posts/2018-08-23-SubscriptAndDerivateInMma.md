@@ -2,7 +2,6 @@
 layout: post
 title: "Mathematica下标与导数赋值问题的解决方法"
 date: 2018-08-23 15:22:43
-description: "Subscript Derivative"
 tag: ["编程", "Wolfram"]
 ---
 
@@ -23,6 +22,8 @@ Clear["`*"]
 ```
 
 并不能清除`f'`的定义。 
+
+<!--more-->
 
 虽说将直接赋值改为用`UpSet`或者`TagSet`替代可以将赋值关联到符号`f`上而不是别的，比如下面的代码。
 

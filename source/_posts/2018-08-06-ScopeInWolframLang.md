@@ -2,13 +2,18 @@
 layout: post
 title: "Wolfram语言中的作用域结构"
 date: 2018-08-06 11:06:12
-description: "Module Block With DynamicModule 命名空间"
 tag: ["编程", "Wolfram"]
 ---
 
 Wolfram语言中的作用域结构主要有如下5种:
 
-<%- toc(page.content) %>
+* `Module`
+* `Block`
+* `With`
+* `DynamicModule`
+* 命名空间
+
+<!--more-->
 
 ### [Module](http://reference.wolfram.com/language/ref/Module.html)
 

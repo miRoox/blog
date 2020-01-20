@@ -2,9 +2,7 @@
 layout: post
 title: "【翻译】代数数据类型的代数结构（上）"
 date: 2017-05-27 21:44:34
-description: "代数数据类型"
 tag: ["编程", "Haskell", "翻译"]
-use_math: true
 nocopyright : true
 ---
 
@@ -15,6 +13,8 @@ nocopyright : true
 *我以此题目在2012年11月的伦敦Haskell会议上做了演讲。演讲的视频见 [YouTube](http://www.youtube.com/watch?v=YScIPA8RbVE) ，幻灯片见 [GitHub](https://github.com/chris-taylor/LondonHUG) 。*
 
 在本系列文章中，我将在不提及范畴论和高等数学的情况下解释Haskell的数据类型为什么被称为 *代数的*。
+
+<!--more-->
 
 你高中所学的代数始于数字（例如：1、2、3……）和运算符（例如：加法和乘法）。运算符给你一种组合数字并从中产生新数字的方法。
 例如：将1和2通过加法运算结合起来将得到一个新数字3，我们通常将这个事实表述为
