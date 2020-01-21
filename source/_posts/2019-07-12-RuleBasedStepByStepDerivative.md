@@ -173,8 +173,7 @@ echoStep[expr_]:=(
 
 然后，与之类似地，还需要一个函数输出显示最初地状态作为等式的起点。需要注意的是，为了比较好地对齐，需要对两者使用不同的边距：
 
-{% raw %}
-```mathematica
+{% codeblock lang:mathematica %}{% raw %}
 echoStep0[expr_]:=(
   CellPrint@Cell[BoxData[FormBox[ToBoxes[expr,TraditionalForm],TraditionalForm]],"Print",
     CellMargins->{{Inherited, Inherited},{Inherited,Inherited}}];
@@ -186,13 +185,11 @@ echoStep[expr_]:=(
     CellMargins->{{Inherited+20, Inherited},{Inherited,Inherited}}];
   expr
 )
-```
-{% endraw %}
+{% endraw %}{% endcodeblock %}
 
 进一步地，考虑到复合函数求导时需要转入对其它函数求导的过程，这将打断正在进行的求导步骤间的顺叙关系，从逻辑上进入更深的层级。为了表现这种层级关系，这里同样通过调整边距实现。引入一个层级标志量`$dDepth`：每当计算`dEval`时都增加这一标志量，结束时就将其还原；同时利用`$dDepth`控制边距以实现对边距的适应调整。
 
-{% raw %}
-```mathematica
+{% codeblock lang:mathematica %}{% raw %}
 $dDepth=0;
 echoStep0[expr_]:=(
   CellPrint@Cell[BoxData[FormBox[ToBoxes[expr,TraditionalForm],TraditionalForm]],"Print",
@@ -205,8 +202,7 @@ echoStep[expr_]:=(
     CellMargins->{{Inherited+20$dDepth, Inherited},{Inherited,Inherited}}];
   expr
 )
-```
-{% endraw %}
+{% endraw %}{% endcodeblock %}
 
 ```mathematica
 dEval[f_,x_]:=Block[{$dDepth=$dDepth+1},dEvalR[f,x]]
@@ -311,8 +307,7 @@ removeLabels[expr_]:=expr/.{dLabeled[e_,_]:>e}
 
 然后在输出时，注解通过`CellFrameLabels`显示在每个单元的右侧。
 
-{% raw %}
-```mathematica
+{% codeblock lang:mathematica %}{% raw %}
 echoStep0[expr_]:=(
   CellPrint@Cell[BoxData[FormBox[ToBoxes[removeLabels@expr,TraditionalForm],TraditionalForm]],"Print",
     CellMargins->{{Inherited+20($dDepth-1), Inherited},{Inherited,Inherited}},
@@ -326,8 +321,7 @@ echoStep[expr_]:=(
     CellFrameLabels->{{None,Cell[BoxData@ToBoxes@getLabels[expr],"MessageText"]},{None,None}}];
   expr
 )
-```
-{% endraw %}
+{% endraw %}{% endcodeblock %}
 
 最后将这些过程添加到计算的每一步中
 

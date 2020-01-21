@@ -112,14 +112,12 @@ f[]:=SetupTeardown[Print["setup"],Print["before"];Abort[];Print["after"],Print["
 
 用法说明已经介绍得比较详细了，下面给一个简单的用例
 
-{% raw %}
-```mathematica
+{% codeblock lang:mathematica %}{% raw %}
 Options[f] = {"A" -> 1, "Op" -> 2};
 f[OptionsPattern[]]:=Scope[UnpackOptions[a,op];{a,op}]
 {f[], f["A" -> 17], f["Op" -> 18], f["A" -> 16, "Op" -> 19]}
 (*Out[*]= {{1,2},{17,2},{1,18},{16,19}}*)
-```
-{% endraw %}
+{% endraw %}{% endcodeblock %}
 
 ### `CollectTo`
 

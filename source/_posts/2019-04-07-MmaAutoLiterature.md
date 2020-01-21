@@ -27,16 +27,14 @@ FrontEndTokenExecute["SelectionCloseUnselectedCells"];
 
 我们也可以将这些功能都整合进样式表中，在`CellEpilog`中添加折叠单元代码，在`GeneratedCellStyles`中改变输出单元的样式。例如，我们可以通过在样式表中添加如下内容来自定义一个`FormulaGenerator`样式
 
-{% raw %}
-```mathematica
+{% codeblock lang:mathematica %}{% raw %}
 Cell[StyleData["FormulaGenerator", StyleDefinitions -> StyleData["Input"]],
  CellEpilog:>(SelectionMove[
     EvaluationNotebook[], All, GeneratedCell]; 
   FrontEndTokenExecute["SelectionCloseUnselectedCells"]),
  GeneratedCellStyles->{"Output"->{"Output", "DisplayFormulaNumbered"}},
  MenuSortingValue->10000]
-```
-{% endraw %}
+{% endraw %}{% endcodeblock %}
 
 这样，使用`FormulaGenerator`样式的输入单元在计算后就会生成一个带标号的公式单元并自动隐藏起来。
 

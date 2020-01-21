@@ -96,8 +96,7 @@ x = 0;
 Block[{x}, Expand[(1 + x)^3]] // Trace // Column
 ```
 
-{% raw %}
-```mathematica
+{% codeblock lang:mathematica %}{% raw %}
 Block[{x},Expand[(1+x)^3]]
 {Expand[(1+x)^3],1+3 x+3 x^2+x^3}
 1+3 x+3 x^2+x^3
@@ -106,8 +105,7 @@ Block[{x},Expand[(1+x)^3]]
 {{x,0},0^3,0}
 1+0+0+0
 1
-```
-{% endraw %}
+{% endraw %}{% endcodeblock %}
 
 `Block`虽然很便利，但“成也动态定界败也动态定界”，它所带来副作用往往不是显然的，更容易引入一些潜在的错误。另一点值得注意的是，像`Table`、`Plot`之类的函数在运算时使用与Block相同的方式局部化变量的值。这意味着使用这些函数时必须同使用`Block`一样小心
 
