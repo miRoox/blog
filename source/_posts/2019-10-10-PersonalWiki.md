@@ -6,8 +6,7 @@ description: "TiddlyWiki"
 tag: ["Wiki", "Web"]
 ---
 
-搭建一个个人维基用来整理知识的想法早已有之，但具体该使用什么方案却迟迟没能定下来。
-在最初的想法里，我希望满足下面的几项需求：
+搭建一个个人维基用来整理知识的想法早已有之，但具体该使用什么方案却迟迟没能定下来。在最初的想法里，我希望满足下面的几项需求：
 
 * 内容与表现分离
 * 自动化构建
@@ -18,19 +17,11 @@ tag: ["Wiki", "Web"]
 * LaTeX公式输入
 * 代码块语法高亮
 
-作为参考，
-见过别人用 [Dokuwiki](https://www.dokuwiki.org/dokuwiki) 的，也有直接拿 Hexo 的 [Wikitte](https://github.com/zthxxx/hexo-theme-Wikitten) 主题搭建的，等等。
-当然，我自己也做过一些尝试，比如 [Zim Wiki](https://www.zim-wiki.org/) ，不过这个太简陋了，完全无法满足我的需求；
-甚至受 [小时物理百科](http://wuli.wiki/) 的影响，尝试过用 LaTeX 构建维基，但 LaTeX 对于我的需求而言又稍显复杂了，而且大量交叉引用在PDF中也并不方便阅读。
-最后在一番比较和取舍之下选择了[TiddlyWiki](https://tiddlywiki.com/)[^1]。
+作为参考，见过别人用 [Dokuwiki](https://www.dokuwiki.org/dokuwiki) 的，也有直接拿 Hexo 的 [Wikitte](https://github.com/zthxxx/hexo-theme-Wikitten) 主题搭建的，等等。当然，我自己也做过一些尝试，比如 [Zim Wiki](https://www.zim-wiki.org/) ，不过这个太简陋了，完全无法满足我的需求；甚至受 [小时物理百科](http://wuli.wiki/) 的影响，尝试过用 LaTeX 构建维基，但 LaTeX 对于我的需求而言又稍显复杂了，而且大量交叉引用在PDF中也并不方便阅读。最后在一番比较和取舍之下选择了[TiddlyWiki](https://tiddlywiki.com/)[^1]。
 
-TiddlyWiki，按官方说法是[「一款非线性个人 Web 笔记本」](https://github.com/Jermolene/TiddlyWiki5#readme)。
-相比其他笔记和 Wiki 系统，其最大的特点之一是程序本体和数据全部都在一个 html 文件内，
-这意味着组织和阅读多个词条可以在同一个页面内直接完成，内容的关联更加直接，方便互相比照。
-同时，还有着非常强大的条目管理功能和插件系统，可扩展性和可定制性都很强。
+TiddlyWiki，按官方说法是[「一款非线性个人 Web 笔记本」](https://github.com/Jermolene/TiddlyWiki5#readme)。相比其他笔记和 Wiki 系统，其最大的特点之一是程序本体和数据全部都在一个 html 文件内，这意味着组织和阅读多个词条可以在同一个页面内直接完成，内容的关联更加直接，方便互相比照。同时，还有着非常强大的条目管理功能和插件系统，可扩展性和可定制性都很强。
 
-TiddlyWiki 的优点还有很多[^2]，这里就不多赘述了。
-就我而言，更想简单说一下 TiddlyWiki 是如何满足前面提到的几项需求的：
+TiddlyWiki 的优点还有很多[^2]，这里就不多赘述了。就我而言，更想简单说一下 TiddlyWiki 是如何满足前面提到的几项需求的：
 
 * 内容与表现分离：
     * 这一项近乎是一种哲学理念，实践起来是否须要完全符合还是看具体情况。
@@ -55,11 +46,9 @@ TiddlyWiki 的优点还有很多[^2]，这里就不多赘述了。
 * 代码块语法高亮
     * Highlight.js插件：这也是官方提供的。
 
-除此之外，TiddlyWiki 还有一大优点是简单，几乎所有操作都可以在网页上完成，基本不用到处配置。
-这对于我这种对web技术基本一无所知的人来说是一个极大的优势。
+除此之外，TiddlyWiki 还有一大优点是简单，几乎所有操作都可以在网页上完成，基本不用到处配置。这对于我这种对web技术基本一无所知的人来说是一个极大的优势。
 
-不过也因为我对web技术的不了解，导致很大的功夫都花在自动部署的配置上了，最终也只是是照猫画虎。
-其间主要参考了 alexashley 的个人Wiki源码[^3]、JavaScript 标准参考教程（alpha）[^4]、《Blog自动部署实践: Hugo + Travis CI -> GitHub Pages》[^5]等资料。
+不过也因为我对web技术的不了解，导致很大的功夫都花在自动部署的配置上了，最终也只是是照猫画虎。其间主要参考了 alexashley 的个人Wiki源码[^3]、JavaScript 标准参考教程（alpha）[^4]、《Blog自动部署实践: Hugo + Travis CI -> GitHub Pages》[^5]等资料。
 
 最终弄出来的成品在：<https://miroox.github.io/wiki/>
 

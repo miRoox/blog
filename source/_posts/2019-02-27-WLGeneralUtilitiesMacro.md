@@ -6,15 +6,11 @@ description: "GeneralUtilities`"
 tag: ["编程", "Wolfram", "参考"]
 ---
 
-``GeneralUtilities` `` 是Mathematica从版本10开始新加入的一个上下文。
-其中提供了大量的实用函数，包括代码生成、调试、静态分析、迭代器对象等各个领域，一定程度上弥补了Mathematica基础设施不足的状况。
+``GeneralUtilities` `` 是Mathematica从版本10开始新加入的一个上下文。其中提供了大量的实用函数，包括代码生成、调试、静态分析、迭代器对象等各个领域，一定程度上弥补了Mathematica基础设施不足的状况。
 
-这个工具包内包含的函数十分繁杂，在当前版本11.3下，可以通过``Names["GeneralUtilities`*"]//Length``看到其共包含了514个符号。
-这篇文章简单介绍与宏有关的部分。
+这个工具包内包含的函数十分繁杂，在当前版本11.3下，可以通过``Names["GeneralUtilities`*"]//Length``看到其共包含了514个符号。这篇文章简单介绍与宏有关的部分。
 
-“宏”在编程领域往往作为一种代码生成技术使用，
-例如在一些编译型语言中，宏展开往往发生在编译或预编译阶段。
-而在``GeneralUtilities` ``的语境下，宏默认在定义时自动展开，同样也是一种代码生成技术。
+“宏”在编程领域往往作为一种代码生成技术使用，例如在一些编译型语言中，宏展开往往发生在编译或预编译阶段。而在``GeneralUtilities` ``的语境下，宏默认在定义时自动展开，同样也是一种代码生成技术。
 
 ```mathematica
 Needs["GeneralUtilities`"]
@@ -26,10 +22,7 @@ Needs["GeneralUtilities`"]
 
 ### `Scope`/`ModuleScope`
 
-我们知道，Mathematica中的局部符号往往需要显式地引入，而不像很多语言在函数体内自动带有作用域。
-这在使用大量局部变量的时候会带来一些麻烦。
-而`Scope`给出了一个解决办法，它自动解析`Scope[body]`内部的赋值语句，提取与之相关联的符号自动局域化。
-通过``?GeneralUtilities`Scope``可以看到它的用法如下：
+我们知道，Mathematica中的局部符号往往需要显式地引入，而不像很多语言在函数体内自动带有作用域。这在使用大量局部变量的时候会带来一些麻烦。而`Scope`给出了一个解决办法，它自动解析`Scope[body]`内部的赋值语句，提取与之相关联的符号自动局域化。通过``?GeneralUtilities`Scope``可以看到它的用法如下：
 
 > `Scope[body]` is a macro that expands to a `Block` with automatically populated local variable list.
 > * Variables are detected syntactically by the presence of `=` and `:=` within `body`.
@@ -38,8 +31,7 @@ Needs["GeneralUtilities`"]
 > * `sym := rhs` will localize `sym`.
 > * Local functions definitions `head[...] := rhs` do not cause localizalization of `head`.
 
-而且它作为一个宏，使用在定义中，则展开发生在定义阶段，从而可以避免调用时因解析和变换带来的额外开销。
-例如
+而且它作为一个宏，使用在定义中，则展开发生在定义阶段，从而可以避免调用时因解析和变换带来的额外开销。例如
 
 ```mathematica
 f[x_]:=Scope[a=x;b^=a;c:=a++;{d,e}={b,c};a]
@@ -56,8 +48,7 @@ Definition[f]
 > `Memoized[body]` specifies that `body` should be evaluted but cached so that subsequent calls with the same value for any bound symbol use the cached value.<br/>
 > `Memoized[body,Method->method]` can be used, where `method` is one of `{"Association", "Symbol", "Inline", "SystemCache"}`, to choose a specific caching method.
 
-即所谓的[记忆化](https://en.wikipedia.org/wiki/Memoization)手法，可以实现空间换时间的优化目的。
-例如对于Mathematica中一个比较经典的记忆化案例
+即所谓的[记忆化](https://en.wikipedia.org/wiki/Memoization)手法，可以实现空间换时间的优化目的。例如对于Mathematica中一个比较经典的记忆化案例
 
 ```mathematica
 fib[0]=0;
@@ -73,8 +64,7 @@ fib[1]=1;
 fib[n_]:=Memoized[fib[n-1]+fib[n-2],Method->"Inline"]
 ```
 
-除了`"Inline"`，`Memoized`还提供了其它几种记忆化的实现手段，包括默认的`"SystemCache"`、基于关联`"Association"`和面向符号的`"Symbol"`，这里不多赘述了。
-不过似乎目前的`"Symbol"`方法的实现有问题，无法应用于函数定义中。
+除了`"Inline"`，`Memoized`还提供了其它几种记忆化的实现手段，包括默认的`"SystemCache"`、基于关联`"Association"`和面向符号的`"Symbol"`，这里不多赘述了。不过似乎目前的`"Symbol"`方法的实现有问题，无法应用于函数定义中。
 
 ### `SetupTeardown`
 
@@ -166,9 +156,7 @@ BenchmarkPlot[{f1,f2},Identity]
 
 > `UseMacros[body]` does nothing more than trigger macro expansion, use it if you want to use macros in a function but don't need `Scope`.
 
-在不了解``GeneralUtilities` ``中宏的作用机理的情况下，这个宏的作用可能会令人困惑。
-事实上，在默认条件下，上述各种宏的自动展开只会发生在赋值等号右边的最外层使用了宏的时候发生。
-这一事实可以在上述各种的定义中一窥究竟，以`Scope`为例
+在不了解``GeneralUtilities` ``中宏的作用机理的情况下，这个宏的作用可能会令人困惑。事实上，在默认条件下，上述各种宏的自动展开只会发生在赋值等号右边的最外层使用了宏的时候发生。这一事实可以在上述各种的定义中一窥究竟，以`Scope`为例
 
 ```
 Scope /: HoldPattern[s:Set[_, _Scope]] := MacroEvaluate @ s;
@@ -197,8 +185,7 @@ Scope /: HoldPattern[tsd:TagSetDelayed[_, _, _Scope]] := MacroEvaluate @ tsd;
 
 > `MacroExpandList[expr]` expands all macros that occur in `expr`, returning a list of `Quoted` expressions that give the intermediate results after each expansion step.
 
-`MacroExpand`展开宏，但是不计算，可以用来预览宏使用的效果。
-而`MacroExpandList`列出展开宏的每一步。
+`MacroExpand`展开宏，但是不计算，可以用来预览宏使用的效果。而`MacroExpandList`列出展开宏的每一步。
 
 ### `MacroEvaluate`
 

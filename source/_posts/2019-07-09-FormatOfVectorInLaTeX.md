@@ -18,5 +18,4 @@ tag: "LaTeX"
 > 
 > 这都2018年了，别想不开老是用eps图。
 
-来自
-[为什么 用TeXstudio在 XeLaTeX下eps图片不显示, pdflatex下反而可以 ? - 李阿玲的回答 - 知乎](https://www.zhihu.com/question/284593369/answer/438941492)
+来自 [为什么 用TeXstudio在 XeLaTeX下eps图片不显示, pdflatex下反而可以 ? - 李阿玲的回答 - 知乎](https://www.zhihu.com/question/284593369/answer/438941492)
