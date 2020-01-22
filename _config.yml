@@ -176,7 +176,7 @@ theme_config:
       url: https://weibo.com/MiFantasy000
     - icon: fab fa-github
       url: https://github.com/miRoox
-  footer: ''
+  footer_post: ''
 
 markdown_it_plus:
     highlight: true
