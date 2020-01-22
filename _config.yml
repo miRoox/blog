@@ -170,6 +170,8 @@ theme_config:
         url: tags/
       rel: nofollow
   social:
+    - icon: fas fa-rss
+      url: atom.xml
     - icon: fas fa-envelope
       url: mailto:miroox@outlook.com
     - icon: fab fa-weibo
