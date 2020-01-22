@@ -12,7 +12,7 @@ tag: ["编程", "Wolfram"]
 
 这里就以前面提到的`LightField`为例说明一下如何造一个WL风格的对象。首先，分析需求，来看看预期要实现的效果：
 
-![result](/images/posts/WLStyleObject/result.png)
+{% asset_img result.png result %}
 
 首先能看到的是`LightField`对象在输出时显示为一个类似于[`SparseArray`](http://reference.wolfram.com/language/ref/SparseArray.html)那样的一个摘要框；然后，对象的属性可以通过函数参数的形式读写访问，而且对写入数据参数还会进行检查，这一点应该是WL风格的对象最核心的特征；最后，对象是能被认为是一个原子对象，这点实质是一种封装，可以避免直接用表达式的部分操作来访问对象内容，同样类似`SparseArray`。
 
@@ -100,7 +100,7 @@ Language`SetMutationHandler[LightField,mutationHandler]
 
 对象的原子化则是利用``System`Private`SetNoEntry``系列的函数，同样，下面的相关资料里有很详细的介绍。这个系列的函数在不少内部对象的实现里也可以见到，比如`Dataset`，我们不妨照着做一个。利用神器``GeneralUtilities`PrintDefinitions``获得其定义，抛开那些无关的，很容易找到下面的内容
 
-![Dataset](/images/posts/WLStyleObject/Dataset.png)
+{% asset_img Dataset.png Dataset %}
 
 中间有一些`Dataset`内部使用的注册机制，抛开那些不看，无非就是``System`Private`SetNoEntry``原子化后，利用``System`Private`NoEntryQ``检查防止无限自递归，注意两处的`Unevaluated`也是防止无限自递归的一环。在相关资料里我们看到10.4以后又引入了几个更便利的函数，于是依葫芦画瓢就可以写成
 
@@ -115,7 +115,7 @@ Language`SetMutationHandler[LightField,mutationHandler]
 
 最后是摘要框，这部分其实完全没有必要，不过说到Mathematica，优雅和颜值也是非常重要的一环，而且同样也用到了一套undocumented函数。这部分可以参考下面的相关资料，也可以用神器``GeneralUtilities`PrintDefinitions``来hack既有摘要框的对象，比如`SparseArray`
 
-![SparseArray](/images/posts/WLStyleObject/SparseArray.png)
+{% asset_img SparseArray.png SparseArray %}
 
 其核心无非就是``BoxForm`ArrangeSummaryBox``，中间量的命名也非常直白，即使不看参考资料也不难猜出使用方法。
 

@@ -135,7 +135,7 @@ BenchmarkPlot[{f1,f2},Identity]
 
 我的电脑上给出的结果为：
 
-![CollectTo](/images/posts/WLGeneralUtilitiesMacro/CollectTo.png)
+{% asset_img CollectTo.png CollectTo %}
 
 可以看到`Bag`的添加效率基本是普通列表的好几倍。
 

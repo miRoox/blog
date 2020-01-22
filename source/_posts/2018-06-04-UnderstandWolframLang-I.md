@@ -23,10 +23,10 @@ tag: ["编程", "Wolfram"]
  算术表达式
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_1.png" alt="2 a + Sqrt[b] + c^d[e] // FullForm" width="177" height="35" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_1.png  '2 a + Sqrt[b] + c^d[e] // FullForm' %}
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_2.png" alt='Plus[Times[2,a],Power[b,Rational[1,2]],Power[c,d[e]]]' width="407" height="15" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_2.png 'Plus[Times[2,a],Power[b,Rational[1,2]],Power[c,d[e]]]' %}
 </p>
 </li>
 <li>
@@ -34,10 +34,10 @@ tag: ["编程", "Wolfram"]
  列表
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_3.png" alt='{1 + 2 I, a*b + c, {2, a}, "Str"} // FullForm' width="290" height="32" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_3.png '{1 + 2 I, a*b + c, {2, a}, "Str"} // FullForm' %}
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_4.png" alt='List[Complex[1,2],Plus[Times[a,b],c],List[2,a],"Str"]' width="409" height="15" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_4.png 'List[Complex[1,2],Plus[Times[a,b],c],List[2,a],"Str"]' %}
 </p>
 </li>
 <li>
@@ -45,10 +45,10 @@ tag: ["编程", "Wolfram"]
  图形
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_5.gif" alt='\!\(\* GraphicsBox[{CircleBox[{0, 0}], InsetBox[RowBox[{RowBox[{SuperscriptBox["x", "2"], "+", SuperscriptBox["y", "2"]}], "==", "1"}], {0, 0}]}]\) //FullForm' width="170" height="108" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_5.gif '\!\(\* GraphicsBox[{CircleBox[{0, 0}], InsetBox[RowBox[{RowBox[{SuperscriptBox["x", "2"], "+", SuperscriptBox["y", "2"]}], "==", "1"}], {0, 0}]}]\) //FullForm' %}
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_6.png" alt="Graphics[List[Circle[List[0,0]],Inset[Equal[Plus[Power[x,2],Power[y,2]],1],List[0,0]]]]" width="661" height="15" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_6.png 'Graphics[List[Circle[List[0,0]],Inset[Equal[Plus[Power[x,2],Power[y,2]],1],List[0,0]]]]' %}
 </p>
 </li>
 <li>
@@ -56,10 +56,10 @@ tag: ["编程", "Wolfram"]
  非符号头部的表达式
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_7.png" alt="(1 + #) &amp;[a] // Hold // FullForm" width="214" height="32" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_7.png '(1 + #) &[a] // Hold // FullForm' %}
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_8.png" alt="Hold[Function[Plus[1,Slot[1]]][a]]" width="252" height="15" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_8.png 'Hold[Function[Plus[1,Slot[1]]][a]]' %}
 </p>
 </li>
 <li>
@@ -67,10 +67,10 @@ tag: ["编程", "Wolfram"]
  按钮控件
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_9.png" alt='\!\(\*ButtonBox["\<\"Push\"\>", Appearance->Automatic,ButtonFunction:>Print["Push!"], Evaluator->Automatic, Method->"Preemptive"]\) // FullForm' width="118" height="40" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_9.png '\!\(\*ButtonBox["\<\"Push\"\>", Appearance->Automatic,ButtonFunction:>Print["Push!"], Evaluator->Automatic, Method->"Preemptive"]\) // FullForm' %}
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_10.png" alt='Button["Push",Print["Push!"],Rule[Appearance,Automatic],Rule[Evaluator,Automatic],Rule[Method,"Preemptive"]]' width="410" height="35" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_10.png 'Button["Push",Print["Push!"],Rule[Appearance,Automatic],Rule[Evaluator,Automatic],Rule[Method,"Preemptive"]]' %}
 </p>
 </li>
 <li>
@@ -78,10 +78,10 @@ tag: ["编程", "Wolfram"]
  笔记本对象（输出仅供参考）
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_11.png" alt="CreateDocument[{x + y, 1/x + 1/y}] // FullForm" width="315" height="32" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_11.png 'CreateDocument[{x + y, 1/x + 1/y}] // FullForm' %}
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/EverythingIsAnExpression_12.png" alt='NotebookObject[FrontEndObject[LinkObject["kyhfi_shm",3,1]],56]' width="453" height="15" style="vertical-align:middle" />
+ {% asset_img EverythingIsAnExpression_12.png 'NotebookObject[FrontEndObject[LinkObject["kyhfi_shm",3,1]],56]' %}
 </p>
 </li>
 </ul>
@@ -102,18 +102,18 @@ tag: ["编程", "Wolfram"]
 <ul>
 <li>
 <p>
- <img src="/images/posts/UnderstandWolframLang/plot_1.png" alt="Plot[Sin[x], {x, 0, 2 \[Pi]}]" width="170" height="32" style="vertical-align:middle" />
+ {% asset_img plot_1.png 'Plot[Sin[x], {x, 0, 2 \[Pi]}]' %}
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/plot_2.gif" alt="plot_2.gif" width="360" height="213" style="vertical-align:middle" />
+ {% asset_img plot_2.gif plot_2.gif %}
 </p>
 </li>
 <li>
 <p>
- <img src="/images/posts/UnderstandWolframLang/plot_3.png" alt="% /. Line -> Point" width="111" height="32" style="vertical-align:middle" />
+ {% asset_img plot_3.png '% /. Line -> Point' %}
 </p>
 <p>
- <img src="/images/posts/UnderstandWolframLang/plot_4.gif" alt="plot_4.gif" width="360" height="213" style="vertical-align:middle" />
+ {% asset_img plot_4.gif plot_4.gif %}
 </p>
 </li>
 </ul>

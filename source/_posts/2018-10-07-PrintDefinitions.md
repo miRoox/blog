@@ -13,7 +13,7 @@ GeneralUtilities`PrintDefinitions[symbol]
 
 即可，如下图
 
-![usage](/images/posts/PrintDefinitions/usage.png)
+{% asset_img usage.png usage %}
 
 <!--more-->
 
