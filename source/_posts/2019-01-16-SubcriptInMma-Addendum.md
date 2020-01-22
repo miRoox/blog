@@ -7,10 +7,7 @@ tag: ["编程", "Wolfram"]
 
 我曾经写过一篇关于Mathematica中下标与赋值问题的[文章](https://miroox.github.io/2018/08/SubscriptAndDerivateInMma/)，不过那篇文章重点解决的是符号关联的问题。但有时，我们可能会遇到另一种问题，比如
 
-<pre><code>
-a=1
-a<sub>1</sub>=2 (* wrong! *)
-</code></pre>
+{% asset_img Subscript.png Subscript %}
 
 <!--more-->
 
