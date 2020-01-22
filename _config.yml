@@ -130,6 +130,10 @@ theme_config:
       icon: fas fa-archive
       url: archives/
       rel: nofollow
+    - name: 分类
+      icon: fas fa-folder-open
+      url: categories/
+      rel: nofollow
     - name: 标签
       icon: fas fa-tags
       url: tags/
@@ -169,6 +173,11 @@ theme_config:
         icon: fas fa-expand-arrows-alt
         url: tags/
       rel: nofollow
+    - widget: category
+      more:
+        icon: fas fa-expand-arrows-alt
+        url: categories/
+        rel: nofollow
   social:
     - icon: fas fa-rss
       url: atom.xml

@@ -2,7 +2,8 @@
 layout: post
 title: "旧作：关于函数列 x,x²+x,x³+3x²+x,x⁴+6x³+7x²+x,……"
 date: 2015-06-27 17:33:00
-tag: "数学"
+categories: "数理科学"
+tag: ["数学", "数列"]
 ---
 
 $$x,x^2+x,x^3+3x^2+x,x^4+6x^3+7x^2+x,\dots$$

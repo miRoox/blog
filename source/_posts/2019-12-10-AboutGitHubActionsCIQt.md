@@ -2,7 +2,8 @@
 layout: post
 title: "利用 GitHub Actions 自动化构建和发布 Qt 程序的一点经验"
 date: 2019-12-10 22:24:54
-tag: ["Qt","持续集成","编程"]
+categories: "代码编程"
+tag: ["Qt", "持续集成", "GitHub"]
 ---
 
 前一阵子 GitHub 正式发布了 [Actions](https://github.com/features/actions) 功能来提供内置的持续集成和持续发布。而我正好最近在利用 Qt 写[数字图像处理的作业](https://github.com/miRoox/HIT-DigitalImageProcessing-Postgraduate)，就想利用这个机会尝试一下基于 GitHub Actions 的持续集成。

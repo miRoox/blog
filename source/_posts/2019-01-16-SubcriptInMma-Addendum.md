@@ -2,7 +2,8 @@
 layout: post
 title: "Mathematica下标赋值问题补遗"
 date: 2019-01-16 14:55:47
-tag: ["编程", "Wolfram"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "踩坑"]
 ---
 
 我曾经写过一篇关于Mathematica中下标与赋值问题的[文章](https://miroox.github.io/2018/08/SubscriptAndDerivateInMma/)，不过那篇文章重点解决的是符号关联的问题。但有时，我们可能会遇到另一种问题，比如

@@ -3,6 +3,7 @@ layout: post
 title: "旧作：沙的狂想"
 date: 2013-08-01 00:00:00
 description: "高一暑假时写的作文，题目来自2013年辽宁卷语文作文"
+categories: "小说文艺"
 tag: ["作文"]
 ---
 

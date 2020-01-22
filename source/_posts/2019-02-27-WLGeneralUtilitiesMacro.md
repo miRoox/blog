@@ -2,7 +2,8 @@
 layout: post
 title: "Mathematica通用工具包参考（一）：宏"
 date: 2019-02-27 23:00:13
-tag: ["编程", "Wolfram", "参考"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "Undocumented", "参考"]
 ---
 
 ``GeneralUtilities` `` 是Mathematica从版本10开始新加入的一个上下文。其中提供了大量的实用函数，包括代码生成、调试、静态分析、迭代器对象等各个领域，一定程度上弥补了Mathematica基础设施不足的状况。

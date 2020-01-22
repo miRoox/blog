@@ -2,7 +2,8 @@
 layout: post
 title: "记Mathematica求导的一些坑"
 date: 2019-05-01 16:02:10
-tag: ["编程", "Wolfram"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "踩坑"]
 ---
 
 这篇文章主要是记录一下在回答贴吧上[这个问题](http://tieba.baidu.com/p/6111508459)时所发现的关于Mathematica求导的一些坑。

@@ -2,7 +2,8 @@
 layout: post
 title: "Mathematica写作自动化技巧"
 date: 2019-04-07 22:45:31
-tag: ["编程", "Wolfram"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "文学编程"]
 ---
 
 在使用Mathematica的笔记本的过程中，我们常常希望将它的代码和文档功能结合起来，例如自动将符号计算的公式、图形以文档的书写习惯展示出来，同时隐藏生成代码，使文档显示自然协调。

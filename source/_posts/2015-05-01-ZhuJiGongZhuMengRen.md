@@ -3,6 +3,7 @@ layout: post
 title: "旧作：筑基工，筑梦人"
 date: 2015-05-01 00:00:00
 description: "高中作文，题目来自2013福建卷高考语文作文，内容有修改"
+categories: "小说文艺"
 tag: ["小说", "作文"]
 ---
 

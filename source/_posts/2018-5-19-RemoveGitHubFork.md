@@ -2,6 +2,7 @@
 layout: post
 title: "解除GitHub仓库的Fork连接"
 date: 2018-05-19 23:45:10
+categories: "代码编程"
 tag: ["Git", "GitHub"]
 ---
 

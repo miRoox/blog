@@ -2,6 +2,7 @@
 layout: post
 title: "突然发现部分Wolfram演示项目支持在线运行了"
 date: 2018-12-01 20:09:39
+categories: "代码编程"
 tag: ["Wolfram"]
 ---
 

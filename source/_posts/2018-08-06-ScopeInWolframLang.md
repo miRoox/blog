@@ -2,7 +2,8 @@
 layout: post
 title: "Wolfram语言中的作用域结构"
 date: 2018-08-06 11:06:12
-tag: ["编程", "Wolfram"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "语法"]
 ---
 
 Wolfram语言中的作用域结构主要有如下5种:

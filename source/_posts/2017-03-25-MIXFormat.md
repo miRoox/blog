@@ -2,7 +2,10 @@
 layout: post
 title: "旧作：【翻译】MIX 文件格式"
 date: 2017-03-25 10:12:33
-tag: ["红警", "翻译"]
+categories:
+  - ["翻译作品"]
+  - ["代码编程"]
+tag: ["红警", "翻译", "参考", "文件格式"]
 nocopyright : true
 ---
 

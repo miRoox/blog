@@ -2,7 +2,10 @@
 layout: post
 title: "【翻译】代数数据类型的代数结构（上）"
 date: 2017-05-27 21:44:34
-tag: ["编程", "Haskell", "翻译"]
+categories:
+  - ["翻译作品"]
+  - ["代码编程"]
+tag: ["Haskell", "翻译", "科普"]
 nocopyright : true
 ---
 

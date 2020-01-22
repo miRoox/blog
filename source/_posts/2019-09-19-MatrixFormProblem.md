@@ -2,7 +2,8 @@
 layout: post
 title: "MatrixForm赋值问题"
 date: 2019-09-19 20:27:34
-tag: ["编程", "Wolfram"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "踩坑"]
 ---
 
 我们知道，赋值等过程中使用 `MatrixForm` 往往会导致后续的计算失效。比如：

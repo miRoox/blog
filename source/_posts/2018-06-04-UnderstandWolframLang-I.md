@@ -2,7 +2,8 @@
 layout: post
 title: "理解Wolfram语言（上）"
 date: 2018-06-04 14:02:10
-tag: ["编程", "Wolfram"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "语法"]
 ---
 
 ### “一切皆表达式”

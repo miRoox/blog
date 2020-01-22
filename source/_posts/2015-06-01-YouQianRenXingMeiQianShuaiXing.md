@@ -3,6 +3,7 @@ layout: post
 title: "旧作：有钱任性？没钱率性？"
 date: 2015-06-01 00:00:00
 description: "高三月考作文"
+categories: "小说文艺"
 tag: ["小说", "作文"]
 ---
 

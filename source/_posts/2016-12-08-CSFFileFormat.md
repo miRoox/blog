@@ -2,7 +2,10 @@
 layout: post
 title: "旧作：【翻译】CSF文件格式"
 date: 2016-12-08 00:24:00
-tag: ["红警", "翻译"]
+categories:
+  - ["翻译作品"]
+  - ["代码编程"]
+tag: ["红警", "翻译", "参考", "文件格式"]
 nocopyright : true
 ---
 

@@ -2,7 +2,8 @@
 layout: post
 title: "旧作：求和公式Σk·a_k"
 date: 2014-04-01 00:00:00
-tag: "数学"
+categories: "数理科学"
+tag: ["数学", "数列"]
 ---
 
 高二做题时发现的，非常trivial，但可以避开错位相减法繁琐方法。

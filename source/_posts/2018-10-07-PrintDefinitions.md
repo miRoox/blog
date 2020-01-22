@@ -2,6 +2,7 @@
 layout: post
 title: "如何方便快捷地查看Mathematica中的符号定义？"
 date: 2018-10-07 13:50:12
+categories: "代码编程"
 tag: ["编程", "Wolfram"]
 ---
 

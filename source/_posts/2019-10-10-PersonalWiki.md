@@ -2,6 +2,7 @@
 layout: post
 title: "尝试用TiddlyWiki搭建个人维基知识库"
 date: 2019-10-10 20:44:23
+categories: "代码编程"
 tag: ["Wiki", "Web"]
 ---
 

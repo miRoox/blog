@@ -3,7 +3,8 @@ layout: post
 title: "关于LaTeX插入矢量图的格式问题"
 date: 2019-07-09 14:51:22
 description: "只要输出介质为pdf，就不要使用 eps 和 PSTricks 插图"
-tag: "LaTeX"
+categories: "代码编程"
+tag: ["LaTeX", "踩坑"]
 ---
 
 简单来说，外部插入矢量图图尽量使用 PDF 格式，以避免生成时的转换。

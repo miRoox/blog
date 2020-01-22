@@ -2,7 +2,8 @@
 layout: post
 title: "Mathematica黑魔法：符号沙盒"
 date: 2019-01-17 23:02:13
-tag: ["编程", "Wolfram"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "Undocumented"]
 ---
 
 ### 问题的引入

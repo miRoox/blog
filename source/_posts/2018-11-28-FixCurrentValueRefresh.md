@@ -2,7 +2,8 @@
 layout: post
 title: "解决CurrentValue等动态刷新无法控制的问题"
 date: 2018-11-28 23:09:13
-tag: ["编程", "Wolfram"]
+categories: "代码编程"
+tag: ["编程", "Wolfram", "踩坑"]
 ---
 
 > All problems in computer science can be solved by another level of indirection. [^1]

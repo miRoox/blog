@@ -2,6 +2,7 @@
 layout: post
 title: "如何提交函数到 Wolfram Function Repository"
 date: 2019-10-12 15:23:32
+categories: "代码编程"
 tag: ["Wolfram"]
 ---
 
