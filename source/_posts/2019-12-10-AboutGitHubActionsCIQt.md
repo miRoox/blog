@@ -2,11 +2,12 @@
 layout: post
 title: "利用 GitHub Actions 自动化构建和发布 Qt 程序的一点经验"
 date: 2019-12-10 22:24:54
-description: "Qt"
 tag: ["Qt","持续集成","编程"]
 ---
 
 前一阵子 GitHub 正式发布了 [Actions](https://github.com/features/actions) 功能来提供内置的持续集成和持续发布。而我正好最近在利用 Qt 写[数字图像处理的作业](https://github.com/miRoox/HIT-DigitalImageProcessing-Postgraduate)，就想利用这个机会尝试一下基于 GitHub Actions 的持续集成。
+
+<!--more-->
 
 当然，有问题首先是找轮子。很快我就找到了 [jaredtao/HelloActions-Qt](https://github.com/jaredtao/HelloActions-Qt)，以及相关的几篇博客文章[^1] [^2]。照猫画虎很快就把各个平台下的自动构建弄成了。但那篇关于自动发行的文章[^2]对多配置下 [create-release](https://github.com/actions/create-release) 重复执行导致失败这一问题的解决方案不太令我满意，总觉得太繁琐了，而且我对其中所用的 PowerShell 也不熟。不过这个问题显然不是特殊情况，想必也曾有人就此提出了问题，而也许已经有别人回答了更好的解决方案也不一定。果不其然，早就有人在 create-release 的仓库下的 issues 中提出过这个问题，并且这个 issue 尚未关闭，也就是并没有一个非常令人满意的解答。不过，其中有一个回答[^3]给我一点启发，它将使用多种配置的发布任务与创建 release 的任务分开，而通过 [upload-artifact](https://github.com/actions/upload-artifact) 和 [download-artifact](https://github.com/actions/upload-artifact) 来传递 release URL。另一个关联的仓库也有人给出了类似的思路[^4]：
 

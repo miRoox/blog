@@ -2,13 +2,14 @@
 layout: post
 title: "MatrixForm赋值问题"
 date: 2019-09-19 20:27:34
-description: "MatrixForm"
 tag: ["编程", "Wolfram"]
 ---
 
 我们知道，赋值等过程中使用 `MatrixForm` 往往会导致后续的计算失效。比如：
 
 {% asset_img problem.svg a = { {1, 2}, {3, 4} } // MatrixForm %}
+
+<!--more-->
 
 对于这个问题，最正统的解决办法当然是在赋值等计算过程中不使用 `MatrixForm`，而只在显示时以 `MatrixForm` 呈现[^1]。典型的方案是在输出部分才加上 `MatrixForm` 包装。不过对于既有代码的问题，一个个手动修改可能略显麻烦，这时可以借助 `EchoFunction` 在实现类似效果的同时保持代码结构基本不变：
 

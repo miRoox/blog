@@ -2,7 +2,6 @@
 layout: post
 title: "Mathematica黑魔法：符号沙盒"
 date: 2019-01-17 23:02:13
-description: "Internal`EmbeddedSymbols、Internal`InheritedBlock"
 tag: ["编程", "Wolfram"]
 ---
 
@@ -27,6 +26,8 @@ v=ValueQ[y+0];
 ```
 
 则会得到`{True,1}`。
+
+<!--more-->
 
 具有[值集](http://reference.wolfram.com/language/tutorial/ManipulatingValueLists.html)知识的读者可能很容易猜想`ValueQ`可能具有类似下面的实现
 

@@ -2,11 +2,12 @@
 layout: post
 title: "如何提交函数到 Wolfram Function Repository"
 date: 2019-10-12 15:23:32
-description: "Wolfram Function Repository"
 tag: ["Wolfram"]
 ---
 
 首先，你需要一个 [Wolfram 账户](https://account.wolfram.com/)。
+
+<!--more-->
 
 然后，你需要[申请一个 Publisher ID](https://datarepository.wolframcloud.com/request-publisher-id)，这点在许多讲述提交函数到WFR的文章中都没提到。大致的申请流程可以在[参考文档](https://reference.wolfram.com/language/workflow/AcquireAResourceSystemPublisherID.html)里找到。
 

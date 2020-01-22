@@ -2,7 +2,6 @@
 layout: post
 title: "Mathematica下标赋值问题补遗"
 date: 2019-01-16 14:55:47
-description: "SetAttributes[Subscript,HoldFirst]"
 tag: ["编程", "Wolfram"]
 ---
 
@@ -12,6 +11,8 @@ tag: ["编程", "Wolfram"]
 a=1
 a<sub>1</sub>=2 (* wrong! *)
 </code></pre>
+
+<!--more-->
 
 也就是定义了符号的本值之后又想定义带有同样符号的下标值。当然，我们是不推荐这么写的，这会使符号的含义很含混。
 不过单从实用的角度考虑，让上面的代码正常工作并不困难，只需要对`Subscript`添加`HoldFirst`属性即可。

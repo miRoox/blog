@@ -2,13 +2,14 @@
 layout: post
 title: "如何在Wolfram语言里造一个Wolfram语言风格的对象"
 date: 2019-05-06 22:27:17
-description: "Language`SetMutationHandler"
 tag: ["编程", "Wolfram"]
 ---
 
 最近在做 [ComputationalOptics包](https://github.com/miRoox/ComputationalOptics) 的时候为了把 [`LightField`](https://github.com/miRoox/ComputationalOptics/blob/1197dbf20758271c93acdbc4f780913443847b95/ComputationalOptics/Kernel/LightField.m) 实现为一个比较典型的Wolfram语言风格的对象，使用了很多undocumented方法，这里主要是做一下记录。
 
 需要注意的是，这里的“对象”不是指“面向对象”里所说的对象（虽然也有点关系），而是类似于 [`Entity`](http://reference.wolfram.com/language/ref/Entity.html) 或者 [`TemporalData`](http://reference.wolfram.com/language/ref/TemporalData.html) 这类的对象。
+
+<!--more-->
 
 这里就以前面提到的`LightField`为例说明一下如何造一个WL风格的对象。首先，分析需求，来看看预期要实现的效果：
 

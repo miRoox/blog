@@ -2,13 +2,14 @@
 layout: post
 title: "基于规则的带步骤符号求导器"
 date: 2019-07-12 22:27:17
-description: "StepD"
 tag: ["编程", "Wolfram"]
 ---
 
 我们知道，[Wolfram|Alpha](https://www.wolframalpha.com) 有一个名为 [Step-by-Step Solutions](https://www.wolframalpha.com/examples/pro-features/step-by-step-solutions/) 的功能，可以显示一些数学问题求解的过程。又比如，著名的 [Rubi](https://rulebasedintegration.org/) 可以在求解积分的同时显示积分的求解步骤。实际上，这些系统背后大抵都是基于模式匹配和规则变换而实现的，因而原则上来说自己也可以实现一个。当然，就实践而言这些系统都过于复杂了，例如 Rubi 包含了超过六千条规则，其背后的原理远非三言两语可以阐明的。不过，相比于积分，微分的运算规则要简明得多，而且对规则的应用总是简单机械的，并不像积分那样可能会运用到各种技巧。因此，本文将利用 Mathematica 的模式匹配和规则实现一个带步骤符号求导器。
 
 {% asset_img DvsInt.JPG Differentiation vs Integration %}
+
+<!--more-->
 
 ### 求导规则
 

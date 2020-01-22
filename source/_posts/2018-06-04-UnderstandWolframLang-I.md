@@ -2,7 +2,6 @@
 layout: post
 title: "理解Wolfram语言（上）"
 date: 2018-06-04 14:02:10
-description: "Everything is an expression."
 tag: ["编程", "Wolfram"]
 ---
 
@@ -11,6 +10,8 @@ tag: ["编程", "Wolfram"]
 > Everything is an expression.
 
 是的，理解了上面这句话，就基本理解了Wolfram语言。至于其它的，那都是细枝末节。
+
+<!--more-->
 
 当然，想要理解这句话，首先要明白Wolfram语言里的表达式是什么。<span id="demo_0">典型地</span>，`f[x,y]` 就是一个[*表达式*](http://reference.wolfram.com/language/tutorial/UnderstandWolframLang/EverythingIsAnExpression_html)，它由一个*头部* `f`，以及两个*项* `x` 和 `y` 构成。通常，我们会用 `f[x,y]` 来表示一个函数 $f(x,y)$，但同时，这种形式也代表了Wolfram语言里表达式的一般结构。
 一般的，表达式由头部和项组成，而头部和项同样也是表达式。这种结构不仅可以用来表示函数，它也可以用来表示[列表](http://reference.wolfram.com/language/ref/List.html)、[图形](http://reference.wolfram.com/language/ref/Graphics.html)、[动态控件](http://reference.wolfram.com/language/tutorial/IntroductionToControlObjects.html)，甚至是[笔记本](http://reference.wolfram.com/language/tutorial/NotebooksAsWolframLanguageExpressions.html)。表达式的这种灵活性为Wolfram语言语法的高度一致性，在理解了这种一致性的基础上，再去看Wolfram语言的各种行为，就会变得好理解很多。

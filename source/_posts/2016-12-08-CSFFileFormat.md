@@ -2,7 +2,6 @@
 layout: post
 title: "旧作：【翻译】CSF文件格式"
 date: 2016-12-08 00:24:00
-description: "红色警戒等游戏中的CSF文件格式"
 tag: ["红警", "翻译"]
 nocopyright : true
 ---
@@ -14,6 +13,8 @@ nocopyright : true
 #  CSF文件格式
 
 CSF文件存储了红色警戒2/尤里的复仇（也有将军/绝命时刻和其它可能）的字符串表。
+
+<!--more-->
 
 ## 标头(The Header)
 

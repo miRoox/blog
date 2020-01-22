@@ -2,7 +2,6 @@
 layout: post
 title: "Mathematica通用工具包参考（一）：宏"
 date: 2019-02-27 23:00:13
-description: "GeneralUtilities`"
 tag: ["编程", "Wolfram", "参考"]
 ---
 
@@ -11,6 +10,8 @@ tag: ["编程", "Wolfram", "参考"]
 这个工具包内包含的函数十分繁杂，在当前版本11.3下，可以通过``Names["GeneralUtilities`*"]//Length``看到其共包含了514个符号。这篇文章简单介绍与宏有关的部分。
 
 “宏”在编程领域往往作为一种代码生成技术使用，例如在一些编译型语言中，宏展开往往发生在编译或预编译阶段。而在``GeneralUtilities` ``的语境下，宏默认在定义时自动展开，同样也是一种代码生成技术。
+
+<!--more-->
 
 ```mathematica
 Needs["GeneralUtilities`"]

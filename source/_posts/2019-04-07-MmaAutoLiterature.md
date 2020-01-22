@@ -2,11 +2,12 @@
 layout: post
 title: "Mathematica写作自动化技巧"
 date: 2019-04-07 22:45:31
-description: "Mathematica写作自动化技巧：改变输出样式、隐藏输入"
 tag: ["编程", "Wolfram"]
 ---
 
 在使用Mathematica的笔记本的过程中，我们常常希望将它的代码和文档功能结合起来，例如自动将符号计算的公式、图形以文档的书写习惯展示出来，同时隐藏生成代码，使文档显示自然协调。
+
+<!--more-->
 
 为了达到这一目的，首先需要的是将输入自动隐藏。我们知道，即使在自然状态下，双击输出单元的单元括号`]`即可隐藏输入单元。这一操作实际相当于选中输出单元后执行了前端令牌["SelectionCloseUnselectedCells"](https://reference.wolfram.com/language/ref/frontendobject/SelectionCloseUnselectedCells.html)，因此，可以将其写作程序代码
 
