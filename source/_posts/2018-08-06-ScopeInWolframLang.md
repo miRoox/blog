@@ -341,5 +341,5 @@ End[];
 
 ----
 
-相关代码交互见 [笔记本](/assets/posts/ScopeInWolframLang/Scope.nb)。
+相关代码交互见 [笔记本](https://www.wolframcloud.com/obj/miroox/Published/ScopeInWolframLangaugae.nb)。
 
