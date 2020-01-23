@@ -228,4 +228,188 @@ $$b-a< \sup_{\text{有限集}F\subset J }\sum_{\alpha\in F}|I_\alpha|< \sum_{n\i
 
 导出矛盾，故 $[a,b]$ 是不可数集。
 
-(待补完)
+### 2.3.5
+
+#### (i)
+
+将 $S$ 中的点按大小排序 $a_0< a_1< \cdots< a_n$
+
+显然只要某个 $I_\alpha\subset[x,y]$，就有 $S\cap[x,y]=\empty$
+
+假设有某个 $a_i\in[x,y]$，由 $\lambda$ 的选取，必有 $a_{i-1}< x,a_{i+1}>y$
+
+故 $[x,y]$ 中最多含有 $S$ 的一个点。
+
+#### (ii)
+
+$$x\in I_\alpha=(k_\alpha,l_\alpha)$$
+
+显然 $y$ 只可能满足 $k_\alpha< x< y< l_\alpha$ 或者 $y\ge l_\alpha$ 其中之一，
+
+而后者显然使 $l_\alpha\in[x,y]$，与题设矛盾，故 $y\in(k_\alpha,l_\alpha)$
+
+#### (iii)
+
+$$[x,y]\cap S=\{h\}$$
+
+以 $h$ 为端点的开区间不会盖住 $h$
+
+对于任何一个盖住 $h$ 的开区间 $I_\beta=(k_\beta,l_\beta)$，必有 $[x,y]\subset I_\beta$，
+
+否则 $[x,y]\cap S=\{h,k_\beta\}\veebar [x,y]\cap S=\{h,l_\beta\}$ 为真，与(i)中结论矛盾，故 $[x,y]\subset I_\beta$
+
+#### (iv)
+
+由(i)的结论和(ii),(iii)的讨论，综述易得。
+
+### 2.3.6
+
+由 2.3.3(vii) 的有限覆盖定理
+
+$$\exist\text{有限集}F\subset J,[a,b]\subset\bigcup_{\alpha\in F}I_\alpha$$
+
+又由 2.3.5(iv) 的结论，综述易得。
+
+### 2.3.7
+
+#### (i)
+
+必要性显然；
+
+充分性：
+
+假若 $\exist\varepsilon_0>0,E\cap(l-\varepsilon_0,l+\varepsilon_0)$是有限集，记为 $\{a_1,a_2,\dots,a_n\}$
+
+取 
+
+$$\varepsilon=\min_{\substack{1\le i\le n\\ a_i\ne l} }\left|a_i-l\right|$$
+
+则 $(E\setminus\{l\})\cap(l-\varepsilon,l+\varepsilon)=\empty$，矛盾，故充分性得证。
+
+#### (ii)
+
+根据否定命题的原则，显然。
+
+#### (iii)
+
+取 $[a,b]\supset E$，若 $E$ 无聚点，则 $\forall x\in E,\exist \varepsilon_x>0, E\cap(x-\varepsilon_x,x+\varepsilon_x)$是有限集
+
+由 2.3.3(vii) 的有限覆盖定理
+
+$$\exist\{x_1,x_2,\dots,x_n \}\subset[a,b], [a,b]\subset\bigcup_{j=1}^n\left(x_j-\varepsilon_{x_j},x_j+\varepsilon_{x_j} \right)$$
+
+而
+
+$$E=E\cap[a,b]\subset\bigcup_{j=1}^nE\cap\left(x_j-\varepsilon_{x_j},x_j+\varepsilon_{x_j} \right)$$
+
+（有限个有限集之并）
+
+故 $E$ 是有限集。
+
+#### (iv)
+
+若 $\Z$ 有上界，则 $\Z_{+}$ 亦有上界，而 $\Z_{+}$ 以 $1$ 为下界，故 $\Z_{+}$ 有界
+
+由 (iii) 的聚点存在定理， $\Z_{+}$ 有聚点，记为 $l$
+
+则 $\left(l-\frac{1}{3},l+\frac{1}{3} \right)\cap\Z_{+}$ 应为无限集，但 $\left(l-\frac{1}{3},l+\frac{1}{3} \right)$ 中至多包含一个整数，与 $l$ 是聚点矛盾，故 $\Z_{+}$ 无上界，$\Z$ 亦无上界。
+
+同理易证 $\Z$ 无下界。
+
+#### (v)
+
+由 (iv) $\Z$ 无界易得。
+
+#### (vi)
+
+假若 $\exist\varepsilon_0>0,\forall N\in\N,\frac{n-m}{N}\ge\varepsilon_0$， 则 $\forall N\in\N,N\le\frac{n-m}{\varepsilon_0}$ 与 $\N$ 无上界矛盾，得证。
+
+#### (vii)
+
+任意给定 $\varepsilon>0$，对 $\forall x\in[a,b]$，
+
+由 (v) 知 $\forall N\in\N,\exist m,n\in\Z, m< Na< Nb< n$，即有 $\frac{m}{N}< a\le x\le b< \frac{n}{N}$
+
+又由 (vi) 知 $\forall\varepsilon>0,\exist N\in\N,\frac{n-m}{N}< \varepsilon$
+
+故
+
+$$\forall\varepsilon>0,(\mathbb{Q}\cap[a,b]\setminus\{x\})\cap(x-\varepsilon,x+\varepsilon)\ne\empty$$
+
+即 $x$ 是 $\mathbb{Q}\cap[a,b]$ 的聚点。
+
+### 2.3.8
+
+#### (i)
+
+显然。
+
+#### (ii)
+
+取 $[a,b]$ 使 $\forall n\in\N,x_n\in[a,b]$，记 $[a_1,b_1]=[a,b]$
+
+将 $[a_1,b_1]$ 二等分，则至少有一边包含 $\{x_n\}$ 的无穷多项，记为 $[a_2,b_2]$，
+
+类似地，将 $[a_2,b_2]$ 二等分，取包含 $\{x_n\}$ 无穷多项的一边 $[a_3,b_3]$，
+
+……
+
+以此类推得到闭区间套 $[a_n,b_n]$，且 $\forall n\in\N$，$[a_n,b_n]$ 包含 $\{x_n\}$ 的无穷多项
+
+由 2.3.1 的闭区间套定理，并注意到 $b_n-a_n=\frac{b-a}{2^{n-1} }\to0$
+
+$$\exist l,\bigcap_{n=1}^{\infty}[a_n,b_n]=\{l\}\text{而}\forall\varepsilon>0,\exist n\in\N,(l-\varepsilon,l+\varepsilon)\supset[a_n,b_n]$$
+
+故 $l$ 是 $\{x_n\}$ 的聚点。
+
+### 2.3.9
+
+不妨设 $b\in B$，取 $x=\sup A$
+
+显然 $\forall\varepsilon>0,A\cap(x-\varepsilon,x+\varepsilon)\ne\empty$，而 $x\le b$
+
+若 $x=b$，显然 $B\cap(x-\varepsilon,x+\varepsilon)\ni b$
+
+若 $x< b$，$\forall\varepsilon>0,\forall y\in A,x+\varepsilon>y$，而 $[a,b]=A\cup B$
+
+故 $0< \varepsilon< b-x, x+\varepsilon\in B$，得证。
+
+### 2.3.10
+
+#### (i)
+
+考察 $n+1$ 个实数 $l\alpha-\lfloor l\alpha\rfloor$（其中 $l\in\{1,2,\dots,n+1\}$）
+
+注意 $\forall l\in\{1,2,\dots,n+1\}, l\alpha-\lfloor l\alpha\rfloor< 1$
+
+故在这组数中至少有两个数满足
+
+$$\left|(l_2\alpha-\lfloor l_2\alpha\rfloor)-(l_1\alpha-\lfloor l_1\alpha\rfloor) \right|< \frac{1}{n},\quad 1< l_1< l_2< n+1$$
+
+现取 $k=l_2-l_1\le n, m=\lfloor l_2\alpha\rfloor-\lfloor l_1\alpha\rfloor$，则 $k\alpha-m< \frac{1}{n}$
+
+即有
+
+$$\left|\alpha-\frac{m}{k} \right|< \frac{1}{kn}$$
+
+#### (ii)
+
+假若只有有限个这样的有理数 $\frac{m_i}{n_i}$，满足 $\left|\alpha-\frac{m_i}{n_i} \right|< \frac{1}{n_i^2}$（$i\in\{1,2,\dots,p\}$）
+
+令
+
+$$\delta=\min_{1\le i\le p}\left|\alpha-\frac{m_i}{n_i} \right|$$
+
+取 $N>\frac{1}{\delta}$，并取 $m,n\in N,(0< n< N)$ 使得
+
+$$\left|\alpha-\frac{m}{n} \right|< \frac{1}{nN}< \frac{1}{n^2}$$
+
+即 $m,n$ 满足题意
+
+同时注意到
+
+$$\left|\alpha-\frac{m}{n} \right|< \frac{1}{nN}< \frac{\delta}{n}< \delta$$
+
+即 $\frac{m}{n}\notin\left\{\frac{m_i}{n_i}:1\le i\le p \right\}$，导出矛盾
+
+故满足 $\left|\alpha-\frac{m}{n}\right|< \frac{1}{n^2}$ 的有理数 $\frac{m}{n}$ 有无限个。
