@@ -28,7 +28,7 @@
     "hexo-related-popular-posts": "^3.0.3",
     "hexo-renderer-ejs": "^0.3.0",
     "hexo-renderer-less": "^0.2.0",
-    "hexo-renderer-markdown-it-plus": "^1.0.4",
+    "hexo-renderer-markdown-it": "^4.0.0",
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.2.0"
   }
