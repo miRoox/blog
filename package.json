@@ -30,6 +30,7 @@
     "hexo-renderer-less": "^0.2.0",
     "hexo-renderer-markdown-it-plus": "^1.0.4",
     "hexo-renderer-stylus": "^0.3.0",
-    "hexo-server": "^0.2.0"
+    "hexo-server": "^0.2.0",
+    "hexo-wordcount": "^6.0.1"
   }
 }
