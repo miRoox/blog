@@ -14,8 +14,8 @@ tag: ["数学", "概率论", "傅里叶变换"]
 
 ## 引言
 
-{% blockquote Henri Poincaré\[2] %}
-Everyone believes in it: experimentalists believing that it is a mathematical theorem, mathematicians believing that it is an empirical fact.
+{% blockquote Henri Poincaré %}
+Everyone believes in it: experimentalists believing that it is a mathematical theorem, mathematicians believing that it is an empirical fact. [2]
 {% endblockquote %}
 
 对中心极限定理的研究实质上始于1733年棣莫弗（A. de Moirvre）对二项分布的极限分布的研究，并得到了拉普拉斯（P.-S. Laplace）、泊松（S.-D. Possion）、贝塞尔（A.L. Bessel）、柯西（A.-L. Cauchy）等人的进一步研究和推广。但总体上，由于当时概率论不太受数学家重视，中心极限定理在很长一段时间没有得到一个完整的严格证明，直到1901年李雅普诺夫（A.M. Lyapunov）借助特征函数的工具才有了一个条件较为宽松的严格证明。\[3]

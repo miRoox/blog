@@ -16,7 +16,7 @@ GitHub的Fork功能实际上主要是服务于Pull Request，然而我以前并�
 
 首先，把删去所有与本地仓库连接的远程仓库
 
-```
+```shell
 $ git remote remove origin
 $ git remote remove upstream
 ```
@@ -25,7 +25,7 @@ $ git remote remove upstream
 
 最后，在GitHub上重新建立同名仓库，然后把本地仓库关联上去。
 
-```
+```shell
 $ git remote add origin <your repo>
 ```
 
