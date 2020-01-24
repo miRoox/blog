@@ -105,6 +105,15 @@ import:
     - '<script type="text/javascript" color="27,195,251" opacity="0.7" zIndex="-1" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>'
 theme_config:
   word_count: true
+  music:
+    enable: true 
+    color: '#1BCDFC'
+    mode: random
+    server: netease
+    type: playlist
+    id: 592343641
+    volume: 0.7
+    autoplay: false 
   cover:
     scheme: search
     height: half
@@ -190,6 +199,8 @@ theme_config:
       url: https://weibo.com/MiFantasy000
     - icon: fab fa-github
       url: https://github.com/miRoox
+    - icon: fas fa-headphones-alt
+      url: https://music.163.com/#/user/home?id=415505414
   footer_post: ''
 
 markdown_it_plus:
