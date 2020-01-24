@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>C/C++的一些常见的坑(1) | miRoox的博客</title>
+  
+  <meta name="keywords" content="编程 / 数理 / 小说">
+  
+  
+  <meta name="description" content="现役研究生">
+  
+
+  
+  <link rel="alternate" href="/blog/atom.xml" title="miRoox的博客">
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.png">
+  
+
+  
+    <link rel="stylesheet" href="/blog/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post half'>
+      
+        
+  <h1 class='title'>miRoox的博客</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="https://miroox.github.io/"
+            
+            
+            id="https:miroox.github.io">
+            <i class='fas fa-home fa-fw'></i>&nbsp;主页
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/blog/archives/"
+            
+              rel="nofollow"
+            
+            
+            id="blogarchives">
+            <i class='fas fa-archive fa-fw'></i>&nbsp;归档
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="https://miroox.github.io/wiki/"
+            
+              rel="nofollow"
+            
+            
+            id="https:miroox.github.iowiki">
+            <i class='fab fa-wikipedia-w fa-fw'></i>&nbsp;知识库
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/blog/about/"
+            
+              rel="nofollow"
+            
+            
+            id="blogabout">
+            <i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/blog/' >
+        
+          miRoox的博客
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/blog/"
+                  
+                  
+                  id="blog">
+									<i class='fas fa-clock fa-fw'></i>&nbsp;最近
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogarchives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogcategories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogtags">
+									<i class='fas fa-tags fa-fw'></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://miroox.github.io/wiki/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="https:miroox.github.iowiki">
+									<i class='fab fa-wikipedia-w fa-fw'></i>&nbsp;知识库
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/blog/"
+                
+                
+                id="blog">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogarchives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/tags/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogtags">
+								<i class='fas fa-tags fa-fw'></i>&nbsp;标签列表
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://miroox.github.io/wiki/"
+                
+                  rel="nofollow"
+                
+                
+                id="https:miroox.github.iowiki">
+								<i class='fab fa-wikipedia-w fa-fw'></i>&nbsp;个人维基
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogabout">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于本站
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/blog/2017/11/TrapInCCpp-1/">
+        C/C++的一些常见的坑(1)
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="http://miRoox.github.io/blog" rel="nofollow">
+        
+          <i class="fas fa-user" aria-hidden="true"></i>
+        
+        <p>miRoox</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2017-11-18</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/blog/categories/代码编程/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>代码编程</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item wordcount">
+      <a class='notlink'>
+        <i class="fas fa-keyboard" aria-hidden="true"></i>
+        <p>字数统计:</p>
+        <p>1.7k字</p>
+      </a>
+    </div>
+    <div class="new-meta-item readtime">
+      <a class='notlink'>
+        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+        <p>阅读时长≈</p>
+        <p>6分</p>
+      </a>
+    </div>
+  
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <p>根据个人经验和见闻总结而来。主要涉及C和C++语法和语义方面的一些陷阱。</p>
+<a id="more"></a>
+<h3 id="求值顺序"><a class="markdownIt-Anchor" href="#求值顺序"></a> 求值顺序</h3>
+<p>在著名的《谭C》教材的误导下，中国学生对表达式的求值顺序的误解可能是最深的。首先要明确地是，<strong>运算符对运算数的求值顺序与运算符的结合性没有任何关系</strong>，而且，无论是C语言还是C++，<strong>几乎所有</strong>运算符对运算数进行求值的顺序都是 <em>未指定的</em>，甚至在某些情况下会构成 <em>未定义行为</em>。</p>
+<p>另一方面，C和C++在这方面的规定较为复杂，而且随着标准版本的变化，相关概念也有较大的变化。因此，除非你自认为自己对这方面的规定十分清楚，我建议尽量让程序里的每一个表达式保持结构简单，尤其避免在一个表达式对同一个对象里产生超过一次 <em>副作用</em>。这不光可以避免未定义行为或者未指定行为，也有助于增强程序的可读性。例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//bad</span></span><br><span class="line"></span><br><span class="line">i = ++i + i++;     <span class="comment">// C 和 C++ 中都为未定义的行为</span></span><br><span class="line"></span><br><span class="line">i = ++i + <span class="number">1</span>;       <span class="comment">// C 中始终为未定义行为；C++11 前为未定义的行为</span></span><br><span class="line"></span><br><span class="line">f(i = <span class="number">-2</span>, i = <span class="number">-2</span>); <span class="comment">// C 中始终为未定义行为；C++17 前为未定义的行为</span></span><br><span class="line"></span><br><span class="line">a[i] = i++;        <span class="comment">// C 中始终为未定义行为；C++17 前为未定义的行为</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//good</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//i = ++i + i++;   // what does the coder want to do?</span></span><br><span class="line"></span><br><span class="line">i = i + <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">i = <span class="number">-2</span>;</span><br><span class="line">f(i, i);</span><br><span class="line"></span><br><span class="line">++i;</span><br><span class="line">a[i] = i;</span><br></pre></td></tr></table></figure>
+<p>参见 <a href="http://zh.cppreference.com/w/c/language/eval_order" target="_blank" rel="noopener">C：求值顺序</a>、<a href="http://zh.cppreference.com/w/cpp/language/eval_order" target="_blank" rel="noopener">C++：求值顺序</a></p>
+<h3 id="字符常量字面量的类型"><a class="markdownIt-Anchor" href="#字符常量字面量的类型"></a> 字符常量/字面量的类型</h3>
+<p>简而言之，C语言中无前缀修饰的 <em>字符常量</em> 的类型是 <code>int</code> ；而C++中无前缀修饰的 <em>字符字面量</em> 的类型默认是 <code>char</code> （除非字符在执行字符集中无法用单字节表示，这时其类型为 <code>int</code> ）。</p>
+<p>是的，在 C 和 C++ 里他们的叫法都不同。C 把嵌入代码的常量值称为 <em>常量</em> 或 <em>字面量</em> ，其中 <em>常量</em> 是 <em>右值</em>表达式， <em>字面量</em> 是 <em>左值</em>表达式 ；而 C++ 中统称为 <em>字面量</em> 。</p>
+<p>其它编码的字符常量/字面量的具体内容参见下面的链接。</p>
+<p>参见：<br>
+<a href="http://zh.cppreference.com/w/c/language/character_constant" target="_blank" rel="noopener">C：字符常量</a>、<a href="http://zh.cppreference.com/w/cpp/language/character_literal" target="_blank" rel="noopener">C++：字符字面量</a></p>
+<h3 id="数组指代器不是指针常量"><a class="markdownIt-Anchor" href="#数组指代器不是指针常量"></a> 数组指代器不是指针常量</h3>
+<p>同样是受《谭C》等一批国内教科书的毒害，有不少人认为数组就是指针常量。但实际上数组的类型就是数组类型，只是使用时大多数情况下会隐式转换成其首元素指针的 <em>非左值</em> 。正因为这种转换的存在，所以我们才能像指针一般使用数组，又因为其结果是非左值，所以不可以被赋值。</p>
+<p>但另一方面，在C语言中，函数参数列表中的数组声明，在对应的函数调用时其实际参数的值是一个指针。（可以说是C的一个黑点了）</p>
+<p>详细的转换规则见下面的链接。</p>
+<p>参见：<br>
+<a href="http://zh.cppreference.com/w/c/language/conversion#.E6.95.B0.E7.BB.84.E5.88.B0.E6.8C.87.E9.92.88.E8.BD.AC.E6.8D.A2" target="_blank" rel="noopener">C：数组到指针转换</a>、<a href="http://zh.cppreference.com/w/cpp/language/implicit_conversion#.E6.95.B0.E7.BB.84.E5.88.B0.E6.8C.87.E9.92.88.E8.BD.AC.E6.8D.A2" target="_blank" rel="noopener">C++：数组到指针转换</a></p>
+<h3 id="static-储存类指定符"><a class="markdownIt-Anchor" href="#static-储存类指定符"></a> <code>static</code> 储存类指定符</h3>
+<p>之所以写这一条，是因为听说有驱动程序把以 <code>static</code> 修饰的对象定义在头文件里导致内存爆炸的传闻。这么看 <code>static</code> 确实有一些坑，无论是C语言还是C++，作为储存类指定符的 <code>static</code> 都具有多重语义，而且在不同情况下含义不尽相同。</p>
+<p>简洁起见，这里不考虑与 <code>thread_local</code>（或者 <code>_Thread_local</code> ）组合的情况；标识符（C）和名称（C++）统称为名称。</p>
+<p>首先要明确的是，储存类指定符都包含两层内涵，一是指定 <strong>对象</strong> 的 <em>储存期</em> ，一是指定 <strong>名称</strong> 的 <em>链接</em> 。这是两个层次的内涵，也是很多初学者比较模糊的。</p>
+<p>一方面，被 <code>static</code> 修饰的对象拥有 <em>静态储存期</em> ，该对象生存期基本和整个程序一样长；另一方面，被 <code>static</code> 修饰的名称通常为 <em>内部链接</em> ，即该名称的只在当前的翻译单元可被引用；除非被 <code>static</code> 修饰的是一个局部变量，那么它（的名称）的链接为 <em>无链接</em> ，即该名称只能在它所在的作用域中被引用。</p>
+<p>可以看出，<code>static</code> 确实可以让我们在头文件里定义函数或者对象而不引发重定义错误，因为包含一个头文件就是把整个头文件复制到源文件里，那么在每一个包含该头文件的源文件里都有一个被 <code>static</code> 修饰的对象/函数，它们虽然具有同样的名称，但由于所用是内部链接，所以它们指代的是（各自翻译单元的）不同实体，因而在内存受限的设备上大量包含这样的头文件就有可能导致内存爆炸。</p>
+<p>还要注意的一点是，对于C，无论是全局还是块作用域中的静态对象，其初始化器必须为常量表达式，且初始化发生于主函数前。而对于C++，静态局部变量的可以不用常量表达式初始化，而且可能等到控制流首次经过其声明时才初始化。</p>
+<p>（注1：对于C++，类中的 <code>static</code> 声明代表不绑定到类实例的 <a href="http://zh.cppreference.com/w/cpp/language/static" target="_blank" rel="noopener">静态成员</a> ）</p>
+<p>（注2：C99后 <code>static</code> 还可能用于函数声明中的 <a href="http://zh.cppreference.com/w/c/language/array" target="_blank" rel="noopener">静态数组下标</a> ）</p>
+<p>参考：<br>
+<a href="http://zh.cppreference.com/w/c/language/storage_duration" target="_blank" rel="noopener">C：存储类指定符</a>、<a href="http://zh.cppreference.com/w/cpp/language/storage_duration" target="_blank" rel="noopener">C++：存储类指定符</a>、<a href="http://zh.cppreference.com/w/c/language/constant_expression#.E9.9D.99.E6.80.81.E5.88.9D.E5.A7.8B.E5.8C.96.E5.99.A8" target="_blank" rel="noopener">C：静态初始化器</a>、<a href="http://zh.cppreference.com/w/cpp/language/initialization#.E9.9D.99.E6.80.81.E5.88.9D.E5.A7.8B.E5.8C.96" target="_blank" rel="noopener">C++：静态初始化</a>、<a href="http://zh.cppreference.com/w/cpp/language/storage_duration#.E9.9D.99.E6.80.81.E5.B1.80.E9.83.A8.E5.8F.98.E9.87.8F" target="_blank" rel="noopener">C++：静态局部变量</a></p>
+<h3 id="某些整数运算的坑"><a class="markdownIt-Anchor" href="#某些整数运算的坑"></a> 某些整数运算的坑</h3>
+<p>懒得写了，见 @孙明琦 的 <a href="https://zhuanlan.zhihu.com/p/26675068" target="_blank" rel="noopener">整理一发C++整数运算的所有细节</a></p>
+<h3 id="main-函数的原型"><a class="markdownIt-Anchor" href="#main-函数的原型"></a> <code>main</code> 函数的原型</h3>
+<p>著名语言律师 @幻の上帝 对此 <a href="https://github.com/FrankHB/pl-docs/blob/master/zh-CN/main-function.md" target="_blank" rel="noopener">早有论述</a>。这里只摘录一下主要结论：</p>
+<blockquote>
+<p><code>void main()</code> 在 C 仍然可以是符合标准(conforming)的扩展；<br>
+在 C++ 中不返回 <code>int</code> 的 <code>main</code> 直接不符合标准。</p>
+</blockquote>
+<p>参见 <a href="http://zh.cppreference.com/w/c/language/main_function" target="_blank" rel="noopener">C：主函数</a>、<a href="http://zh.cppreference.com/w/cpp/language/main_function" target="_blank" rel="noopener">C++：主函数</a></p>
+<h3 id="volatile-类型限定符"><a class="markdownIt-Anchor" href="#volatile-类型限定符"></a> <code>volatile</code> 类型限定符</h3>
+<p><code>volatile</code> 大概是被误解最多的 C/C++ 语言特性之一。</p>
+<p>简而言之，<code>volatile</code> 只是代表 <em><strong>读副作用</strong></em> ，与什么 <em>多线程</em>、 <em>原子性</em> 以及 <em>memory barrier</em> 都没什么关系（尽管 <a href="https://docs.microsoft.com/zh-cn/cpp/cpp/volatile-cpp" target="_blank" rel="noopener">MSVC</a> 提供了额外的语义使之可以用于多线程编程，但这种特性不可移植，不推荐使用）。而 <code>volatile</code> 本来的意图主要是用于模拟映射于内存的硬件I/O，以及信号处理函数。</p>
+<p>（注：<a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/atomic.html" target="_blank" rel="noopener">Java</a> 里的 <code>volatile</code> 具有原子访问的语义。）</p>
+<p>参见 <a href="http://zh.cppreference.com/w/c/language/volatile" target="_blank" rel="noopener">C：volatile 类型限定符</a>、<a href="http://zh.cppreference.com/w/cpp/language/cv" target="_blank" rel="noopener">C++：cv 类型限定符</a>、<a href="https://docs.microsoft.com/zh-cn/cpp/cpp/volatile-cpp" target="_blank" rel="noopener">MSDN：volatile</a>、<a href="http://zh.cppreference.com/w/c/program/signal#.E4.BF.A1.E5.8F.B7.E5.A4.84.E7.90.86.E5.87.BD.E6.95.B0" target="_blank" rel="noopener">C：信号处理函数</a>、<a href="http://zh.cppreference.com/w/cpp/language/as_if" target="_blank" rel="noopener">C++：如同规则</a></p>
+<hr>
+<p>应该会有下一篇的，大概。</p>
+
+      </div>
+      
+      
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-01-24T16:39:03+00:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>更新于 2020年1月25日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/参考/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>参考</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/编程/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>编程</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/C语言/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>C语言</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/C/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/语法/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>语法</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/踩坑/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>踩坑</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://miRoox.github.io/blog/2017/11/TrapInCCpp-1/&title=C/C++的一些常见的坑(1) | miRoox的博客&summary=根据个人经验和见闻总结而来。主要涉及C和C++语法和语义方面的一些陷阱。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://miRoox.github.io/blog/2017/11/TrapInCCpp-1/&title=C/C++的一些常见的坑(1) | miRoox的博客&summary=根据个人经验和见闻总结而来。主要涉及C和C++语法和语义方面的一些陷阱。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://miRoox.github.io/blog/2017/11/TrapInCCpp-1/&title=C/C++的一些常见的坑(1) | miRoox的博客&summary=根据个人经验和见闻总结而来。主要涉及C和C++语法和语义方面的一些陷阱。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+      
+      
+          <div class="prev-next">
+              
+                  <section class="prev">
+                      <span class="art-item-left">
+                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                          <h4>
+                              <a href="/blog/2018/05/2018-5-19-RemoveGitHubFork/" rel="prev" title="解除GitHub仓库的Fork连接">
+                                
+                                    解除GitHub仓库的Fork连接
+                                
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/blog/tags/Git/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> Git</a> <a class="tag" href="/blog/tags/GitHub/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> GitHub</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/blog/2017/10/ImageEncryptImprovedChirikovMap/" rel="prev" title="基于改进的Chirikov映射的彩色图像加密算法">
+                                  
+                                      基于改进的Chirikov映射的彩色图像加密算法
+                                  
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/blog/tags/图像加密/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 图像加密</a> <a class="tag" href="/blog/tags/图像处理/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 图像处理</a> <a class="tag" href="/blog/tags/混沌/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 混沌</a> <a class="tag" href="/blog/tags/算法/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 算法</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
+          </div>
+      
+    </section>
+  </article>
+
+
+
+  <!-- 显示推荐文章和评论 -->
+
+
+
+  
+
+
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'C/C++的一些常见的坑(1)',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+      
+        
+          
+          
+            
+              <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='/blog/images/avatar.jpg'/>
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/blog/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:miroox@outlook.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://weibo.com/MiFantasy000"
+              class="social fab fa-weibo flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/miRoox"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=415505414"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#求值顺序"><span class="toc-text"> 求值顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符常量字面量的类型"><span class="toc-text"> 字符常量/字面量的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组指代器不是指针常量"><span class="toc-text"> 数组指代器不是指针常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static-储存类指定符"><span class="toc-text"> static 储存类指定符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#某些整数运算的坑"><span class="toc-text"> 某些整数运算的坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main-函数的原型"><span class="toc-text"> main 函数的原型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#volatile-类型限定符"><span class="toc-text"> volatile 类型限定符</span></a></li></ol>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/blog/categories/代码编程/" href="/blog/categories/代码编程/"><div class='name'>代码编程</div><div class='badge'>(31)</div></a></li>
+        
+          <li><a class="flat-box" title="/blog/categories/小说文艺/" href="/blog/categories/小说文艺/"><div class='name'>小说文艺</div><div class='badge'>(12)</div></a></li>
+        
+          <li><a class="flat-box" title="/blog/categories/数理科学/" href="/blog/categories/数理科学/"><div class='name'>数理科学</div><div class='badge'>(8)</div></a></li>
+        
+          <li><a class="flat-box" title="/blog/categories/杂谈散记/" href="/blog/categories/杂谈散记/"><div class='name'>杂谈散记</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box" title="/blog/categories/翻译作品/" href="/blog/categories/翻译作品/"><div class='name'>翻译作品</div><div class='badge'>(5)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+            
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+    href="/blog/tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/blog/tags/C/" style="font-size: 14px; color: #999">C++</a> <a href="/blog/tags/C语言/" style="font-size: 14px; color: #999">C语言</a> <a href="/blog/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/blog/tags/GitHub/" style="font-size: 15.25px; color: #919191">GitHub</a> <a href="/blog/tags/Haskell/" style="font-size: 15.25px; color: #919191">Haskell</a> <a href="/blog/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/blog/tags/Qt/" style="font-size: 15.25px; color: #919191">Qt</a> <a href="/blog/tags/Undocumented/" style="font-size: 16.5px; color: #888">Undocumented</a> <a href="/blog/tags/Web/" style="font-size: 14px; color: #999">Web</a> <a href="/blog/tags/Wiki/" style="font-size: 14px; color: #999">Wiki</a> <a href="/blog/tags/Wolfram/" style="font-size: 24px; color: #555">Wolfram</a> <a href="/blog/tags/作文/" style="font-size: 22.75px; color: #5e5e5e">作文</a> <a href="/blog/tags/傅里叶变换/" style="font-size: 14px; color: #999">傅里叶变换</a> <a href="/blog/tags/功能模拟/" style="font-size: 17.75px; color: #808080">功能模拟</a> <a href="/blog/tags/参考/" style="font-size: 19px; color: #777">参考</a> <a href="/blog/tags/哲学/" style="font-size: 16.5px; color: #888">哲学</a> <a href="/blog/tags/图像加密/" style="font-size: 14px; color: #999">图像加密</a> <a href="/blog/tags/图像处理/" style="font-size: 14px; color: #999">图像处理</a> <a href="/blog/tags/小说/" style="font-size: 21.5px; color: #666">小说</a> <a href="/blog/tags/微积分/" style="font-size: 17.75px; color: #808080">微积分</a> <a href="/blog/tags/拖放/" style="font-size: 14px; color: #999">拖放</a> <a href="/blog/tags/持续集成/" style="font-size: 14px; color: #999">持续集成</a> <a href="/blog/tags/散记/" style="font-size: 14px; color: #999">散记</a> <a href="/blog/tags/数列/" style="font-size: 16.5px; color: #888">数列</a> <a href="/blog/tags/数学/" style="font-size: 20.25px; color: #6f6f6f">数学</a> <a href="/blog/tags/文件格式/" style="font-size: 15.25px; color: #919191">文件格式</a> <a href="/blog/tags/文学编程/" style="font-size: 14px; color: #999">文学编程</a> <a href="/blog/tags/文言文/" style="font-size: 14px; color: #999">文言文</a> <a href="/blog/tags/杂谈/" style="font-size: 14px; color: #999">杂谈</a> <a href="/blog/tags/概率论/" style="font-size: 14px; color: #999">概率论</a> <a href="/blog/tags/混沌/" style="font-size: 14px; color: #999">混沌</a> <a href="/blog/tags/科幻/" style="font-size: 14px; color: #999">科幻</a> <a href="/blog/tags/科普/" style="font-size: 17.75px; color: #808080">科普</a> <a href="/blog/tags/程序设计/" style="font-size: 14px; color: #999">程序设计</a> <a href="/blog/tags/笔记/" style="font-size: 14px; color: #999">笔记</a> <a href="/blog/tags/符号计算/" style="font-size: 14px; color: #999">符号计算</a> <a href="/blog/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/blog/tags/红警/" style="font-size: 17.75px; color: #808080">红警</a> <a href="/blog/tags/编程/" style="font-size: 24px; color: #555">编程</a> <a href="/blog/tags/翻译/" style="font-size: 19px; color: #777">翻译</a> <a href="/blog/tags/语法/" style="font-size: 16.5px; color: #888">语法</a> <a href="/blog/tags/踩坑/" style="font-size: 20.25px; color: #6f6f6f">踩坑</a> <a href="/blog/tags/逻辑/" style="font-size: 14px; color: #999">逻辑</a> <a href="/blog/tags/题解/" style="font-size: 15.25px; color: #919191">题解</a> <a href="/blog/tags/马克思主义/" style="font-size: 14px; color: #999">马克思主义</a>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/blog/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:miroox@outlook.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://weibo.com/MiFantasy000"
+            class="social fab fa-weibo flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/miRoox"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=415505414"
+            class="social fas fa-headphones-alt flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
+  </div>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/blog/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/29/91197b04c13f512f734a76d4ac422d89dbe229.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/29/91197b04c13f512f734a76d4ac422d89dbe229.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/blog/js/app.js"></script>
+
+
+  <script src="/blog/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script type="text/javascript" color="27,195,251" opacity="0.7" zIndex="-1" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
