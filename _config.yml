@@ -178,6 +178,10 @@ theme_config:
     - widget: author
       avatar: /images/avatar.jpg
       social: true
+    - widget: plain
+      icon: fas fa-bell
+      title: 布告板
+      body: '博客迁移中……'
     - widget: toc
     - widget: tagcloud
       icon: fas fa-tags
