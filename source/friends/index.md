@@ -40,13 +40,21 @@ links:
     icon: fas fa-user-tie
     items:
     - name: 卢昌海
-      avatar: http://www.changhai.org/files/images/logo.gif
+      avatar: https://www.changhai.org/files/images/logo.gif
       url: https://www.changhai.org/
       backgroundColor: '#6A5ACD'
       textColor: '#FFF'
       tags:
       - 科普
       - 数学
+    - name: Liam Huang
+      avatar: https://liam.page/images/avatar/avatar.webp
+      url: https://liam.page/
+      backgroundColor: '#FFF'
+      textColor: '#282828'
+      tags:
+      - TeX
+      - 技术
 ---
 
 友链交换示例：
