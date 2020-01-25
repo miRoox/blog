@@ -220,6 +220,14 @@ theme_config:
   footer_post: ''
   footer: '———————————————— 我可是有底线的！ ————————————————'
 
+# Comments
+gitalk:
+  clientID: 72d968977988a0f2857a
+  clientSecret: 545b7fd3220ded515ef4b37df88eacb7a0d25387
+  repo: blog
+  owner: miRoox
+  admin: ["miRoox"]
+
 markdown_it_plus:
     highlight: true
     html: true
