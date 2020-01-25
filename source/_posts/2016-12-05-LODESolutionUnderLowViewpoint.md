@@ -127,11 +127,15 @@ $$y''+py'+qy=\mathrm{e}^{\alpha x} [ P(x)\cos \beta x+Q(x)\sin \beta x ] \tag{9}
 
 这是前面一般形式的一种特殊的情况，只需要注意如下两个事实：
 
-①由欧拉恒等式 $\mathrm{e}^{\imath x}=\cos x+\imath \sin x$，知上式右边可化为 $S(x)\mathrm{e}^{\lambda x}$ 
+①由欧拉恒等式 $\mathrm{e}^{\imath x}=\cos x+\imath \sin x$，知上式右边可化为
+
+$$S(x)\mathrm{e}^{\lambda x}$$
 
 其中，$\lambda =\alpha +\imath \beta$，$S(x)$是适当的 $n$ 次多项式； 
 
-②对于 $n$ 次多项式 $S(x)$，若 $\lambda \neq 0$，则 $\int S(x)\mathrm{e}^{\lambda x}=T(x)\mathrm{e}^{\lambda x}+C$ 
+②对于 $n$ 次多项式 $S(x)$，若 $\lambda \neq 0$，则
+
+$$\int S(x)\mathrm{e}^{\lambda x}=T(x)\mathrm{e}^{\lambda x}+C$$
 
 其中，$T(x)$ 也是 $n$ 次多项式。
 

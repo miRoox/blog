@@ -400,7 +400,7 @@ $$\left|\alpha-\frac{m}{k} \right|< \frac{1}{kn}$$
 
 $$\delta=\min_{1\le i\le p}\left|\alpha-\frac{m_i}{n_i} \right|$$
 
-取 $N>\frac{1}{\delta}$，并取 $m,n\in N,(0< n< N)$ 使得
+取 $N>\frac{1}{\delta}$，并取 $m,n\in\N,(0< n< N)$ 使得
 
 $$\left|\alpha-\frac{m}{n} \right|< \frac{1}{nN}< \frac{1}{n^2}$$
 
