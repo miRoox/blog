@@ -126,6 +126,10 @@ theme_config:
         icon: fas fa-archive
         url: archives/
         rel: nofollow
+      - name: 友链
+        icon: fas fa-user-friends
+        url: friends/
+        rel: nofollow
       - name: 知识库
         icon: fab fa-wikipedia-w
         url: https://miroox.github.io/wiki/
@@ -150,6 +154,10 @@ theme_config:
       icon: fas fa-tags
       url: tags/
       rel: nofollow
+    - name: 友链
+      icon: fas fa-user-friends
+      url: friends/
+      rel: nofollow
     - name: 知识库
       icon: fab fa-wikipedia-w
       url: https://miroox.github.io/wiki/
@@ -165,6 +173,10 @@ theme_config:
     - name: 标签列表
       icon: fas fa-tags
       url: tags/
+      rel: nofollow
+    - name: 友情链接
+      icon: fas fa-user-friends
+      url: friends/
       rel: nofollow
     - name: 个人维基
       icon: fab fa-wikipedia-w
