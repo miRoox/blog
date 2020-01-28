@@ -31,13 +31,21 @@ tag: ["图像加密", "图像处理", "混沌", "算法"]
 
 Chirikov标准映射表达式为：
 
-![Chrikov map](/chirikov.png)
+$$\begin{pmatrix}
+x_{n+1} \\ y_{n+1}
+\end{pmatrix}=
+\begin{pmatrix}
+(k\sin y_n+x_n)\mod 2\pi\\
+(x_{n+1}+y_n)\mod 2\pi
+\end{pmatrix}$$
 
 包含有一个 $k$ 参数.
 
-| ![k=0.5](/k=0.5.png) <br/> $k=0.5$ | ![k=1.2](/k=1.2.png) <br/> $k=1.2$ |
-| ![k=4.5](/k=4.5.png) <br/> $k=4.5$ | ![k=6.5](/k=6.5.png) <br/> $k=6.5$ |
-| ![k=8.2](/k=8.2.png) <br/> $k=8.2$ | ![k=10](/k=10.png) <br/> $k=10$    |
+|  |  |
+:-: | :-:
+| ![k=0.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/k=0.5.png) <br/> $k=0.5$ | ![k=1.2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/k=1.2.png) <br/> $k=1.2$ |
+| ![k=4.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/k=4.5.png) <br/> $k=4.5$ | ![k=6.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/k=6.5.png) <br/> $k=6.5$ |
+| ![k=8.2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/k=8.2.png) <br/> $k=8.2$ | ![k=10](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/k=10.png) <br/> $k=10$    |
 
 **不同参数 $k$ 对应的映射的迭代轨迹**
 
@@ -45,15 +53,23 @@ Chirikov标准映射表达式为：
 
 从映射图像可以看出，只有当 $k$ 的大小超过某一阈值后，映射才会变得混沌，均匀充满整个相空间。为此，我们在其中添加了一个参数 $h$ ，增加了混沌映射输入参数的任意性。改进后的Chirikov映射表达式：
 
-![improved Chrikov map](/improved-chirikov.png)
+$$\begin{pmatrix}
+x_{n+1} \\ y_{n+1}
+\end{pmatrix}=
+\begin{pmatrix}
+(k\sin y_n+x_n)\mod 2\pi\\
+(x_{n+1}+hy_n)\mod 2\pi
+\end{pmatrix}$$
 
 包含了 $k$ 和 $h$ 两个参数.
 
-| | ![h=1,k=2](/h=1,k=2.png) <br/> $h=1$ $k=2$ |
-| ![h=1.5,k=0.5](/h=1.5,k=0.5.png) <br/> $h=1.5$ $k=0.5$ | ![h=1.5,k=2](/h=1.5,k=2.png) <br/> $h=1.5$ $k=2$ |
-| ![h=2,k=0.5](/h=2,k=0.5.png) <br/> $h=2$ $k=0.5$ | ![h=2,k=0.5](/h=2,k=0.5.png) <br/> $h=2$ $k=0.5$ |
-| ![h=2,k=1](/h=2,k=1.png) <br/> $h=2$ $k=1$ | ![h=2,k=1](/h=2,k=1.png) <br/> $h=2$ $k=1$ |
-| ![h=3.5,k=1](/h=3.5,k=1.png) <br/> $h=3.5$ $k=1$ | ![h=3.5,k=2](/h=3.5,k=2.png) <br/> $h=3.5$ $k=2$ |
+|  |  |
+:-: | :-:
+| | ![h=1,k=2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=1,k=2.png) <br/> $h=1$ $k=2$ |
+| ![h=1.5,k=0.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=1.5,k=0.5.png) <br/> $h=1.5$ $k=0.5$ | ![h=1.5,k=2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=1.5,k=2.png) <br/> $h=1.5$ $k=2$ |
+| ![h=2,k=0.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=2,k=0.5.png) <br/> $h=2$ $k=0.5$ | ![h=2,k=0.5](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=2,k=0.5.png) <br/> $h=2$ $k=0.5$ |
+| ![h=2,k=1](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=2,k=1.png) <br/> $h=2$ $k=1$ | ![h=2,k=1](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=2,k=1.png) <br/> $h=2$ $k=1$ |
+| ![h=3.5,k=1](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=3.5,k=1.png) <br/> $h=3.5$ $k=1$ | ![h=3.5,k=2](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/h=3.5,k=2.png) <br/> $h=3.5$ $k=2$ |
 
 **不同 $h$、$k$ 参数对应的映射的迭代轨迹**
 
@@ -67,7 +83,7 @@ Chirikov标准映射表达式为：
 
 ②将密钥代表的参数映射到合适的范围内；
 
-③读取图片的像素数据成一个\[行,列,RGB\]的三维数组，并将每个R或G或B值转换成8位的bit array，然后将其展平为长度为 $N$ 的一维数组；
+③读取图片的像素数据成一个\[行,列,RGB]的三维数组，并将每个R或G或B值转换成8位的bit array，然后将其展平为长度为 $N$ 的一维数组；
 
 ④用第②步生成的参数，使用改进的Chirikov映射生成一个充分长的序对 $(x,y)$ 列表并线性地扩充为 $n\times N$ 的整型序对列表；
 
@@ -98,10 +114,10 @@ Block[{data,pos},data=source;
 
 | 原图像 | 加密图像 | 解密图像 |
 |:------:|:--------:|:--------:|
-| ![origin](/origin.png) | ![encrypted](/encrypted.png) | ![decrypted](/origin.png) |
+| ![origin](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/origin.png) | ![encrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/encrypted.png) | ![decrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/origin.png) |
 
-| ![histogram](/histogram.png) |
-|=====
+| ![histogram](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/histogram.png) |
+| :-: |
 | **原图像素和加密像素分布直方图** |
 
 由直方图可以看出，加密算法将图片的像素分布均匀化，有效的增加了原图像素的熵值。基本排除通过加密图像就能看出原图像的大概轮廓的可能性。
@@ -112,7 +128,7 @@ Block[{data,pos},data=source;
 
 | 保持其它参数不变，改变 $h$ | 保持其它参数不变，改变 $k$ |
 |:--------------------------:|:--------------------------:|
-| ![MSE-h](/mse-h.png) | ![MSE-k](/mse-k.png) |
+| ![MSE-h](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/mse-h.png) | ![MSE-k](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/mse-k.png) |
 
 MSE(means square error)为均方误差，表征原始图像与解密图像的差异。MSE=0时表示两图像相等。由上图可知，密钥参数取值范围进入到一个很小的区间（ 10 <sup>-15</sup> 数量级）时，才有可能将图片解密出来。这能有效防止对加密图像使用枚举遍历进行破解。
 
@@ -120,8 +136,8 @@ MSE(means square error)为均方误差，表征原始图像与解密图像的差
 
 | 被遮挡的加密图像 | 对应的解密图像 |
 |:----------------:|:--------------:|
-| ![25cover-encrypted](/25cover-encrypted.png) | ![25cover-decrypted](/25cover-decrypted.png) |
-| ![50cover-encrypted](/50cover-encrypted.png) | ![50cover-decrypted](/50cover-decrypted.png) |
+| ![25cover-encrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/25cover-encrypted.png) | ![25cover-decrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/25cover-decrypted.png) |
+| ![50cover-encrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/50cover-encrypted.png) | ![50cover-decrypted](https://github.com/miRoox/image-encryption-with-improved-Chirikov-map/raw/gh-pages/resource/50cover-decrypted.png) |
 
 上表显示对应对加密图像不同遮挡面积的还原效果。遮挡方法是用绘图工具在加密图像上填充了一个多边形。当遮挡面积约为原图的25%时，解密图像与原图像间的MSE=0.039，视觉效果上仍能清楚分辨出与原图的形状、色彩信息。当遮挡面积约为原图的50%时，解密图像与原图像间的MSE=0.154，此时只能勉强看到原图的轮廓，色彩信息已不可辩。
 
