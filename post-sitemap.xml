@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>http://miRoox.github.io/blog/2014/12/Miniascape/</loc>
+        <lastmod>2020-01-29T13:25:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://miRoox.github.io/blog/2013/07/FenDou/</loc>
+        <lastmod>2020-01-29T10:40:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://miRoox.github.io/blog/2017/10/ImageEncryptImprovedChirikovMap/</loc>
         <lastmod>2020-01-28T14:19:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -329,14 +345,6 @@
 
     <url>
         <loc>http://miRoox.github.io/blog/2019/12/AboutGitHubActionsCIQt/</loc>
-        <lastmod>2020-01-22T14:41:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://miRoox.github.io/blog/2013/07/FenDou/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

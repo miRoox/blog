@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: Wolfram | miRoox的博客</title>
+  <title>Archives: 2014/12 | miRoox的博客</title>
   
   <meta name="keywords" content="编程 / 数理 / 小说">
   
@@ -324,13 +324,17 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      
-<div class='l_main'>
-  
-    
-      
+      <div class='l_main'>
+	
+		
   <section class="post-list">
     
+      
+        
+          
+        
+      
+    
     
       
         
@@ -346,8 +350,8 @@
       
         
   <h2 class="title">
-    <a href="/blog/2018/12/WolframOnlineDemo/">
-      突然发现部分Wolfram演示项目支持在线运行了
+    <a href="/blog/2014/12/Miniascape/">
+      旧作：盆景
     </a>
   </h2>
 
@@ -377,7 +381,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-12-01</p>
+    <p>2015-01-01</p>
   </a>
 </div>
 
@@ -387,647 +391,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blog/categories/代码编程/' rel="nofollow">
+    <a href='/blog/categories/小说文艺/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>代码编程</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-  
-    <div class="new-meta-item wordcount">
-      <a class='notlink'>
-        <i class="fas fa-keyboard" aria-hidden="true"></i>
-        <p>字数统计:</p>
-        <p>106字</p>
-      </a>
-    </div>
-    <div class="new-meta-item readtime">
-      <a class='notlink'>
-        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
-        <p>阅读时长≈</p>
-        <p>1分</p>
-      </a>
-    </div>
-  
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>如题，已经有<strong>部分</strong>Wolfram演示项目支持在线运行，尽管这个功能貌似还在测试中。</p>
-      
-        <div class="readmore">
-          <a href="/blog/2018/12/WolframOnlineDemo/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blog/tags/Wolfram/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Wolfram</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/blog/2018/11/FixCurrentValueRefresh/">
-      解决CurrentValue等动态刷新无法控制的问题
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    
-      <a href="http://miRoox.github.io/blog" rel="nofollow">
-        
-          <i class="fas fa-user" aria-hidden="true"></i>
-        
-        <p>miRoox</p>
-      </a>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-11-28</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blog/categories/代码编程/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>代码编程</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-  
-    <div class="new-meta-item wordcount">
-      <a class='notlink'>
-        <i class="fas fa-keyboard" aria-hidden="true"></i>
-        <p>字数统计:</p>
-        <p>466字</p>
-      </a>
-    </div>
-    <div class="new-meta-item readtime">
-      <a class='notlink'>
-        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
-        <p>阅读时长≈</p>
-        <p>1分</p>
-      </a>
-    </div>
-  
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <blockquote>
-<p>All problems in computer science can be solved by another level of indirection. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-</blockquote>
-<p>最近在拿Mathematica做一些小东西的时候发现<code>CurrentValue</code>等函数在动态中刷新不受<code>Refresh</code>等方式影响。比如</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Dynamic</span>[<span class="keyword">Refresh</span>[<span class="keyword">CurrentValue</span>[<span class="string">"MousePosition"</span>], <span class="keyword">None</span>]]</span><br></pre></td></tr></table></figure>
-<p>输出会不断刷新，并不受<code>Refresh[□, None]</code>结构控制。</p>
-      
-        <div class="readmore">
-          <a href="/blog/2018/11/FixCurrentValueRefresh/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blog/tags/编程/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 编程</a>
-        
-          <a href="/blog/tags/踩坑/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 踩坑</a>
-        
-          <a href="/blog/tags/Wolfram/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Wolfram</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/blog/2018/10/PrintDefinitions/">
-      如何方便快捷地查看Mathematica中的符号定义？
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    
-      <a href="http://miRoox.github.io/blog" rel="nofollow">
-        
-          <i class="fas fa-user" aria-hidden="true"></i>
-        
-        <p>miRoox</p>
-      </a>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-10-07</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blog/categories/代码编程/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>代码编程</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-  
-    <div class="new-meta-item wordcount">
-      <a class='notlink'>
-        <i class="fas fa-keyboard" aria-hidden="true"></i>
-        <p>字数统计:</p>
-        <p>182字</p>
-      </a>
-    </div>
-    <div class="new-meta-item readtime">
-      <a class='notlink'>
-        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
-        <p>阅读时长≈</p>
-        <p>1分</p>
-      </a>
-    </div>
-  
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>使用</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GeneralUtilities`PrintDefinitions[symbol]</span><br></pre></td></tr></table></figure>
-<p>即可，如下图</p>
-<img src="/blog/2018/10/PrintDefinitions/usage.png" title="usage">
-      
-        <div class="readmore">
-          <a href="/blog/2018/10/PrintDefinitions/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blog/tags/编程/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 编程</a>
-        
-          <a href="/blog/tags/Wolfram/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Wolfram</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/blog/2018/08/SubscriptAndDerivateInMma/">
-      Mathematica下标与导数赋值问题的解决方法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    
-      <a href="http://miRoox.github.io/blog" rel="nofollow">
-        
-          <i class="fas fa-user" aria-hidden="true"></i>
-        
-        <p>miRoox</p>
-      </a>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-08-23</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blog/categories/代码编程/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>代码编程</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-  
-    <div class="new-meta-item wordcount">
-      <a class='notlink'>
-        <i class="fas fa-keyboard" aria-hidden="true"></i>
-        <p>字数统计:</p>
-        <p>929字</p>
-      </a>
-    </div>
-    <div class="new-meta-item readtime">
-      <a class='notlink'>
-        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
-        <p>阅读时长≈</p>
-        <p>3分</p>
-      </a>
-    </div>
-  
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>众所周知，Mathematica中虽然使用下标形式非常方便，但如果对下标结构进行直接赋值，它将关联到内部符号<code>Subscript</code>上。这样，在我们大量清理符号定义的时候可能会漏掉一些定义。类似地，导数<code>Derivative</code>有同样的问题，比如对于</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f'=df</span><br></pre></td></tr></table></figure>
-<p>使用</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Clear</span>[f]</span><br><span class="line"><span class="keyword">Clear</span>[<span class="string">"`*"</span>]</span><br></pre></td></tr></table></figure>
-<p>并不能清除<code>f'</code>的定义。</p>
-      
-        <div class="readmore">
-          <a href="/blog/2018/08/SubscriptAndDerivateInMma/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blog/tags/编程/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 编程</a>
-        
-          <a href="/blog/tags/踩坑/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 踩坑</a>
-        
-          <a href="/blog/tags/Wolfram/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Wolfram</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/blog/2018/08/UnicodeCharInMmaPackage/">
-      Mathematica程序包的中文与Unicode处理
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    
-      <a href="http://miRoox.github.io/blog" rel="nofollow">
-        
-          <i class="fas fa-user" aria-hidden="true"></i>
-        
-        <p>miRoox</p>
-      </a>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-08-08</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blog/categories/代码编程/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>代码编程</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-  
-    <div class="new-meta-item wordcount">
-      <a class='notlink'>
-        <i class="fas fa-keyboard" aria-hidden="true"></i>
-        <p>字数统计:</p>
-        <p>357字</p>
-      </a>
-    </div>
-    <div class="new-meta-item readtime">
-      <a class='notlink'>
-        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
-        <p>阅读时长≈</p>
-        <p>1分</p>
-      </a>
-    </div>
-  
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>Mathematica在处理字符时默认总会将所有字符转换为ASCII字符表示，例如<code>π</code>会转化为<code>\[Pi]</code>，而像汉字<code>仪</code>这样的一般字符会转化为<code>\:4eea</code>。</p>
-<p>这种设计固然可以避免某些环境对非ASCII字符不支持的困难，而且在Mathematica环境下会自动转换成原本的字符，但对于一般的文本阅读环境而言，尤其是在代码中使用一些中文文本或者注释时，这样的内容阅读起来根本无法理解。</p>
-<p>为了方便在没有Mathematica的环境下也能方便的阅读程序包中的非ASCII的一般字符，下面脚本提供了将<code>\:nnnn</code>形式的转义序列转换为UTF-8编码下对应的Unicode字符的简单方法</p>
-      
-        <div class="readmore">
-          <a href="/blog/2018/08/UnicodeCharInMmaPackage/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blog/tags/编程/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 编程</a>
-        
-          <a href="/blog/tags/踩坑/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 踩坑</a>
-        
-          <a href="/blog/tags/Wolfram/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Wolfram</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/blog/2018/08/ScopeInWolframLang/">
-      Wolfram语言中的作用域结构
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    
-      <a href="http://miRoox.github.io/blog" rel="nofollow">
-        
-          <i class="fas fa-user" aria-hidden="true"></i>
-        
-        <p>miRoox</p>
-      </a>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-08-06</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blog/categories/代码编程/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>代码编程</p>
+      <p>小说文艺</p>
     </a>
   </div>
 
@@ -1048,7 +414,7 @@
       <a class='notlink'>
         <i class="fas fa-hourglass-half" aria-hidden="true"></i>
         <p>阅读时长≈</p>
-        <p>11分</p>
+        <p>9分</p>
       </a>
     </div>
   
@@ -1070,17 +436,10 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <p>Wolfram语言中的作用域结构主要有如下5种:</p>
-<ul>
-<li><code>Module</code></li>
-<li><code>Block</code></li>
-<li><code>With</code></li>
-<li><code>DynamicModule</code></li>
-<li>命名空间</li>
-</ul>
+      高中写的烂尾中二电波小说
       
         <div class="readmore">
-          <a href="/blog/2018/08/ScopeInWolframLang/" class="flat-box">
+          <a href="/blog/2014/12/Miniascape/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             阅读全文
           </a>
@@ -1090,268 +449,9 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blog/tags/编程/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 编程</a>
+          <a href="/blog/tags/小说/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 小说</a>
         
-          <a href="/blog/tags/语法/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 语法</a>
-        
-          <a href="/blog/tags/Wolfram/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Wolfram</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/blog/2018/06/UnderstandWolframLang-I/">
-      理解Wolfram语言（上）
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    
-      <a href="http://miRoox.github.io/blog" rel="nofollow">
-        
-          <i class="fas fa-user" aria-hidden="true"></i>
-        
-        <p>miRoox</p>
-      </a>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-06-04</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blog/categories/代码编程/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>代码编程</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-  
-    <div class="new-meta-item wordcount">
-      <a class='notlink'>
-        <i class="fas fa-keyboard" aria-hidden="true"></i>
-        <p>字数统计:</p>
-        <p>1k字</p>
-      </a>
-    </div>
-    <div class="new-meta-item readtime">
-      <a class='notlink'>
-        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
-        <p>阅读时长≈</p>
-        <p>3分</p>
-      </a>
-    </div>
-  
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h3 id="一切皆表达式"><a class="markdownIt-Anchor" href="#一切皆表达式"></a> “一切皆表达式”</h3>
-<blockquote>
-<p>Everything is an expression.</p>
-</blockquote>
-<p>是的，理解了上面这句话，就基本理解了Wolfram语言。至于其它的，那都是细枝末节。</p>
-      
-        <div class="readmore">
-          <a href="/blog/2018/06/UnderstandWolframLang-I/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blog/tags/编程/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 编程</a>
-        
-          <a href="/blog/tags/语法/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 语法</a>
-        
-          <a href="/blog/tags/Wolfram/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Wolfram</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/blog/2017/09/ClassBasedOOPWithMma/">
-      使用Mathematica实现基于类的面向对象
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-  <div class='new-meta-item author'>
-    
-      <a href="http://miRoox.github.io/blog" rel="nofollow">
-        
-          <i class="fas fa-user" aria-hidden="true"></i>
-        
-        <p>miRoox</p>
-      </a>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2017-09-01</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/blog/categories/代码编程/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>代码编程</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-  
-    <div class="new-meta-item wordcount">
-      <a class='notlink'>
-        <i class="fas fa-keyboard" aria-hidden="true"></i>
-        <p>字数统计:</p>
-        <p>1.9k字</p>
-      </a>
-    </div>
-    <div class="new-meta-item readtime">
-      <a class='notlink'>
-        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
-        <p>阅读时长≈</p>
-        <p>7分</p>
-      </a>
-    </div>
-  
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>Mathematica 通常被宣传为 <em>符号式</em> 、 <em>函数式</em> 的编程语言，不过 <a href="https://en.wikipedia.org/wiki/Comparison_of_multi-paradigm_programming_languages#Language_overview" target="_blank" rel="noopener">维基百科</a> 宣称它支持 13种编程范式，其中还包括 <em>面向对象</em> 编程。尽管大家似乎都不把 Mathematica 当编程语言，不过出于兴趣，也为了提升对 Mathematica 语言特性和面向对象的理解，于是有了这篇文章。</p>
-<p>比较理想的情况是能够以类似 C++ 或者 Java 那样的形式来创建和使用类与对象，以此为目标进行设计。</p>
-      
-        <div class="readmore">
-          <a href="/blog/2017/09/ClassBasedOOPWithMma/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/blog/tags/功能模拟/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 功能模拟</a>
-        
-          <a href="/blog/tags/编程/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 编程</a>
-        
-          <a href="/blog/tags/Wolfram/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> Wolfram</a>
+          <a href="/blog/tags/科幻/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> 科幻</a>
         
       </div>
     
@@ -1364,24 +464,6 @@
     
   </section>
   
-    
-      <br>
-      <div class="prev-next">
-        <div class="prev-next">
-          
-            <a class="prev" rel="prev" href="/blog/tags/Wolfram/">
-              <section class="post prev" >
-                <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
-              </section>
-            </a>
-          
-          <p class="current">
-            2 / 2
-          </p>
-          
-        </div>
-      </div>
-
     
     <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
     
@@ -1390,8 +472,7 @@
   
 
 
-    
-  
+	
 </div>
 <aside class='l_side'>
   
@@ -1715,6 +796,14 @@
   </div>
 </footer>
 <script>setLoadingBarProgress(80);</script>
+
+
+
+
+	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+	
+
+	
 
 
       <script>setLoadingBarProgress(60);</script>

@@ -3,20 +3,6 @@
 
 
     <url>
-        <loc>http://miRoox.github.io/blog/tags/%E5%B0%8F%E8%AF%B4/</loc>
-        <lastmod>2020-01-22T14:41:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://miRoox.github.io/blog/tags/%E4%BD%9C%E6%96%87/</loc>
-        <lastmod>2020-01-22T14:41:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://miRoox.github.io/blog/tags/%E6%95%B0%E5%88%97/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -192,13 +178,6 @@
     </url>
 
     <url>
-        <loc>http://miRoox.github.io/blog/tags/%E7%A7%91%E5%B9%BB/</loc>
-        <lastmod>2020-01-22T14:41:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://miRoox.github.io/blog/tags/%E6%95%A3%E8%AE%B0/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -313,6 +292,27 @@
     <url>
         <loc>http://miRoox.github.io/blog/tags/%E7%AE%97%E6%B3%95/</loc>
         <lastmod>2020-01-28T14:19:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://miRoox.github.io/blog/tags/%E4%BD%9C%E6%96%87/</loc>
+        <lastmod>2020-01-29T10:40:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://miRoox.github.io/blog/tags/%E5%B0%8F%E8%AF%B4/</loc>
+        <lastmod>2020-01-29T13:25:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://miRoox.github.io/blog/tags/%E7%A7%91%E5%B9%BB/</loc>
+        <lastmod>2020-01-29T13:25:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
