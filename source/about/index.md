@@ -1,6 +1,8 @@
 ---
 layout: page
 title: 关于我 
+meta:
+  header: [title, author, updated, counter, wordcount]
 ---
 
 
