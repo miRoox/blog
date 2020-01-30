@@ -206,6 +206,14 @@ theme_config:
         icon: fas fa-expand-arrows-alt
         url: categories/
         rel: nofollow
+    - widget: music
+      icon: fas fa-compact-disc
+      title: "最近在听"
+      more:
+        icon: far fa-heart
+        url: https://music.163.com/#/user/home?id=415505414
+        rel: external nofollow noopener noreferrer
+        target: _blank
   social:
     - icon: fas fa-rss
       url: atom.xml
