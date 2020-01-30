@@ -1,6 +1,8 @@
 ---
 layout: links
 title: 友情链接
+meta:
+  header: [title, author, updated]
 links:
   - group: 大佬们
     icon: fas fa-user-friends
