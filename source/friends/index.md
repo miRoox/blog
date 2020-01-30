@@ -42,11 +42,27 @@ links:
   - group: 那些我认识但是不认识我的巨佬们
     icon: fas fa-user-tie
     items:
+    - name: Stephen Wolfram
+      avatar: https://www.stephenwolfram.com/about/images/inpages-about_10.gif
+      url: https://writings.stephenwolfram.com/
+      backgroundColor: '#E82D1D'
+      textColor: '#FFF'
+      tags:
+      - Wolfram
+      - 复杂性科学
+    - name: 刘宇昆
+      avatar: https://kenliu.name/binary/ken.jpg
+      url: https://kenliu.name/
+      backgroundColor: '#FFF'
+      textColor: '#282828'
+      tags:
+      - 科幻
+      - 小说
     - name: 卢昌海
       avatar: https://www.changhai.org/files/images/logo.gif
       url: https://www.changhai.org/
-      backgroundColor: '#6A5ACD'
-      textColor: '#FFF'
+      backgroundColor: '#CCCCFF'
+      textColor: '#000'
       tags:
       - 科普
       - 数学
