@@ -10,6 +10,8 @@ tag: ["持续集成", "GitHub", "Wolfram"]
 
 <!--more-->
 
+### 配置经历（趟过的坑）
+
 当然，天下代码一大抄，照猫画虎首先也需要一个参考对象。这里参照的是 [xu-cheng/latex-action](https://github.com/xu-cheng/latex-action)，因为这是一个基于 Docker 容器的 Actions。而现成的 [Wolfram 引擎的 Docker 配置](https://hub.docker.com/r/arnoudbuzing/wolframengine)早已经出现的 DockerHub 上了，直接拿来用就可以了。
 
 由于缺乏经验，还是先按照 [Creating a Docker container action](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-a-docker-container-action) 的文档过了一遍基本的流程，了解了一下 Docker 的基本用法。
@@ -29,7 +31,25 @@ tag: ["持续集成", "GitHub", "Wolfram"]
 
 解决了认证激活的问题，剩下的基本就也没什么难度了。对参数缺失以及不合法的报错处理直接按  [xu-cheng/latex-action](https://github.com/xu-cheng/latex-action) 照搬。其它配置也基本大同小异。
 
-最后，将 Action 发布到了市场上，见 [GitHub action for Wolfram language](https://github.com/marketplace/actions/github-action-for-wolfram-language)。基本用例：
+最后，将 Action 发布到了市场上，见 [GitHub action for Wolfram language](https://github.com/marketplace/actions/github-action-for-wolfram-language)。有什么用我也不清楚，大概可以方便推广？
+
+### 食用方法
+
+使用时将下面的内容复制到 `.github/workflow/main.yml` （或者其它名字的）配置文件里
+
+```yaml
+  - name: Run Wolfram script
+    uses: miRoox/wolfram-action@master
+    with:
+      file: script.wl
+    env:
+      WOLFRAM_ID: ${{ secrets.WolframID }}
+      WOLFRAM_PASS: ${{ secrets.WolframPW }}
+```
+
+这里，`script.wl` 即你要运行的 Wolfram 语言脚本；`secrets.WolframID` 和 `secrets.WolframPW` 分别对应你的 Wolfram 账号 ID 和密码，你需要在仓库中建立对应名称的 Secrets，操作流程见 [Creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)。
+
+下面是一个完整的配置文件的例子：
 
 ```yaml
 on: [push]
@@ -50,6 +70,8 @@ jobs:
 ```
 
 ---
+
+### 附录
 
 关于 Wolfram 引擎的许可证：
 
