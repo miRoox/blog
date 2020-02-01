@@ -228,7 +228,7 @@ theme_config:
     - icon: fas fa-headphones-alt
       url: https://music.163.com/#/user/home?id=415505414
   footer_post: ''
-  footer: '———————————————— 我可是有底线的！ ————————————————'
+  footer: '—————— 我可是有底线的！ ——————'
 
 # Comments
 gitalk:
