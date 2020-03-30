@@ -1,3 +1,4 @@
 [submodule "themes/volantis"]
 	path = themes/volantis
 	url = git@github.com:miRoox/hexo-theme-volantis.git
+	branch = user
