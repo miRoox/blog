@@ -236,6 +236,10 @@ theme_config:
       volume: 0.7
       autoplay: false
       order: random
+    backstretch:
+      images:
+        - images/bg1.jpg
+        - images/bg2.jpg
   comments:
     gitalk:
       clientID: 72d968977988a0f2857a
