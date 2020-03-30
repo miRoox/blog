@@ -204,16 +204,9 @@ theme_config:
   widget:
     blogger:
       class: blogger
-      display: [desktop]
       avatar: images/avatar.jpg
-      jinrishici: false
-      social: true
     bulletin:
       class: text
-      display: [desktop]
-      header:
-        icon: fas fa-bell
-        title: 布告板
       content:
         - '博客迁移中……'
   footer:
