@@ -1,5 +1,5 @@
 /*!
- * Valine v1.3.9
+ * Valine v1.3.10
  * (c) 2017-2019 xCss
  * Released under the GPL-2.0 License.
  * Last Update: 2019-6-26 21:52:17
@@ -258,7 +258,7 @@
                 head: {
                     nick: "昵称（必填）",
                     mail: "邮箱（必填）",
-                    link: "完整链接"
+                    link: "链接"
                 },
                 tips: {
                     comments: "评论",
@@ -454,7 +454,7 @@
                     return b.indexOf(t) > -1 ? '<input name="' + t + '" placeholder="' + e.locale.head[t] + '" class="v' + t + ' vinput" type="' + n + '">' : ""
                 });
                 e.placeholder = e.config.placeholder || "Just Go Go",
-                e.el.innerHTML = '<div class="vwrap"><div class="vheader item' + P.length + '">' + P.join("") + '</div><div class="vedit"><textarea id="veditor" class="veditor vinput" placeholder="' + e.placeholder + '"></textarea><div class="vctrl"><span class="vemoji-btn">' + e.locale.ctrl.emoji + '</span> | <span class="vpreview-btn">' + e.locale.ctrl.preview + '</span></div><div class="vemojis" style="display:none;"></div><div class="vinput vpreview" style="display:none;"></div></div><div class="vcontrol"><div class="col col-20" title="Markdown is supported"><a href="https://segmentfault.com/markdown" target="_blank"><svg class="markdown" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14.85 3H1.15C.52 3 0 3.52 0 4.15v7.69C0 12.48.52 13 1.15 13h13.69c.64 0 1.15-.52 1.15-1.15v-7.7C16 3.52 15.48 3 14.85 3zM9 11H7V8L5.5 9.92 4 8v3H2V5h2l1.5 2L7 5h2v6zm2.99.5L9.5 8H11V5h2v3h1.5l-2.51 3.5z"></path></svg></a></div><div class="col col-80 text-right"><button type="button" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">' + e.locale.ctrl.reply + '</button></div></div><div style="display:none;" class="vmark"></div></div><div class="vinfo" style="display:none;"><div class="vcount col"></div></div><div class="vlist"></div><div class="vempty" style="display:none;"></div><div class="vpage txt-center"></div><div class="info"><div class="power txt-right">Powered By <a href="https://valine.js.org" target="_blank">Valine</a><br>' + o + "</div></div>";
+                e.el.innerHTML = '<div class="vwrap"><div class="vheader item' + P.length + '">' + P.join("") + '</div><div class="vedit"><textarea id="veditor" class="veditor vinput" placeholder="' + e.placeholder + '"></textarea><div class="vctrl"><span class="vemoji-btn">' + e.locale.ctrl.emoji + '</span> | <span class="vpreview-btn">' + e.locale.ctrl.preview + '</span></div><div class="vemojis" style="display:none;"></div><div class="vinput vpreview" style="display:none;"></div></div><div class="vcontrol"><div class="col col-20" title="Markdown is supported"><a rel="external nofollow noopener noreferrer" href="https://segmentfault.com/markdown" target="_blank"><svg class="markdown" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14.85 3H1.15C.52 3 0 3.52 0 4.15v7.69C0 12.48.52 13 1.15 13h13.69c.64 0 1.15-.52 1.15-1.15v-7.7C16 3.52 15.48 3 14.85 3zM9 11H7V8L5.5 9.92 4 8v3H2V5h2l1.5 2L7 5h2v6zm2.99.5L9.5 8H11V5h2v3h1.5l-2.51 3.5z"></path></svg></a></div><div class="col col-80 text-right"><button type="button" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">' + e.locale.ctrl.reply + '</button></div></div><div style="display:none;" class="vmark"></div></div><div class="vinfo" style="display:none;"><div class="vcount col"></div></div><div class="vlist"></div><div class="vempty" style="display:none;"></div><div class="vpage txt-center"></div><div class="info"><div class="power txt-right">Powered By <a href="https://valine.js.org" target="_blank">Valine</a><br>' + o + "</div></div>";
                 var U = u.find(e.el, ".vempty");
                 e.nodata = {
                     show: function(t) {
@@ -800,6 +800,9 @@
                 s && (l = '<span class="vsys">' + (s = d(s)).browser + " " + s.version + '</span> <span class="vsys">' + s.os + " " + s.osVersion + "</span>"),
                 "*" === y && (l = '<a href="' + e.get("url") + '" class="vsys">' + e.get("url") + "</a>");
                 var p, f = e.get("link") || "";
+                if (f.indexOf('.') > 0 && f.indexOf('://') < 0) {
+                  f = 'http://' + f;
+                }
                 p = f ? '<a class="vnick" rel="nofollow" href="' + f + '" target="_blank" >' + e.get("nick") + "</a>" : '<span class="vnick">' + e.get("nick") + "</span>",
                 i.innerHTML = o + '\n            <div class="vh" rootid=' + (e.get("rid") || e.id) + '>\n                <div class="vhead">' + p + " " + l + '</div>\n                <div class="vmeta">\n                    <span class="vtime">' + c(e.get("insertedAt") || e.createdAt, t.locale) + '</span>\n                    <span class="vat">' + t.locale.ctrl.reply + '</span>\n                </div>\n                <div class="vcontent">\n                    ' + b(e.get("comment")) + "\n                </div>\n            </div>";
                 for (var h = u.find(i, ".vat"), v = u.findAll(i, "a"), g = 0, x = v.length; g < x; g++) {
@@ -2318,13 +2321,13 @@
     }
     , function(e, t) {
         function aru(index){
-          return "<img id='emoji' src='https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/aru/" + index + ".png'>";
+          return "<img id='emoji' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/aru/" + index + ".png'>";
         }
         function tieba(str){
-          return "<img id='emoji' src='https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/" + str + ".png'>";
+          return "<img id='emoji' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/tieba/" + str + ".png'>";
         }
         function qq(str) {
-          return "<img id='emoji' src='https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/qq/" + str + ".gif'>";
+          return "<img id='emoji' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/qq/" + str + ".gif'>";
         }
         e.exports = {
             aru151: aru(151),
