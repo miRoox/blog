@@ -157,8 +157,17 @@ theme_config:
           rel: nofollow
         - name: 分类
           icon: fas fa-folder-open
-          url: categories/
-          rel: nofollow
+          rows:
+            - name: 代码编程
+              url: categories/代码编程
+            - name: 数理科学
+              url: categories/数理科学
+            - name: 小说文艺
+              url: categories/小说文艺
+            - name: 杂谈散记
+              url: categories/杂谈散记
+            - name: 翻译作品
+              url: categories/翻译作品
         - name: 标签
           icon: fas fa-tags
           url: tags/
