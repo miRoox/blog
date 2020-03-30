@@ -115,9 +115,13 @@ theme_config:
     volume: 0.7
     autoplay: false 
   cover:
-    scheme: search
-    height: half
+    search: '搜索……'
+    display:
+      home: true
+      archive: true
+      others: false
     title: miRoox的博客
+    subtitle: ''
     features:
       - name: 主页
         icon: fas fa-home
@@ -138,105 +142,115 @@ theme_config:
         icon: fas fa-info-circle
         url: about/
         rel: nofollow
-  menu_desktop:
-    - name: 最近
-      icon: fas fa-clock
-      url: /
-    - name: 归档
-      icon: fas fa-archive
-      url: archives/
-      rel: nofollow
-    - name: 分类
-      icon: fas fa-folder-open
-      url: categories/
-      rel: nofollow
-    - name: 标签
+  navbar:
+    logo:
+      title: miRoox' Blog
+    search: '搜索……'
+    menu:
+      on_desktop:
+        - name: 最近
+          icon: fas fa-clock
+          url: /
+        - name: 归档
+          icon: fas fa-archive
+          url: archives/
+          rel: nofollow
+        - name: 分类
+          icon: fas fa-folder-open
+          url: categories/
+          rel: nofollow
+        - name: 标签
+          icon: fas fa-tags
+          url: tags/
+          rel: nofollow
+        - name: 友链
+          icon: fas fa-user-friends
+          url: friends/
+          rel: nofollow
+        - name: 知识库
+          icon: fab fa-wikipedia-w
+          url: https://miroox.github.io/wiki/
+          rel: nofollow
+      on_mobile:
+        - name: 近期文章
+          icon: fas fa-clock
+          url: /
+        - name: 文章归档
+          icon: fas fa-archive
+          url: archives/
+          rel: nofollow
+        - name: 标签列表
+          icon: fas fa-tags
+          url: tags/
+          rel: nofollow
+        - name: 友情链接
+          icon: fas fa-user-friends
+          url: friends/
+          rel: nofollow
+        - name: 个人维基
+          icon: fab fa-wikipedia-w
+          url: https://miroox.github.io/wiki/
+          rel: nofollow
+        - name: 关于本站
+          icon: fas fa-info-circle
+          url: about/
+          rel: nofollow
+  meta:
+    author:
+      name: miRoox
+      url: https://miroox.github.io/
+      avatar: /blog/images/avatar.jpg
+    tags:
       icon: fas fa-tags
-      url: tags/
-      rel: nofollow
-    - name: 友链
-      icon: fas fa-user-friends
-      url: friends/
-      rel: nofollow
-    - name: 知识库
-      icon: fab fa-wikipedia-w
-      url: https://miroox.github.io/wiki/
-      rel: nofollow
-  menu_mobile:
-    - name: 近期文章
-      icon: fas fa-clock
-      url: /
-    - name: 文章归档
-      icon: fas fa-archive
-      url: archives/
-      rel: nofollow
-    - name: 标签列表
-      icon: fas fa-tags
-      url: tags/
-      rel: nofollow
-    - name: 友情链接
-      icon: fas fa-user-friends
-      url: friends/
-      rel: nofollow
-    - name: 个人维基
-      icon: fab fa-wikipedia-w
-      url: https://miroox.github.io/wiki/
-      rel: nofollow
-    - name: 关于本站
-      icon: fas fa-info-circle
-      url: about/
-      rel: nofollow
-  sidebar:
-    - widget: author
-      avatar: /images/avatar.jpg
+  widget:
+    blogger:
+      class: blogger
+      display: [desktop]
+      avatar: images/avatar.jpg
+      jinrishici: false
       social: true
-    - widget: plain
-      icon: fas fa-bell
-      title: 布告板
-      body: '博客迁移中……'
-    - widget: toc
-    - widget: tagcloud
-      icon: fas fa-tags
-      more:
-        icon: fas fa-expand-arrows-alt
-        url: tags/
-      rel: nofollow
-    - widget: category
-      more:
-        icon: fas fa-expand-arrows-alt
-        url: categories/
-        rel: nofollow
-    - widget: music
-      icon: fas fa-compact-disc
-      title: "最近在听"
-      more:
-        icon: far fa-heart
+    bulletin:
+      class: text
+      display: [desktop]
+      header:
+        icon: fas fa-bell
+        title: 布告板
+      content:
+        - '博客迁移中……'
+  footer:
+    layout: [aplayer, social, license, copyright]
+    social:
+      - icon: fas fa-rss
+        url: atom.xml
+      - icon: fas fa-envelope
+        url: mailto:miroox@outlook.com
+      - icon: fab fa-weibo
+        url: https://weibo.com/MiFantasy000
+      - icon: fab fa-zhihu
+        url: https://www.zhihu.com/people/lu-yong-8-79
+      - icon: fab fa-github
+        url: https://github.com/miRoox
+      - icon: fas fa-headphones-alt
         url: https://music.163.com/#/user/home?id=415505414
-        rel: external nofollow noopener noreferrer
-        target: _blank
-  social:
-    - icon: fas fa-rss
-      url: atom.xml
-    - icon: fas fa-envelope
-      url: mailto:miroox@outlook.com
-    - icon: fab fa-weibo
-      url: https://weibo.com/MiFantasy000
-    - icon: fab fa-zhihu
-      url: https://www.zhihu.com/people/lu-yong-8-79
-    - icon: fab fa-github
-      url: https://github.com/miRoox
-    - icon: fas fa-headphones-alt
-      url: https://music.163.com/#/user/home?id=415505414
-  footer_post: ''
-  footer: '—————— 我可是有底线的！ ——————'
-
-# Comments
-gitalk:
-  clientID: 72d968977988a0f2857a
-  clientSecret: 545b7fd3220ded515ef4b37df88eacb7a0d25387
-  repo: blog
-  owner: miRoox
-  admin: ["miRoox"]
+    copyright: '[Copyright © 2020 miRoox](https://miroox.github.io/)'
+  plugins:
+    mathjax: false
+    wordcount: true
+    aplayer:
+      enable: true
+      server: netease
+      type: playlist
+      id: 592343641
+      volume: 0.7
+      autoplay: false
+      order: random
+  comments:
+    gitalk:
+      clientID: 72d968977988a0f2857a
+      clientSecret: 545b7fd3220ded515ef4b37df88eacb7a0d25387
+      repo: blog
+      owner: miRoox
+      admin: ["miRoox"]
 
 markdown_it_plus:
     highlight: true
