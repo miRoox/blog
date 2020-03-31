@@ -10,13 +10,13 @@ tag: ["编程", "Wolfram", "踩坑"]
 
 最近在拿Mathematica做一些小东西的时候发现`CurrentValue`等函数在动态中刷新不受`Refresh`等方式影响。比如
 
+<!--more-->
+
 ```mathematica
 Dynamic[Refresh[CurrentValue["MousePosition"], None]]
 ```
 
 输出会不断刷新，并不受`Refresh[□, None]`结构控制。
-
-<!--more-->
 
 另一方面，同样被设计为“过分敏感”的`Clock`则受`Refresh`控制，
 
