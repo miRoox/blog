@@ -179,7 +179,7 @@ theme_config:
   widget:
     blogger:
       class: blogger
-      avatar: images/avatar.jpg
+      avatar: /blog/images/avatar.jpg
     bulletin:
       class: text
       content:
