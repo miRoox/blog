@@ -137,63 +137,38 @@ theme_config:
       title: miRoox' Blog
     search: '搜索……'
     menu:
-      on_desktop:
-        - name: 最近
-          icon: fas fa-clock
-          url: /
-        - name: 归档
-          icon: fas fa-archive
-          url: archives/
-          rel: nofollow
-        - name: 分类
-          icon: fas fa-folder-open
-          rows:
-            - name: 代码编程
-              url: categories/代码编程
-            - name: 数理科学
-              url: categories/数理科学
-            - name: 小说文艺
-              url: categories/小说文艺
-            - name: 杂谈散记
-              url: categories/杂谈散记
-            - name: 翻译作品
-              url: categories/翻译作品
-        - name: 标签
-          icon: fas fa-tags
-          url: tags/
-          rel: nofollow
-        - name: 友链
-          icon: fas fa-user-friends
-          url: friends/
-          rel: nofollow
-        - name: 知识库
-          icon: fab fa-wikipedia-w
-          url: https://miroox.github.io/wiki/
-          rel: nofollow
-      on_mobile:
-        - name: 近期文章
-          icon: fas fa-clock
-          url: /
-        - name: 文章归档
-          icon: fas fa-archive
-          url: archives/
-          rel: nofollow
-        - name: 标签列表
-          icon: fas fa-tags
-          url: tags/
-          rel: nofollow
-        - name: 友情链接
-          icon: fas fa-user-friends
-          url: friends/
-          rel: nofollow
-        - name: 个人维基
-          icon: fab fa-wikipedia-w
-          url: https://miroox.github.io/wiki/
-          rel: nofollow
-        - name: 关于本站
-          icon: fas fa-info-circle
-          url: about/
-          rel: nofollow
+      - name: 最近
+        icon: fas fa-clock
+        url: /
+      - name: 归档
+        icon: fas fa-archive
+        url: archives/
+        rel: nofollow
+      - name: 分类
+        icon: fas fa-folder-open
+        rows:
+          - name: 代码编程
+            url: categories/代码编程
+          - name: 数理科学
+            url: categories/数理科学
+          - name: 小说文艺
+            url: categories/小说文艺
+          - name: 杂谈散记
+            url: categories/杂谈散记
+          - name: 翻译作品
+            url: categories/翻译作品
+      - name: 标签
+        icon: fas fa-tags
+        url: tags/
+        rel: nofollow
+      - name: 友链
+        icon: fas fa-user-friends
+        url: friends/
+        rel: nofollow
+      - name: 知识库
+        icon: fab fa-wikipedia-w
+        url: https://miroox.github.io/wiki/
+        rel: nofollow
   meta:
     author:
       name: miRoox
