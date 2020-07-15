@@ -696,4 +696,4 @@ void MainWindow::dropEvent(QDropEvent *event)
 
 这样，一个具有标签页拖放功能的多文本浏览器就基本完成了。
 
-*完整源码参见 <https://github.com/miRoox/MyTabWidget>*
+*完整源码参见 <https://github.com/miRoox/DnDTabWidget/tree/v1.0>*
