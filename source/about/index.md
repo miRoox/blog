@@ -10,6 +10,7 @@ meta:
 0.	感兴趣的领域包括但不限于：编程、动漫、科幻小说、数学、科学哲学...
 0.	好像什么都会一点，又好像什么都不懂。
 0.	本质上是个theorist 。
+0.  爱抽象的人很难爱上具体的人。
 0.  目前科研方向主要是计算光学成像。
 0.	常用社交帐号:[微博](https://weibo.com/MiFantasy000)、[Bangumi](http://bangumi.tv/user/miroox)、[GitHub](https://github.com/miRoox)
 0.	不喜欢传统社交，不谈政治，少谈时事。
@@ -32,7 +33,7 @@ meta:
 0.  万物皆可后现代。
 0.	曾自称红警Modder，但其实从未做出过一个完成品。
 0.	编程从C语言入门，目前主要使用C++、Wolfram Language （Mathematica）和Julia。
-0.	C++是一门包罗万象的语言，也因此是门垃圾语言。
+0.	C++是一门包罗万象的语言，也因此是门糟糕的语言。
 0.  希望Rust早日干爆C++之流。
 0.	<del>吹一波Mathematica，吊打MatLab。</del>现在改吹Julia了，吊打前面两位。
 0.	还要吹一波Qt，至少人家支持的平台多。
