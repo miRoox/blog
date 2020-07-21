@@ -80,3 +80,9 @@ jobs:
 > 您可以使用免费引擎开发项目，以及**演示和测试**。但是，免费引擎许可证不允许终端用户使用，除非此用途**用于进一步开发**。对于终端用户使用，用户必须拥有 Wolfram 引擎的单独许可证。如果您拥有 Wolfram 产品（如 Wolfram|One 或 Mathematica），或者您所在的组织拥有 Wolfram 站点许可证，则您可能已拥有相应的许可证。开源项目可以[申请](https://www.wolframcloud.com/objects/forms/wolfram-engine-open-source)特殊的 Wolfram 引擎许可证，允许终端用户自由使用免费引擎作为他们项目用途的一部分。
 
 由于持续集成服务本身是“用于进一步开发”的用途，而且终端用户使用时也确实不能免除 Wolfram 引擎的单独许可证，我认为在许可上应该时没有什么风险的。
+
+---
+
+关于许可证的使用次数。经测试，对于同一个 Docker image，重复使用是不会消耗许可证的。
+而在进行了新 build 的 image 中使用才会消耗许可证。
+这也是这个 action 相对于直接在 workflow 中使用 `wget` 下载 Wolfram Engine 再激活的一个优势。
