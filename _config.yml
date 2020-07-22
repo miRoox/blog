@@ -216,6 +216,7 @@ theme_config:
         - images/bg1.jpg
         - images/bg2.jpg
   comments:
+    service: gitalk
     gitalk:
       clientID: 72d968977988a0f2857a
       clientSecret: 545b7fd3220ded515ef4b37df88eacb7a0d25387
