@@ -7,6 +7,14 @@ links:
   - group: 大佬们
     icon: fas fa-user-friends
     items:
+    - name: 张小飞
+      avatar: https://www.cryfeifei.cn/medias/avatar.jpg
+      url: https://www.cryfeifei.cn/
+      backgroundColor: '#00EE00'
+      textColor: '#FFF'
+      tags:
+      - Qt
+      - WPS
     - name: 虾包
       avatar: https://noodlefighter.com/favicon.png
       url: https://noodlefighter.com/about_me/
