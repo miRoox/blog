@@ -33,6 +33,7 @@ links:
       - 软件
       - 生活
     - name: wuyudi
+      avatar: https://wuyudi.github.io/images/avatar.png
       url: https://wuyudi.github.io/
       backgroundColor: '#1e1e1e'
       textColor: '#FFF'
