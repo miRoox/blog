@@ -193,6 +193,8 @@ theme_config:
         url: mailto:miroox@outlook.com
       - icon: fab fa-weibo
         url: https://weibo.com/MiFantasy000
+      - icon: fab fa-twitter
+        url: https://twitter.com/miroox6
       - icon: fab fa-zhihu
         url: https://www.zhihu.com/people/lu-yong-8-79
       - icon: fab fa-github
