@@ -17,7 +17,7 @@ tag: ["GitHub", "Wolfram"]
 1. 输入 GitHub 用户名 <br/> {% asset_img github_id.png github id %}
 2. 输入要预览的 GitHub 仓库名和分支，分支默认为 master <br/> {% asset_img github_repo-branch.png github repo-branch %}
 3. 得到一个Markdown格式的徽章链接代码 [![View notebooks](https://wolfr.am/HAAhzkRq)](https://wolfr.am/OphS2N6z)  <br/> {% asset_img markdown_badge.png markdown badge %}
-4. 复制徽章代码到 Markdown 文件（通常是 README.md），在预览中点击徽章即可打开笔记本 <br/> {% asset_img notebook.png notebook %}
+4. 复制徽章代码到 Markdown 文件（通常是 `README.md`），在预览中点击徽章即可打开笔记本 <br/> {% asset_img notebook.png notebook %}
 
 ---
 
