@@ -21,7 +21,7 @@ tag: ["GitHub", "Wolfram"]
 
 ---
 
-补记：关于笔记本的编写保存
+补记：关于在 git 和 GitHub 上的笔记本的编写保存
 
 写笔记本的时候建议使用 [`ResourceFunction["SaveReadableNotebook"]`](https://resources.wolframcloud.com/FunctionRepository/resources/SaveReadableNotebook) 或者 [`mathematica-notebook-filter`](https://github.com/JP-Ellis/mathematica-notebook-filter) 得到干净的笔记本文件，避免提交一些乱七八糟的cache到git中：
 
