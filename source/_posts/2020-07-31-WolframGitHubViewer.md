@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "在 GitHub 上预览 Wolfram 笔记本"
+title: "预览在 GitHub 上的 Wolfram 笔记本"
 date: 2020-7-31 21:29:21
 categories: "代码编程"
 tag: ["GitHub", "Wolfram"]
