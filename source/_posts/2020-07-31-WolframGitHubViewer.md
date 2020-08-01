@@ -19,6 +19,11 @@ tag: ["GitHub", "Wolfram"]
 3. 得到一个Markdown格式的徽章链接代码 [![View notebooks](https://wolfr.am/HAAhzkRq)](https://wolfr.am/OphS2N6z)  <br/> {% asset_img markdown_badge.png markdown badge %}
 4. 复制徽章代码到 Markdown 文件（通常是 `README.md`），在预览中点击徽章即可打开笔记本 <br/> {% asset_img notebook.png notebook %}
 
+目前的坑：
+
+1. 文件名中不能包含中文
+2. Cloud 访问可能比较慢
+
 ---
 
 补记：关于在 git 和 GitHub 上的笔记本的编写保存
