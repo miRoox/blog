@@ -5,6 +5,11 @@ meta:
   header: [title, author, updated, counter, wordcount]
 ---
 
+## Stats
+
+<figure><embed src="https://wakatime.com/share/@miRoox/d69f9754-4f30-4fbe-8a10-9b6c4c2e9a81.svg"></embed></figure>
+
+## Intro
 
 0.	偏理的工科生，字面意义的死宅。
 0.	感兴趣的领域包括但不限于：编程、动漫、科幻小说、数学、科学哲学...
