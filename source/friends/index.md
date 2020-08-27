@@ -7,6 +7,28 @@ links:
   - group: 大佬们
     icon: fas fa-user-friends
     items:
+    - name: Raptazure
+      avatar: https://raptazure.github.io/favicon-32x32.png
+      url: https://raptazure.github.io/
+      backgroundColor: '#FFFFF9'
+      textColor: '#282828'
+      tags:
+      - Rust
+      - 生活
+    - name: Billchenchina
+      avatar: https://avatars1.githubusercontent.com/u/7758042?s=460&u=c3b919f7bfb2f13cebfb5d3a7864bab2120d7873&v=4
+      url: https://billchen.bid/
+      backgroundColor: '#FFF'
+      textColor: '#282828'
+      tags:
+      - 计算机
+    - name: leolanger
+      avatar: https://lhd-code.github.io/images/avater.jpg
+      url: https://lhd-code.github.io/
+      backgroundColor: '#FFF'
+      textColor: '#282828'
+      tags:
+      - 计算机
     - name: 张小飞
       avatar: https://www.cryfeifei.cn/medias/avatar.jpg
       url: https://www.cryfeifei.cn/
@@ -68,7 +90,7 @@ links:
       - 科幻
       - 小说
     - name: 卢昌海
-      avatar: https://www.changhai.org/files/images/logo.gif
+      avatar: http://www.changhai.org/files/images/logo.gif
       url: https://www.changhai.org/
       backgroundColor: '#CCCCFF'
       textColor: '#000'
