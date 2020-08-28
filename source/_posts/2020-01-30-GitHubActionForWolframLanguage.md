@@ -86,3 +86,17 @@ jobs:
 关于许可证的使用次数。经测试，对于同一个 Docker image，重复使用是不会消耗许可证的。
 而在进行了新 build 的 image 中使用才会消耗许可证。
 这也是这个 action 相对于直接在 workflow 中使用 `wget` 下载 Wolfram Engine 再激活的一个优势。
+
+---
+
+2020.08.28 补记：
+
+最近发现 Wolfram Engine 的许可证好像可以随便用了，这个项目的意义顿时变得微妙了起来。现在在 GitHub Action 中可以直接在 Ubuntu 环境下运行：
+
+```sh
+wget https://account.wolfram.com/download/public/wolfram-engine/desktop/LINUX
+sudo bash LINUX -- -auto -verbose
+rm LINUX
+```
+
+安装 Wolfram Engine ，然后采用前述同样的命令激活。
