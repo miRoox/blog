@@ -29,6 +29,12 @@ links:
       textColor: '#282828'
       tags:
       - 计算机
+    - name: 叶子
+      avatar: https://misaka-9936.github.io/images/avatar/avatar.jpg
+      url: https://misaka-9936.github.io/
+      backgroundColor: '#FFF'
+      textColor: '#282828'
+      tags: []
     - name: 张小飞
       avatar: https://www.cryfeifei.cn/medias/avatar.jpg
       url: https://www.cryfeifei.cn/
