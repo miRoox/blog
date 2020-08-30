@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>部署一个简单的缩略 URL 的表单</title>
+      <link href="/blog/2020/08/WolframURLShortenForm/"/>
+      <url>/blog/2020/08/WolframURLShortenForm/</url>
+      
+        <content type="html"><![CDATA[<p>最近微博好像把 <code>github.io</code> 下的域名屏蔽了，导致博客完全无法分享，就考虑通过短链接跳转绕开这一限制。考虑到 Mathematica 有现成的函数 <a href="http://reference.wolfram.com/language/ref/URLShorten.html" target="_blank" rel="noopener"><code>URLShorten</code></a>，直接使用即可。不过闲着无聊，就顺便部署了一个简单的缩略 URL 的表单: <a href="https://www.wolframcloud.com/obj/miroox/url-shorten" target="_blank" rel="noopener">https://www.wolframcloud.com/obj/miroox/url-shorten</a>。</p><a id="more"></a><iframe src="https://www.wolframcloud.com/obj/miroox/url-shorten?_embed=iframe" width="600" height="400" frameborder="0" loading="lazy" allowfullscreen></iframe><p>本来想支持复制按钮的，然而 <a href="http://reference.wolfram.com/language/ref/CopyToClipboard.html" target="_blank" rel="noopener"><code>CopyToClipboard</code></a> 在网页上不起作用，自己写 js 支持又出乎意料的麻烦，遂放弃。</p><p>部署用的代码：</p><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CloudDeploy</span>[</span><br><span class="line"> <span class="keyword">FormPage</span>[</span><br><span class="line">  &#123;<span class="string">"url"</span>, <span class="string">"URL:"</span>&#125; -&gt; &lt;|</span><br><span class="line">    <span class="string">"Interpreter"</span> -&gt; <span class="string">"URL"</span>,</span><br><span class="line">    <span class="string">"Hint"</span> -&gt; <span class="string">"Enter the URL to be shortened"</span></span><br><span class="line">    |&gt;,</span><br><span class="line">  <span class="keyword">Row</span>@&#123;<span class="string">"Short URL: "</span>, <span class="keyword">Hyperlink</span>@ <span class="keyword">URLShorten</span>[#url]&#125; &amp;,</span><br><span class="line">  <span class="keyword">AppearanceRules</span> -&gt; &lt;|</span><br><span class="line">    <span class="string">"Title"</span> -&gt; <span class="string">"Shorten your URL"</span></span><br><span class="line">    |&gt;</span><br><span class="line">  ],</span><br><span class="line"> <span class="string">"url-shorten"</span>,</span><br><span class="line"> <span class="keyword">Permissions</span> -&gt; <span class="string">"Public"</span></span><br><span class="line"> ]</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Wolfram </tag>
+            
+            <tag> Cloud </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【新坑】wll-rs: 用于 Rust 的 Wolfram LibraryLink 接口</title>
       <link href="/blog/2020/08/wll-rs-design/"/>
       <url>/blog/2020/08/wll-rs-design/</url>
