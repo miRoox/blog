@@ -8,7 +8,7 @@ links:
     icon: fas fa-user-friends
     items:
     - name: Raptazure
-      avatar: https://raptazure.github.io/favicon-32x32.png
+      avatar: https://cdn.jsdelivr.net/gh/raptazure/cdn/blog/flandre-scarlet.png
       url: https://raptazure.github.io/
       backgroundColor: '#FFFFF9'
       textColor: '#282828'
