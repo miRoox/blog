@@ -3,7 +3,7 @@ layout: post
 title: "【新坑】wll-rs: 用于 Rust 的 Wolfram LibraryLink 接口"
 date: 2020-08-29 23:40:21
 categories: "代码编程"
-tag: ["Rust", "Wolfram", "LibraryLink"]
+tag: ["Rust", "Wolfram", "LibraryLink", "编程"]
 ---
 
 苦于  Wolfram [LibraryLink](http://reference.wolfram.com/language/LibraryLink/tutorial/Overview.html) 原本的接口使用起来过于繁琐，又受 [wll-interface](https://github.com/njpipeorgan/wll-interface) 的启发，近期开了一个新坑，尝试为 Wolfram LibraryLink 封装一套 Rust 的接口 [wll-rs](https://crates.io/crates/wll)。
