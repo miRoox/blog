@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>吐槽：这些天在拼接仪项目上踩的坑</title>
+      <link href="/blog/2020/10/TrapInSplicerProject/"/>
+      <url>/blog/2020/10/TrapInSplicerProject/</url>
+      
+        <content type="html"><![CDATA[<p><em>本文以倒苦水为主。</em></p><a id="more"></a><hr><p>那是一个平和的中午，我刚吃完午饭，正准备回寝室休息。然而，一个突如其来的微信消息打破了宁静的一天……</p><p>嗯，就是导师突然拉上我们组好几个人来开会，讨论如何在甲方要求的验收时间——国庆节后——之前把这个项目的软件部分给做出来。然而，这个项目虽然启动已经有至少三年之久了，可之前基本没啥进展，硬件那边不知道为啥一直没完成，咱们软件也就没好好做，并且之前负责这个项目的两个师兄都已经毕业了。最终，这颗定时炸弹轮到咱们手里终于还是炸了。</p><p>不过，更离谱的是我们没人明白这个东西到底要做成啥样。手头只有一份上一代留下来的不清不楚的说明书。而导师的核心指示就是要把界面做得和原来一样，至于里面的功能，很大程度上只能自己去猜了。</p><p>整个项目粗浅的理解就是在一个多自由度的位移台上放了一个红外相机，软件则要控制位移台的运动以及相机的拍摄，并可以运用自动聚焦的方式寻找焦面的最佳位置。你要问我这里哪里体现了“拼接仪”，我也说不清，只能说和我们软件部分的工作无关。</p><h3 id="位移台控制"><a class="markdownIt-Anchor" href="#位移台控制"></a> 位移台控制</h3><p>最初给我分配的任务就是位移台控制。在这里，位移台是通过 PMAC 驱动的。PMAC (Programmable Multi-Axis Controller) 可编程多轴运动控制器，是美国 Delta Tau Data System 公司推出的PC机平台上的运动控制器。不过，想要用 PMAC 实现上位机编程控制，首先还需要安装 <a href="http://www.deltatau.com/DT_Products/SoftwareDetails.aspx?CatID=500-PMAC%20EXECUTIVE%20PRO2%20SUITE" target="_blank" rel="noopener">PMAC EXECUTIVE PRO2 SUITE</a>，然后通过它的互操作库 <code>Interop.PCOMMSERVERLib</code> 来调用命令，实现对电机的控制。</p><p>然而，我们一上手就遇到了一个难题，<code>Interop.PCOMMSERVERLib</code> 似乎是基于 .NET Framework 3.x 开发的，将它引入引用后，如果目标框架是 .NET Framework 3.5 就没有问题，而如果用 .NET Framework 4 及以上，就会出现诸如“无法嵌入互操作类型 “PmacDeviceClass”，请改用合适的接口”的问题。然而，<code>Windows.Forms.DataVisualization</code> 又是 .NET Framework 4 才引入的，没用它的话，要绘制自动聚焦评价函数的曲线又显得麻烦起来。</p><p>几经波折，总算在公司的官方论坛上找到了一个<a href="http://forums.deltatau.com/showthread.php?tid=234" target="_blank" rel="noopener">解决方法</a>。按照他的指示，将引用属性里的“嵌入互操作类型”的值改为 <code>false</code>，就可以避免出现编译错误了。按我的理解，这避开了编译时对 COM 类型的解析。而另一方面，得益于 COM 组件强大的兼容性，这么做在运行时似乎并不会有问题。</p><p>除此之外，还有各种其它问题到工厂里调试才逐渐凸显，于是项目的开发毫无疑问的超期了，变成了一场漫长而琐碎拉锯战。</p><h3 id="相机控制"><a class="markdownIt-Anchor" href="#相机控制"></a> 相机控制</h3><p>相机用的是 FLIR 的工业相机，为了通过编程控制，需要使用 <a href="https://www.flir.com/products/flycapture-sdk/" target="_blank" rel="noopener">FlyCapture2</a> 套件进行开发。</p><p>事实上，这部分之前的一个师兄应该已经尝试过了，然而，他在移交代码的时候并没有找全所有依赖，导致移交的程序虽然能通过编译，但一旦启动就会发生 <code>FileNotFoundException</code>。不过好在开发套件中还包含一些demo的源码，那就编译跑跑试试？幸运的是，demo在我的机器上可以跑起来。既然如此，那就好办了，找到输出目录，把里面的东西一股脑的都复制过来……额，好像有点多。那就先用暴力排除法，在程序启动的时候试着把路径里的文件一个个删掉，没有操作权限的文件就是必要的依赖。不过后来想想这个方法还是太笨太低效了，于是又去找查找依赖项的工具，得到了 <a href="https://github.com/lucasg/Dependencies" target="_blank" rel="noopener">Dependencies</a>，不过这是后话了。</p><p>既然找到依赖了，最好还能在构建的时候一把梭把依赖全部自动复制到输出目录。在研究了一下demo的项目文件后，又根据目标平台和配置写了一个<code>PostBuildEvent</code>脚本，中间还顺带学习了一下 PowerShell，一晃就到了凌晨三点半。</p><p>结果第二天师兄跟我说在他那儿还是会触发 <code>BadImageFormatException</code>，不过此时我已经备好了 Dependencies 作为武器。分析一下 Dependencies 给出缺失的库，基本都 <code>api-ms-win-</code> 开头，<code>d</code> 结尾的一些动态库，这就意识到估计跟 Debug 模式有关，而且是微软官方的 VC++ 运行时库。于是先让师兄换成 Release，成功跑起来。再让他给 Visual Studio 安装 C++ 桌面开发的相关组件，才解决。</p><p>然而还有漫长的痛苦发生在去工厂调试之后。我们的目标工控机跑的是古老的 Windows XP 32位系统，然而我们用的这个库是64位（其实有32位的，不过32位的好像缺依赖，在我自己的机器上都跑不了demo）。好在机器的硬件是64位的，于是又抱着主机到有网的地方重装一个64位系统。除了系统之外，还有各种 VC 运行时库、.NET Framework 要安装。</p><p>好不容易搞定了基本环境，启动后却检测不到相机。看设备管理器里的提示，似乎跟驱动程序的证书有关，可找遍各种资料也没明白应该怎么修复，找相机售后也没得出个所以然来。不过这段时间我正好有一些工作面试之类的，也没太管。事后，听说师兄们祭出了终极绝招360管家，把所有系统漏洞都修复了就好使了……而问题的准确原因也就成了一个谜。</p><h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h3><p>做这么一个项目的过程中虽然踩了不少坑，碰了不少壁，不过“凡不能毁灭我的，必使我强大”，要说收获，可能也不少。不过项目虽然已经进入后期，但踩坑之路还没有断绝。到了现在，看这项目最大的隐患可能就是各个精度指标提的有些离谱，什么自动聚焦图像采集间隔 10μm，用<strong>拟合</strong>得到的最佳焦面位置判定精度却要达到1μm之类的，实在是过于奇幻了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈散记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+            <tag> C# </tag>
+            
+            <tag> PMAC </tag>
+            
+            <tag> FlyCapture2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>部署一个简单的缩略 URL 的表单</title>
       <link href="/blog/2020/08/WolframURLShortenForm/"/>
       <url>/blog/2020/08/WolframURLShortenForm/</url>

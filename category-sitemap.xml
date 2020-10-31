@@ -8,6 +8,13 @@
     </url>
 
     <url>
+        <loc>http://miroox.github.io/blog/categories/%25E6%259D%2582%25E8%25B0%2588%25E6%2595%25A3%25E8%25AE%25B0/</loc>
+        <lastmod>2020-10-31T14:56:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://miroox.github.io/blog/categories/%25E4%25BB%25A3%25E7%25A0%2581%25E7%25BC%2596%25E7%25A8%258B/</loc>
         <lastmod>2020-08-31T06:56:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -22,22 +29,15 @@
     </url>
 
     <url>
-        <loc>http://miroox.github.io/blog/categories/%25E6%259D%2582%25E8%25B0%2588%25E6%2595%25A3%25E8%25AE%25B0/</loc>
-        <lastmod>2020-01-28T14:19:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://miroox.github.io/blog/categories/%25E7%25BF%25BB%25E8%25AF%2591%25E4%25BD%259C%25E5%2593%2581/</loc>
-        <lastmod>2020-01-28T14:19:41.000Z</lastmod>
+        <lastmod>2020-01-29T10:40:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://miroox.github.io/blog/categories/%25E6%2595%25B0%25E7%2590%2586%25E7%25A7%2591%25E5%25AD%25A6/</loc>
-        <lastmod>2020-01-28T14:19:41.000Z</lastmod>
+        <lastmod>2020-01-29T10:40:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
