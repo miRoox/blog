@@ -81,10 +81,10 @@ Template(
 
 包注册其实非常简单。不过注册前还需要检查一下注册需要满足的条件，包括是否有开源许可协议，是否所有依赖都有有限区间的 `[compat]` 入口，以及前面提过的命名要求等。这些条件详见 [Registering a package in General](https://github.com/JuliaRegistries/General#registering-a-package-in-general)。
 
-至于注册，只需要在需要的 commit 下评论
+至于注册，只需要在更新了项目文件中的 `version` 后，在对应的提交下评论
 
 ```
 @JuliaRegistrator register
 ```
 
-即可。
+即可发出注册请求，它会自动在 [JuliaRegistries/General](https://github.com/JuliaRegistries/General) 中创建一个对应的 pull request。对于新注册的包，会公示三天，如果没有问题，则会自动合并；对于已存在的包的新版本，等待5分钟就会自动合并。
