@@ -75,7 +75,7 @@ Template(
 
 可以看到除了前一节提到的部分，还有基于 [GitHub Actions](https://github.com/features/actions) 的持续集成，[Codecov](https://codecov.io/) 覆盖率监测、[CompatHelper](https://github.com/JuliaRegistries/CompatHelper.jl)、[TagBot](https://github.com/JuliaRegistries/TagBot) 等一系列附加工具。详情还是去看 PkgTemplates.jl 的文档吧。
 
-另外，Documenter 在部署文档时，需要在托管环境中配置 SSH 部署密钥，而为了生成密钥，还需要 [DocumenterTools.jl](https://github.com/JuliaDocs/DocumenterTools.jl)，然后分别将公钥和私钥放在 GitHub 的 deploy key 和名为 `DOCUMENTER_KEY` 的环境变量中。这部分详见 [Authentication: SSH Deploy Keys](https://juliadocs.github.io/Documenter.jl/stable/man/hosting/#travis-ssh)。
+另外，Documenter 在部署文档时，需要在托管环境中配置 SSH 部署密钥，而为了生成密钥，还需要 [DocumenterTools.jl](https://github.com/JuliaDocs/DocumenterTools.jl)，然后分别将公钥和私钥放在 GitHub 具有仓库写权限的 deploy key 和名为 `DOCUMENTER_KEY` 的环境变量中。这部分详见 [Authentication: SSH Deploy Keys](https://juliadocs.github.io/Documenter.jl/stable/man/hosting/#travis-ssh)。
 
 ### 包注册
 
