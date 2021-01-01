@@ -201,7 +201,7 @@ theme_config:
         url: https://github.com/miRoox
       - icon: fas fa-headphones-alt
         url: https://music.163.com/#/user/home?id=415505414
-    copyright: '[Copyright © 2017-2020 miRoox](https://miroox.github.io/) Powered by the [Volantis theme](https://volantis.js.org/) for [Hexo](https://hexo.io/) '
+    copyright: '[Copyright © 2017-2021 miRoox](https://miroox.github.io/) Powered by the [Volantis theme](https://volantis.js.org/) for [Hexo](https://hexo.io/) '
   plugins:
     mathjax: false
     wordcount: true
