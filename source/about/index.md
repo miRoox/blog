@@ -17,8 +17,9 @@ meta:
 0.	本质上是个theorist 。
 0.  爱抽象的人很难爱上具体的人。
 0.  目前科研方向主要是计算光学成像。
-0.	常用社交帐号:[微博](https://weibo.com/MiFantasy000)、[Bangumi](http://bangumi.tv/user/miroox)、[GitHub](https://github.com/miRoox)
-0.	不喜欢传统社交，不谈政治，少谈时事。
+0.	常用社交帐号: [twitter](https://twitter.com/miroox6)、[微博](https://weibo.com/MiFantasy000)、[Bangumi](http://bangumi.tv/user/miroox)、[GitHub](https://github.com/miRoox)
+0.  社交废人，通常承受不了2人以上的社交环境。
+0.	不谈政治，少谈时事。
 0.	动画、漫画、轻小说都看，不过后两者相对看得少。
 0.	国产动画、漫画挑着看一些，欧美的基本不看。
 0.	对动画的评价标准不确定，好评的重要一点是电波对的上（如《人类衰退之后》），某一方面很优秀的作品也会给好评（如《永生之酒》），差评的作品基本上是我很难看下去的。
