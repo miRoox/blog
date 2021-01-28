@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>在MSBuild中构建LaTeX文档</title>
+      <link href="/blog/2021/01/MSBuild-LaTeXDoc/"/>
+      <url>/blog/2021/01/MSBuild-LaTeXDoc/</url>
+      
+        <content type="html"><![CDATA[<p>众所周知，LaTeX 便于实现专业级的排版效果，而且内容与样式分离的设计也使文档格式易于调整修改；同时，其源文件作为一种纯文本格式的文件，对于 git 这类版本控制系统也更为友好，利于开发过程中的协作工作。因此，LaTeX 相比 Word 更适合用于制作软件的用户手册。</p><p>Visual Studio 本身当然没有提供 LaTeX 的构建工具，但作为其构建系统的 MSBuild 提供了自定义目标和任务的方式。而我们在编写 LaTeX 文档时，也常常会使用 LaTeX 自己的构建工具（如：latexmk、Arara）。方便起见，我们直接用 <a href="https://docs.microsoft.com/zh-cn/visualstudio/msbuild/exec-task" target="_blank" rel="noopener">Exec 任务</a>调用 latexmk 构建 LaTeX 文档，已避免处理交叉引用等问题面临的多次编译排版的麻烦。</p><p>这里就略过 LaTeX 文档本身如何编写了，只讲 MSBuild 的配置。</p><p>首先，在文本编辑器下打开项目文件，通过属性设置好文档的目录和文档的文件名：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">PropertyGroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ManualFile</span>&gt;</span>manual.pdf<span class="tag">&lt;/<span class="name">ManualFile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ManualDir</span>&gt;</span>$(SolutionDir)doc/manual/<span class="tag">&lt;/<span class="name">ManualDir</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">PropertyGroup</span>&gt;</span></span><br></pre></td></tr></table></figure><p>这里，我们要生成的手册文档所在的路径是相对于解决方案路径的 <code>doc/manual</code>，而排版输出的 PDF 文档其文件名是 <code>manual.pdf</code>。</p><p>然后添加构建文档的目标：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Target</span> <span class="attr">Name</span>=<span class="string">"BuildManual"</span> <span class="attr">AfterTargets</span>=<span class="string">"PostBuildEvent"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Exec</span> <span class="attr">Command</span>=<span class="string">"latexmk"</span> <span class="attr">WorkingDirectory</span>=<span class="string">"$(ManualDir)"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Copy</span> <span class="attr">SourceFiles</span>=<span class="string">"$(ManualDir)$(ManualFile)"</span> <span class="attr">DestinationFolder</span>=<span class="string">"$(OutDir)"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Target</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Target</span> <span class="attr">Name</span>=<span class="string">"PublishManual"</span> <span class="attr">AfterTargets</span>=<span class="string">"Publish"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Copy</span> <span class="attr">SourceFiles</span>=<span class="string">"$(ManualDir)$(ManualFile)"</span> <span class="attr">DestinationFolder</span>=<span class="string">"$(PublishDir)"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Target</span>&gt;</span></span><br></pre></td></tr></table></figure><p>需要注意的是，latexmk 想要正常工作的话，要将工作目录和 LaTeX 源文件设置为同一个，尤其是在设置了 <code>latexmkrc</code> 来调整 latexmk 的行为的情况下。</p><p>另外，除了在构建时需要将输出的 PDF 文档复制到软件的输出目录下之外，不要忘记发布时同样需要将其复制到发布目录下。</p><p>最后，为了方便重新构建，也不要忘记在清理目标时同时清理 LaTeX 文档：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Target</span> <span class="attr">Name</span>=<span class="string">"CleanManual"</span> <span class="attr">AfterTargets</span>=<span class="string">"Clean"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Exec</span> <span class="attr">Command</span>=<span class="string">"latexmk -c"</span> <span class="attr">WorkingDirectory</span>=<span class="string">"$(ManualDir)"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Delete</span> <span class="attr">Files</span>=<span class="string">"$(OutDir)$(ManualFile)"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Target</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LaTeX </tag>
+            
+            <tag> MSBuild </tag>
+            
+            <tag> Visual Studio </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2020年终总结</title>
       <link href="/blog/2020/12/Summary2020/"/>
       <url>/blog/2020/12/Summary2020/</url>
