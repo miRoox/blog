@@ -41,6 +41,20 @@ Visual Studio 本身当然没有提供 LaTeX 的构建工具，但作为其构�
 
 另外，除了在构建时需要将输出的 PDF 文档复制到软件的输出目录下之外，不要忘记发布时同样需要将其复制到发布目录下。
 
+然而，如果设置了多种 `TargetFrameworks` 时，上面这种组织目标的方式可能就不太合适，因为构建时几种目标框架会同时进行构建，很可能导致 latexmk 在同一时间段调用多次，而其所需的文件资源互相抢占，最终构建失败。当然，这样的问题总有前人踩过类似的坑，比如 SO 上的 [How to make an MSBuild Target that only runs once instead of once, before Targets that run once per framework in the TargetFrameworks tag?](https://stackoverflow.com/questions/46675782/how-to-make-an-msbuild-target-that-only-runs-once-instead-of-once-before-target)，告诉我们可以使用 `BeforeTargets="DispatchToInnerBuilds"` 在进入目标框架构建之前执行目标，于是我们的文档构建-输出-发布可以改写成：
+
+```xml
+<Target Name="BuildManual" BeforeTargets="DispatchToInnerBuilds">
+  <Exec Command="latexmk" WorkingDirectory="$(ManualSource)" />
+</Target>
+<Target Name="CopyManual" DependsOnTargets="BuildManual" AfterTargets="PostBuildEvent">
+  <Copy SourceFiles="$(ManualSource)$(ManualFile)" DestinationFolder="$(OutDir)" />
+</Target>
+<Target Name="PublishManual" DependsOnTargets="BuildManual" AfterTargets="Publish">
+  <Copy SourceFiles="$(ManualSource)$(ManualFile)" DestinationFolder="$(PublishDir)" />
+</Target>
+```
+
 最后，为了方便重新构建，也不要忘记在清理目标时同时清理 LaTeX 文档：
 
 ```xml
