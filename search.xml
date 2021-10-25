@@ -20,6 +20,10 @@
       
         <tags>
             
+            <tag> 编程 </tag>
+            
+            <tag> 元编程 </tag>
+            
             <tag> C# </tag>
             
             <tag> .NET </tag>
@@ -46,6 +50,8 @@
       
       
         <tags>
+            
+            <tag> 编程 </tag>
             
             <tag> LaTeX </tag>
             
@@ -191,6 +197,8 @@
             <tag> 编程 </tag>
             
             <tag> Wolfram </tag>
+            
+            <tag> 元编程 </tag>
             
             <tag> Rust </tag>
             
@@ -468,9 +476,13 @@
       
         <tags>
             
+            <tag> 功能模拟 </tag>
+            
             <tag> 编程 </tag>
             
             <tag> Wolfram </tag>
+            
+            <tag> 元编程 </tag>
             
             <tag> Undocumented </tag>
             
@@ -561,6 +573,8 @@
             
             <tag> Wolfram </tag>
             
+            <tag> 元编程 </tag>
+            
             <tag> Undocumented </tag>
             
         </tags>
@@ -591,6 +605,8 @@
             <tag> 编程 </tag>
             
             <tag> Wolfram </tag>
+            
+            <tag> 元编程 </tag>
             
         </tags>
       
@@ -759,6 +775,8 @@
             <tag> 踩坑 </tag>
             
             <tag> Wolfram </tag>
+            
+            <tag> 元编程 </tag>
             
         </tags>
       
@@ -995,6 +1013,8 @@
             <tag> 编程 </tag>
             
             <tag> Wolfram </tag>
+            
+            <tag> 元编程 </tag>
             
         </tags>
       
