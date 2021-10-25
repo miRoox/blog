@@ -3,7 +3,7 @@ layout: post
 title: "在Wolfram语言中模拟指针语义"
 date: 2019-01-18 23:15:37
 categories: "代码编程"
-tag: ["编程", "Wolfram", "功能模拟"]
+tag: ["编程", "Wolfram", "功能模拟", "元编程"]
 ---
 
 ### 背景和问题的引入

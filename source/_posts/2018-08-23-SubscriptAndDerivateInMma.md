@@ -3,7 +3,7 @@ layout: post
 title: "Mathematica下标与导数赋值问题的解决方法"
 date: 2018-08-23 15:22:43
 categories: "代码编程"
-tag: ["编程", "Wolfram", "踩坑"]
+tag: ["编程", "Wolfram", "踩坑", "元编程"]
 description: 众所周知，Mathematica中虽然使用下标形式非常方便，但如果对下标结构进行直接赋值，它将关联到内部符号 Subscript 上。这样，在我们大量清理符号定义的时候可能会漏掉一些定义。
 ---
 

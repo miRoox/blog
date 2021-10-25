@@ -3,7 +3,7 @@ layout: post
 title: "在MSBuild中构建LaTeX文档"
 date: 2021-01-28 20:12:12
 categories: "代码编程"
-tag: ["MSBuild", "LaTeX", "Visual Studio"]
+tag: ["MSBuild", "LaTeX", "Visual Studio", "编程"]
 ---
 
 众所周知，LaTeX 便于实现专业级的排版效果，而且内容与样式分离的设计也使文档格式易于调整修改；同时，其源文件作为一种纯文本格式的文件，对于 git 这类版本控制系统也更为友好，利于开发过程中的协作工作。因此，LaTeX 相比 Word 更适合用于制作软件的用户手册。

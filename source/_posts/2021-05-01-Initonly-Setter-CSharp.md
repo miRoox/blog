@@ -3,7 +3,7 @@ layout: post
 title: "关于C#9中仅初始化的属性设置器"
 date: 2021-05-01 20:46:12
 categories: "代码编程"
-tag: ["C#", ".NET"]
+tag: ["C#", ".NET", "编程", "元编程"]
 ---
 
 C# 9 引入了[仅初始化的属性设置器](https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/proposals/csharp-9.0/init)，这使我们可以定义一个只能在构造函数或者初始化设定项中进行设置的属性：

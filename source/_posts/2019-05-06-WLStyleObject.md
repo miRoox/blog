@@ -3,7 +3,7 @@ layout: post
 title: "如何在Wolfram语言里造一个Wolfram语言风格的对象"
 date: 2019-05-06 22:27:17
 categories: "代码编程"
-tag: ["编程", "Wolfram", "Undocumented"]
+tag: ["编程", "Wolfram", "Undocumented", "功能模拟", "元编程"]
 ---
 
 最近在做 [ComputationalOptics包](https://github.com/miRoox/ComputationalOptics) 的时候为了把 [`LightField`](https://github.com/miRoox/ComputationalOptics/blob/1197dbf20758271c93acdbc4f780913443847b95/ComputationalOptics/Kernel/LightField.m) 实现为一个比较典型的Wolfram语言风格的对象，使用了很多undocumented方法，这里主要是做一下记录。

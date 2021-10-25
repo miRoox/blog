@@ -3,7 +3,7 @@ layout: post
 title: "使用Mathematica实现基于类的面向对象"
 date: 2017-09-01 23:54:41
 categories: "代码编程"
-tag: ["编程", "Wolfram", "功能模拟"]
+tag: ["编程", "Wolfram", "功能模拟", "元编程"]
 ---
 
 Mathematica 通常被宣传为 *符号式* 、 *函数式* 的编程语言，不过 [维基百科](https://en.wikipedia.org/wiki/Comparison_of_multi-paradigm_programming_languages#Language_overview) 宣称它支持 13种编程范式，其中还包括 *面向对象* 编程。尽管大家似乎都不把 Mathematica 当编程语言，不过出于兴趣，也为了提升对 Mathematica 语言特性和面向对象的理解，于是有了这篇文章。
