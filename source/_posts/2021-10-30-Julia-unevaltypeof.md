@@ -8,6 +8,8 @@ tag: ["Julia", "元编程"]
 
 在Julia中，[`typeof`](https://docs.juliacn.com/latest/base/base/#Core.typeof) 可以获取对象类型，但和C++中的 [`decltype`](https://zh.cppreference.com/w/cpp/language/decltype) 不同，它获取的是对象的运行时类型，需要对表达式完成求值才能得到。然而有时我们可能希望不求值就得到表达式的类型，这在Julia中并没有**直接**提供内置方法来实现。
 
+<!-- more -->
+
 但是，我们注意到 [`Tests.@inferred`](https://docs.juliacn.com/latest/stdlib/Test/#Test.@inferred) 可以对推导出的类型和实际的运行时类型进行比较。显然，Julia其实提供了相应的方法获取推导的类型的。阅读[其代码](https://github.com/JuliaLang/julia/blob/master/stdlib/Test/src/Test.jl#L1601)不难发现 `Base.return_types` 方法是推导类型的关键所在。这一方法在文档中并没有具体介绍，仅在手册中介绍方法分派的[输出类型计算](https://docs.juliacn.com/latest/manual/methods/#%E8%BE%93%E5%87%BA%E7%B1%BB%E5%9E%8B%E8%AE%A1%E7%AE%97)时作为一个反面例子出现。根据文档中的简单用例以及 `@inferred` 中的实现推断，可以知道它的签名类似
 
 ```julia
@@ -16,7 +18,7 @@ Base.return_types(f, types::Tuple{Vararg{DataType}})
 
 即根据函数 `f` 以及给定参数类型的元组 `types` 来得到可能的返回值类型。注意这个函数会返回一个类型数组，分别对应于**可能**匹配到方法的不同实例的返回类型。例如
 
-```jl
+```julia
 > f(x::Int) = x^2
 > f(x::Integer) = x
 > Base.return_types(f, (Int,))
@@ -65,7 +67,7 @@ end
 
 简单试一下：
 
-```jl
+```julia
 > @uneval_typeof 1+2*3
 Int64
 > @uneval_typeof 1//2+3.0*0x45
