@@ -60,6 +60,16 @@ links:
       - ACG
       - 软件
       - 生活
+    - name: iamyukino
+      avatar: https://iamyukino.github.io/index/wp-content/work/images/global/avatar.png
+      url: https://iamyukino.github.io/
+      backgroundColor: '#4f8bae'
+      textColor: '#FFF'
+      tags:
+      - 编程
+      - CPP
+      - 生活
+      - 二次元相关
     - name: wuyudi
       avatar: https://wuyudi.github.io/images/avatar.png
       url: https://wuyudi.github.io/
