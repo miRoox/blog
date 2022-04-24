@@ -23,8 +23,8 @@ links:
       tags:
       - 计算机
     - name: leolanger
-      avatar: https://lhd-code.github.io/images/avater.jpg
-      url: https://lhd-code.github.io/
+      avatar: https://leolanger.github.io/img/illust_75709101_20200509_190820.jpg
+      url: https://leolanger.github.io/
       backgroundColor: '#FFF'
       textColor: '#282828'
       tags:
