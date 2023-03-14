@@ -23,6 +23,10 @@ jobs:
           node-version: '10.x'
       - run: npm ci
       - run: npm run build
+      - name: Validate public HTML 
+        run: |
+          grep -qr --include '*.html' '[^[:space:]]' public/
+          npm run validate-public
       - name: Deploy
         if: github.event_name != 'pull_request' 
         uses: JamesIves/github-pages-deploy-action@v4
