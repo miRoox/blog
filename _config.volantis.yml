@@ -1,0 +1,138 @@
+cover:
+  search: '搜索……'
+  display:
+    home: true
+    archive: true
+    others: false
+  title: miRoox的博客
+  subtitle: ''
+  features:
+    - name: 主页
+      icon: fas fa-home
+      url: https://miroox.github.io/
+    - name: 归档
+      icon: fas fa-archive
+      url: archives/
+      rel: nofollow
+    - name: 友链
+      icon: fas fa-user-friends
+      url: friends/
+      rel: nofollow
+    - name: 知识库
+      icon: fab fa-wikipedia-w
+      url: https://miroox.github.io/wiki/
+      rel: nofollow
+    - name: 关于
+      icon: fas fa-info-circle
+      url: about/
+      rel: nofollow
+navbar:
+  logo:
+    title: # miRoox' Blog
+  search: '搜索……'
+  menu:
+    - name: 最近
+      icon: fas fa-clock
+      url: /
+    - name: 归档
+      icon: fas fa-archive
+      url: archives/
+      rel: nofollow
+    - name: 分类
+      icon: fas fa-folder-open
+      rows:
+        - name: 代码编程
+          url: categories/代码编程
+        - name: 数理科学
+          url: categories/数理科学
+        - name: 小说文艺
+          url: categories/小说文艺
+        - name: 杂谈散记
+          url: categories/杂谈散记
+        - name: 翻译作品
+          url: categories/翻译作品
+    - name: 标签
+      icon: fas fa-tags
+      url: tags/
+      rel: nofollow
+    - name: 友链
+      icon: fas fa-user-friends
+      url: friends/
+      rel: nofollow
+    - name: 知识库
+      icon: fab fa-wikipedia-w
+      url: https://miroox.github.io/wiki/
+      rel: nofollow
+sidebar:
+  for_page: [blogger, bulletin, category, tagcloud]
+  widget_library:
+    blogger:
+      class: blogger
+      avatar: /blog/images/avatar.jpg
+      jinrishici: false
+      social:
+        - icon: fas fa-rss
+          url: atom.xml
+        - icon: fas fa-envelope
+          url: mailto:miroox@outlook.com
+        - icon: fab fa-weibo
+          url: https://weibo.com/MiFantasy000
+        - icon: fab fa-twitter
+          url: https://twitter.com/miroox6
+        - icon: fab fa-zhihu
+          url: https://www.zhihu.com/people/lu-yong-8-79
+        - icon: fab fa-github
+          url: https://github.com/miRoox
+    bulletin:
+      class: text
+      content:
+        - '博客迁移中……'
+article:
+  body:
+    meta_library:
+      author:
+        name: miRoox
+        url: https://miroox.github.io/
+        avatar: /blog/images/avatar.jpg
+site_footer:
+  layout: [aplayer, social, license, copyright]
+  social:
+    - icon: fas fa-rss
+      url: atom.xml
+    - icon: fas fa-envelope
+      url: mailto:miroox@outlook.com
+    - icon: fab fa-weibo
+      url: https://weibo.com/MiFantasy000
+    - icon: fab fa-twitter
+      url: https://twitter.com/miroox6
+    - icon: fab fa-zhihu
+      url: https://www.zhihu.com/people/lu-yong-8-79
+    - icon: fab fa-github
+      url: https://github.com/miRoox
+    - icon: fas fa-headphones-alt
+      url: https://music.163.com/#/user/home?id=415505414
+  copyright: '[Copyright © 2017-2023 miRoox](https://miroox.github.io/) Powered by the [Volantis theme](https://volantis.js.org/) for [Hexo](https://hexo.io/) '
+plugins:
+  mathjax: false
+  wordcount: true
+  aplayer:
+    enable: true
+    server: netease
+    type: playlist
+    id: 592343641
+    volume: 0.7
+    autoplay: false
+    order: random
+  parallax:
+    enable: true
+    images:
+      - images/bg1.jpg
+      - images/bg2.jpg
+comments:
+  service: gitalk
+  gitalk:
+    clientID: 72d968977988a0f2857a
+    clientSecret: 545b7fd3220ded515ef4b37df88eacb7a0d25387
+    repo: blog
+    owner: miRoox
+    admin: ["miRoox"]
