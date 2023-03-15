@@ -4,7 +4,12 @@
   ],
   "rules": {
     "no-dup-id": "warn",
+    "no-dup-attr": "warn",
+    "attribute-misuse": "warn",
+    "attribute-allowed-values": "warn",
+    "element-required-attributes": "warn",
     "element-permitted-content": "warn",
+    "void-content": "warn",
     "deprecated": "warn",
     "no-deprecated-attr": "warn"
   }
