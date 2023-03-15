@@ -8,11 +8,11 @@ tag: ["编程", "Wolfram", "Undocumented", "参考", "元编程"]
 
 ``GeneralUtilities` `` 是Mathematica从版本10开始新加入的一个上下文。其中提供了大量的实用函数，包括代码生成、调试、静态分析、迭代器对象等各个领域，一定程度上弥补了Mathematica基础设施不足的状况。
 
+<!--more-->
+
 这个工具包内包含的函数十分繁杂，在当前版本11.3下，可以通过``Names["GeneralUtilities`*"]//Length``看到其共包含了514个符号。这篇文章简单介绍与宏有关的部分。
 
 “宏”在编程领域往往作为一种代码生成技术使用，例如在一些编译型语言中，宏展开往往发生在编译或预编译阶段。而在``GeneralUtilities` ``的语境下，宏默认在定义时自动展开，同样也是一种代码生成技术。
-
-<!--more-->
 
 ```mathematica
 Needs["GeneralUtilities`"]
