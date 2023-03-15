@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "html-validate:standard"
+  ],
+  "rules": {
+    "no-dup-id": "warn",
+    "element-permitted-content": "warn",
+    "deprecated": "warn",
+    "no-deprecated-attr": "warn"
+  }
+}
