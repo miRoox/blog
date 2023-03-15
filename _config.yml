@@ -98,11 +98,10 @@ theme: volantis
 favicon: /images/favicon.png
 # avatar: /images/avatar.jpg
 import:
-  link:
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-  script:
-    - <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-    - <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  head_begin:
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    - <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    - <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
     - <script type="text/javascript" color="27,195,251" opacity="0.7" zIndex="-1" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 theme_config:
   cover:
@@ -135,7 +134,7 @@ theme_config:
         rel: nofollow
   navbar:
     logo:
-      title: miRoox' Blog
+      title: # miRoox' Blog
     search: '搜索……'
     menu:
       - name: 最近
@@ -170,22 +169,38 @@ theme_config:
         icon: fab fa-wikipedia-w
         url: https://miroox.github.io/wiki/
         rel: nofollow
-  meta:
-    author:
-      name: miRoox
-      url: https://miroox.github.io/
-      avatar: /blog/images/avatar.jpg
-    tags:
-      icon: fas fa-tags
-  widget:
-    blogger:
-      class: blogger
-      avatar: /blog/images/avatar.jpg
-    bulletin:
-      class: text
-      content:
-        - '博客迁移中……'
-  footer:
+  sidebar:
+    for_page: [blogger, bulletin, category, tagcloud]
+    widget_library:
+      blogger:
+        class: blogger
+        avatar: /blog/images/avatar.jpg
+        jinrishici: false
+        social:
+          - icon: fas fa-rss
+            url: atom.xml
+          - icon: fas fa-envelope
+            url: mailto:miroox@outlook.com
+          - icon: fab fa-weibo
+            url: https://weibo.com/MiFantasy000
+          - icon: fab fa-twitter
+            url: https://twitter.com/miroox6
+          - icon: fab fa-zhihu
+            url: https://www.zhihu.com/people/lu-yong-8-79
+          - icon: fab fa-github
+            url: https://github.com/miRoox
+      bulletin:
+        class: text
+        content:
+          - '博客迁移中……'
+  article:
+    body:
+      meta_library:
+        author:
+          name: miRoox
+          url: https://miroox.github.io/
+          avatar: /blog/images/avatar.jpg
+  site_footer:
     layout: [aplayer, social, license, copyright]
     social:
       - icon: fas fa-rss
@@ -214,7 +229,8 @@ theme_config:
       volume: 0.7
       autoplay: false
       order: random
-    backstretch:
+    parallax:
+      enable: true
       images:
         - images/bg1.jpg
         - images/bg2.jpg
