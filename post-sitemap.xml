@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>http://miRoox.github.io/blog/2015/07/ZenoParadoxAndCalculus/</loc>
+        <lastmod>2023-03-16T06:36:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://miRoox.github.io/blog/2019/02/WLGeneralUtilitiesMacro/</loc>
         <lastmod>2023-03-15T14:47:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -330,14 +338,6 @@
 
     <url>
         <loc>http://miRoox.github.io/blog/2015/07/Idea/</loc>
-        <lastmod>2020-01-22T14:41:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://miRoox.github.io/blog/2015/07/ZenoParadoxAndCalculus/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
