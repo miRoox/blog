@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>http://miRoox.github.io/blog/2024/04/psyco-failure/</loc>
+        <lastmod>2024-04-08T14:09:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://miRoox.github.io/blog/2015/07/ZenoParadoxAndCalculus/</loc>
         <lastmod>2023-03-16T06:36:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -513,7 +521,7 @@
     </url>
 
     <url>
-        <loc>http://miRoox.github.io/blog/2019/07/RuleBasedStepByStepDerivative/</loc>
+        <loc>http://miRoox.github.io/blog/2019/09/MatrixFormProblem/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -521,7 +529,7 @@
     </url>
 
     <url>
-        <loc>http://miRoox.github.io/blog/2019/09/MatrixFormProblem/</loc>
+        <loc>http://miRoox.github.io/blog/2019/07/RuleBasedStepByStepDerivative/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
