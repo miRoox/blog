@@ -339,6 +339,13 @@
     </url>
 
     <url>
+        <loc>http://miroox.github.io/blog/tags/Haskell/</loc>
+        <lastmod>2020-01-22T14:41:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://miroox.github.io/blog/tags/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -347,13 +354,6 @@
 
     <url>
         <loc>http://miroox.github.io/blog/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
-        <lastmod>2020-01-22T14:41:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://miroox.github.io/blog/tags/Haskell/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
