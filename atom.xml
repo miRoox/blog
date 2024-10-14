@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://miroox.github.io/blog/"/>
-  <updated>2022-01-03T15:47:37.000Z</updated>
+  <updated>2024-10-14T14:39:02.000Z</updated>
   <id>http://miroox.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开通了爱发电</title>
+    <link href="http://miroox.github.io/blog/2024/10/afdian/"/>
+    <id>http://miroox.github.io/blog/2024/10/afdian/</id>
+    <published>2024-10-14T14:45:11.000Z</published>
+    <updated>2024-10-14T14:39:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>开通了爱发电，后知后觉地加入互联网乞讨的队伍。虽然现在啥也没发。</p><p>爱发电账号：<a href="https://afdian.com/a/miRoox">@miRoox</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;开通了爱发电，后知后觉地加入互联网乞讨的队伍。虽然现在啥也没发。&lt;/p&gt;
+&lt;p&gt;爱发电账号：&lt;a href=&quot;https://afdian.com/a/miRoox&quot;&gt;@miRoox&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="杂谈散记" scheme="http://miRoox.github.io/blog/categories/%E6%9D%82%E8%B0%88%E6%95%A3%E8%AE%B0/"/>
+    
+    
+      <category term="通知" scheme="http://miRoox.github.io/blog/tags/%E9%80%9A%E7%9F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>2021年终总结</title>
@@ -542,34 +570,6 @@
       <category term="元编程" scheme="http://miRoox.github.io/blog/tags/%E5%85%83%E7%BC%96%E7%A8%8B/"/>
     
       <category term="Undocumented" scheme="http://miRoox.github.io/blog/tags/Undocumented/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记Mathematica求导的一些坑</title>
-    <link href="http://miroox.github.io/blog/2019/05/TrapAboutDerivativeInMma/"/>
-    <id>http://miroox.github.io/blog/2019/05/TrapAboutDerivativeInMma/</id>
-    <published>2019-05-01T08:02:10.000Z</published>
-    <updated>2020-03-31T07:10:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这篇文章主要是记录一下在回答贴吧上<a href="http://tieba.baidu.com/p/6111508459">这个问题</a>时所发现的关于Mathematica求导的一些坑。</p><p>原问题虽然没有明说，但我推测问题背景应该是波特图之类的问题，具体问题如下：</p><span id="more"></span><blockquote><p>对这个函数的幅角求导，代入一个数值为什么求出了个复数值啊，实函数求导应该是实数啊。声明了一下x是实数后好像也不行。</p><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">f</span><span class="punctuation">[</span><span class="type">x_</span><span class="punctuation">]</span> <span class="operator">:=</span> <span class="built_in">Arg</span><span class="punctuation">[</span><span class="punctuation">(</span><span class="operator">-</span><span class="punctuation">(</span><span class="variable">x</span> <span class="operator">-</span> <span class="number">1</span><span class="punctuation">)</span><span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="number">4</span> <span class="punctuation">(</span><span class="number">4</span> <span class="variable">x</span><span class="operator">^</span><span class="number">3</span> <span class="operator">-</span> <span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span> <span class="operator">-</span> <span class="variable">x</span><span class="operator">^</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">/</span><span class="punctuation">(</span><span class="punctuation">(</span><span class="variable">x</span> <span class="operator">-</span> <span class="number">1</span><span class="punctuation">)</span><span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="number">4</span> <span class="punctuation">(</span><span class="number">4</span> <span class="variable">x</span><span class="operator">^</span><span class="number">3</span> <span class="operator">-</span> <span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span> <span class="operator">-</span> <span class="variable">x</span><span class="operator">^</span><span class="number">4</span><span class="punctuation">)</span> <span class="operator">-</span> <span class="number">4</span><span class="operator">*</span><span class="built_in">I</span><span class="operator">*</span><span class="punctuation">(</span><span class="variable">x</span><span class="operator">^</span><span class="number">3</span> <span class="operator">-</span> <span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span> <span class="operator">+</span> <span class="number">2</span> <span class="variable">x</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">]</span></span><br><span class="line"><span class="variable">f</span><span class="operator">&#x27;</span><span class="punctuation">[</span><span class="number">5</span><span class="punctuation">]</span></span><br><span class="line"><span class="comment">(*Out: (513125/13791752+(342351 I)/3447938) Arg&#x27;[2499/2626-(765 I)/2626]*)</span></span><br><span class="line"><span class="built_in">N</span><span class="punctuation">[</span><span class="punctuation">(</span><span class="number">513125</span><span class="operator">/</span><span class="number">13791752</span><span class="operator">+</span><span class="punctuation">(</span><span class="number">342351</span> <span class="built_in">I</span><span class="punctuation">)</span><span class="operator">/</span><span class="number">3447938</span><span class="punctuation">)</span> <span class="built_in">Arg</span><span class="operator">&#x27;</span><span class="punctuation">[</span><span class="number">2499</span><span class="operator">/</span><span class="number">2626</span><span class="operator">-</span><span class="punctuation">(</span><span class="number">765</span> <span class="built_in">I</span><span class="punctuation">)</span><span class="operator">/</span><span class="number">2626</span><span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line"><span class="comment">(*Out: 0.0109427 + 0.0292034 I*)</span></span><br></pre></td></tr></table></figure><p>这是程序，我觉得可能是程序表达的问题，那么该怎么去写这个程序呢？新手上路，老哥请指点</p></blockquote><p>这段程序恰好碰到了Mathematica在求导问题上的两个坑：</p><ol><li>Mathematica总是假设链式求导法则是有效的，但这里遇到的<code>Arg</code>本身是一个<em>不可导</em>的函数，链导法则是不成立的。这一点是一个非常常见的坑。</li><li>然后Mathematica的数值导数设计的也欠合理，在遇到符号求导失效的情况时，Mathematica在计算函数导数时会利用其沿着<em>实轴</em>方向的变化率来近似求导（事实上<code>Arg</code>沿复平面不同方向的变化率通常不相等），而<code>Arg</code>本身总是实数，这样一来得到的<code>Arg'[...]</code>的结果就总是一个实数，然而前面根据链导法则乘出的那一坨又是个复数，自然得到的最终结果也是复数。</li></ol><p>针对这个问题，可以提出两种解决办法：</p><ol><li>一个很自然的想法是直接绕开<code>Arg</code>这个不可导的函数，即可以将通过<code>ComplexExpand</code>其转化为<code>ArcTan</code>形式，再去求导就不会有这些问题了：<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">f</span><span class="punctuation">[</span><span class="type">x_</span><span class="punctuation">]</span><span class="operator">=</span><span class="built_in">ComplexExpand</span><span class="punctuation">[</span><span class="built_in">Arg</span><span class="punctuation">[</span><span class="punctuation">(</span><span class="operator">-</span><span class="punctuation">(</span><span class="variable">x</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">)</span><span class="operator">^</span><span class="number">2</span><span class="operator">+</span><span class="number">4</span> <span class="punctuation">(</span><span class="number">4</span> <span class="variable">x</span><span class="operator">^</span><span class="number">3</span><span class="operator">-</span><span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span><span class="operator">-</span><span class="variable">x</span><span class="operator">^</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">/</span><span class="punctuation">(</span><span class="punctuation">(</span><span class="variable">x</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">)</span><span class="operator">^</span><span class="number">2</span><span class="operator">+</span><span class="number">4</span> <span class="punctuation">(</span><span class="number">4</span> <span class="variable">x</span><span class="operator">^</span><span class="number">3</span><span class="operator">-</span><span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span><span class="operator">-</span><span class="variable">x</span><span class="operator">^</span><span class="number">4</span><span class="punctuation">)</span><span class="operator">-</span><span class="number">4</span><span class="operator">*</span><span class="built_in">I</span><span class="operator">*</span><span class="punctuation">(</span><span class="variable">x</span><span class="operator">^</span><span class="number">3</span><span class="operator">-</span><span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span><span class="operator">+</span><span class="number">2</span> <span class="variable">x</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">]</span><span class="operator">,</span><span class="built_in">TargetFunctions</span><span class="operator">-&gt;</span><span class="punctuation">&#123;</span><span class="built_in">Re</span><span class="operator">,</span><span class="built_in">Im</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="operator">;</span></span><br><span class="line"><span class="variable">f</span><span class="operator">&#x27;</span><span class="punctuation">[</span><span class="number">5</span><span class="punctuation">]</span></span><br><span class="line"><span class="comment">(*Out: 1117/10504*)</span></span><br></pre></td></tr></table></figure></li><li>还可以反过来利用上述数值导数的坑来解决：因为这里就是要求<code>f</code>沿实轴方向的导数，所以我们不妨利用数值导数始终沿实轴发生这一特性，先从<code>f</code>上就避免符号计算引入错误的链导法则，然后直接让Mathematica对<code>f</code>进行数值求导，于是可以这么写：<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Clear</span><span class="punctuation">[</span><span class="variable">f</span><span class="punctuation">]</span></span><br><span class="line"><span class="variable">f</span><span class="punctuation">[</span><span class="type">x_</span><span class="operator">?</span><span class="built_in">NumericQ</span><span class="punctuation">]</span><span class="operator">:=</span><span class="built_in">Arg</span><span class="punctuation">[</span><span class="punctuation">(</span><span class="operator">-</span><span class="punctuation">(</span><span class="variable">x</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">)</span><span class="operator">^</span><span class="number">2</span><span class="operator">+</span><span class="number">4</span> <span class="punctuation">(</span><span class="number">4</span> <span class="variable">x</span><span class="operator">^</span><span class="number">3</span><span class="operator">-</span><span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span><span class="operator">-</span><span class="variable">x</span><span class="operator">^</span><span class="number">4</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">/</span><span class="punctuation">(</span><span class="punctuation">(</span><span class="variable">x</span><span class="operator">-</span><span class="number">1</span><span class="punctuation">)</span><span class="operator">^</span><span class="number">2</span><span class="operator">+</span><span class="number">4</span> <span class="punctuation">(</span><span class="number">4</span> <span class="variable">x</span><span class="operator">^</span><span class="number">3</span><span class="operator">-</span><span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span><span class="operator">-</span><span class="variable">x</span><span class="operator">^</span><span class="number">4</span><span class="punctuation">)</span><span class="operator">-</span><span class="number">4</span><span class="operator">*</span><span class="built_in">I</span><span class="operator">*</span><span class="punctuation">(</span><span class="variable">x</span><span class="operator">^</span><span class="number">3</span><span class="operator">-</span><span class="number">3</span> <span class="variable">x</span><span class="operator">^</span><span class="number">2</span><span class="operator">+</span><span class="number">2</span> <span class="variable">x</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">]</span></span><br><span class="line"><span class="variable">f</span><span class="operator">&#x27;</span><span class="punctuation">[</span><span class="number">5.</span><span class="punctuation">]</span></span><br><span class="line"><span class="comment">(*Out: 0.10634*)</span></span><br></pre></td></tr></table></figure>如果只需要近似的数值值得话，同样可以解决问题。</li></ol><hr /><p>相关链接：</p><ul><li><a href="http://tieba.baidu.com/p/6111508459">来个老哥抬一手~</a></li><li><a href="https://mathematica.stackexchange.com/questions/196998/why-does-arg1-i-return-0-5">Why does Arg’[1. + I] return -0.5?</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这篇文章主要是记录一下在回答贴吧上&lt;a href=&quot;http://tieba.baidu.com/p/6111508459&quot;&gt;这个问题&lt;/a&gt;时所发现的关于Mathematica求导的一些坑。&lt;/p&gt;
-&lt;p&gt;原问题虽然没有明说，但我推测问题背景应该是波特图之类的问题，具体问题如下：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="代码编程" scheme="http://miRoox.github.io/blog/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="编程" scheme="http://miRoox.github.io/blog/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="Wolfram" scheme="http://miRoox.github.io/blog/tags/Wolfram/"/>
-    
-      <category term="踩坑" scheme="http://miRoox.github.io/blog/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
