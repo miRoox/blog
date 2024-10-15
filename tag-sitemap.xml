@@ -360,14 +360,14 @@
     </url>
 
     <url>
-        <loc>http://miroox.github.io/blog/tags/%E7%AC%94%E8%AE%B0/</loc>
+        <loc>http://miroox.github.io/blog/tags/Haskell/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://miroox.github.io/blog/tags/Haskell/</loc>
+        <loc>http://miroox.github.io/blog/tags/%E7%AC%94%E8%AE%B0/</loc>
         <lastmod>2020-01-22T14:41:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
