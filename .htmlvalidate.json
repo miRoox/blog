@@ -3,6 +3,7 @@
     "html-validate:standard"
   ],
   "rules": {
+    "element-name": ["error", { "whitelist": ["pjax"] }],
     "no-dup-id": "warn",
     "no-dup-attr": "warn",
     "attribute-misuse": "warn",

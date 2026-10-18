@@ -64,7 +64,11 @@ navbar:
       url: https://miroox.github.io/wiki/
       rel: nofollow
 sidebar:
-  for_page: [blogger, bulletin, category, tagcloud]
+  for:
+    home: [blogger, bulletin, category, tagcloud]
+    index_blog: [blogger, bulletin, category, tagcloud]
+    page: [blogger, bulletin, category, tagcloud]
+    post: [toc]
   widget_library:
     blogger:
       class: blogger
@@ -114,7 +118,10 @@ site_footer:
   copyright: '[Copyright © 2017-2023 miRoox](https://miroox.github.io/) Powered by the [Volantis theme](https://volantis.js.org/) for [Hexo](https://hexo.io/) '
 plugins:
   mathjax: false
-  wordcount: true
+  wordcount:
+    enable: true
+  pjax:
+    enable: false
   aplayer:
     enable: true
     server: netease
