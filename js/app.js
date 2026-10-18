@@ -1,10 +1,63 @@
+/**
+ * app.js - Volantis 主题核心应用脚本
+ * 定义 VolantisApp、FancyBox 等核心功能。
+ * 依赖 global.ejs 中定义的 window.volantis 基础对象。
+ *
+ * 模块结构：
+ *   DOMContentLoaded      - 初始化 VolantisApp、FancyBox，注册 Pjax 回调
+ *   VolantisApp            - 主应用（导航栏、滚动、TOC、代码复制等）
+ *   highlightKeyWords      - 搜索关键字高亮
+ *   VolantisFancyBox       - 图片灯箱
+ */
+
+// 图片错误降级
+document.addEventListener("error", function (e) {
+  const elem = e.target;
+  if (elem.tagName.toLowerCase() !== 'img') return;
+  if (typeof elem.attributes.onerror !== "undefined") return;
+
+  const parentElem = elem.parentElement;
+  if (!parentElem) return;
+
+  const parentElemClass = parentElem.className;
+  const pParentElem = parentElem.parentElement;
+  if (!pParentElem) return;
+  const pParentElemClass = pParentElem.className;
+
+  elem.classList.add('fix-error');
+
+  if (parentElemClass === 'fancybox' && pParentElemClass === 'fancybox') {
+    pParentElem.classList.add('hideFancybox');
+    pParentElem.classList.remove('fancybox');
+    parentElem.classList.remove('fancybox');
+  } else if (parentElemClass === 'img-bg' && pParentElemClass === 'img-wrap') {
+    pParentElem.classList.add('hideFancybox');
+  }
+}, true);
+
+
+// DOMContentLoaded：初始化与 Pjax 注册
 document.addEventListener("DOMContentLoaded", function () {
   volantis.requestAnimationFrame(() => {
     VolantisApp.init();
     VolantisApp.subscribe();
-    VolantisFancyBox.init();
+    const fancyBoxInstance = new VolantisFancyBox();
+    fancyBoxInstance.bind('#post-body img[fancybox]');
     highlightKeyWords.startFromURL();
     locationHash();
+
+    volantis.pjax.push(() => {
+      VolantisApp.pjaxReload();
+      fancyBoxInstance.bind('#post-body img[fancybox]');
+      sessionStorage.setItem("domTitle", document.title);
+      highlightKeyWords.startFromURL();
+    }, 'app.js');
+    volantis.pjax.send(() => {
+      volantis.dom.switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.dom.header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.dom.wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+      volantis.EventListener.remove() // 移除事件监听器 see: global.js
+    }, 'app.js');
   });
 });
 
@@ -13,29 +66,36 @@ const locationHash = () => {
   if (window.location.hash) {
     let locationID = decodeURI(window.location.hash.split('#')[1]).replace(/\ /g, '-');
     let target = document.getElementById(locationID);
+    if (locationID && !target) {
+      locationID = decodeURIComponent(window.location.hash.split('#')[1]).replace(/\ /g, '-');
+      target = document.getElementById(locationID);
+    }
     if (target) {
       setTimeout(() => {
         if (window.location.hash.startsWith('#fn')) { // hexo-reference https://github.com/volantis-x/hexo-theme-volantis/issues/647
-          volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant', observer: true })
+          VolantisApp.scrolltoElement(target,VolantisApp.getScrollCorrection() - VolantisApp.REM, 'instant', true);
+        } else if (window.location.hash.startsWith('#mjx')) { // mathjax
+          VolantisApp.scrolltoElement(target,VolantisApp.getScrollCorrection() + VolantisApp.REM, 'instant', true);
         } else {
-          // 锚点中上半部有大片空白 高度大概是 volantis.dom.header.offsetHeight
-          volantis.scroll.to(target, { addTop: 5, behavior: 'instant', observer: true })
+          // 文章标题锚点 锚点中上半部有大片空白 高度大概是 volantis.dom.header.offsetHeight=64
+          VolantisApp.scrolltoElement(target,VolantisApp.REM, 'instant', true);
         }
-      }, 1000)
+      }, 500)
     }
   }
 }
 Object.freeze(locationHash);
 
-/* Main */
+// Main：VolantisApp 主应用
 const VolantisApp = (() => {
   const fn = {},
     COPYHTML = '<button class="btn-copy" data-clipboard-snippet=""><i class="fa-solid fa-copy"></i><span>COPY</span></button>';
+  const REM = parseFloat(getComputedStyle(document.documentElement).fontSize); // 16
   let scrollCorrection = 80;
 
   fn.init = () => {
     if (volantis.dom.header) {
-      scrollCorrection = volantis.dom.header.clientHeight + 16;
+      scrollCorrection = volantis.dom.header.clientHeight + REM; // 64+16
     }
 
     window.onresize = () => {
@@ -50,7 +110,7 @@ const VolantisApp = (() => {
         fn.setHeaderSearch();
       }
     }
-    volantis.scroll.push(fn.scrollEventCallBack, "scrollEventCallBack")
+    volantis.scroll.push(volantis.debounce(fn.scrollEventCallBack), "scrollEventCallBack")
   }
 
   fn.event = () => {
@@ -68,9 +128,9 @@ const VolantisApp = (() => {
     }
 
     // 站点信息 最后活动日期
-    if (volantis.GLOBAL_CONFIG.sidebar.for_page.includes('webinfo') || volantis.GLOBAL_CONFIG.sidebar.for_post.includes('webinfo')) {
+    if (!!document.getElementById('last-update-show')) {
       const lastupd = volantis.GLOBAL_CONFIG.sidebar.webinfo.lastupd;
-      if (!!document.getElementById('last-update-show') && lastupd.enable && lastupd.friendlyShow) {
+      if (lastupd.enable && lastupd.friendlyShow) {
         document.getElementById('last-update-show').innerHTML = fn.utilTimeAgo(volantis.GLOBAL_CONFIG.lastupdate);
       }
     }
@@ -83,6 +143,18 @@ const VolantisApp = (() => {
       document.getElementById('webinfo-runtime-count').innerHTML = `${daysold} ${volantis.GLOBAL_CONFIG.sidebar.webinfo.runtime.unit}`;
     }
 
+    // notebook sidebar.tagtree 标签展开
+    if (!!document.querySelector('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')) {
+      const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+      for (const tagSwitcher of tagSwitchers) {
+        tagSwitcher.addEventListener('click', (e) => {
+          const parent = e.target.closest('.tag-subtree.parent-tag')
+          parent.classList.toggle('expanded')
+          e.preventDefault()
+        })
+      }
+    }
+
     // 消息提示 复制时弹出
     document.body.oncopy = function () {
       fn.messageCopyright()
@@ -90,7 +162,7 @@ const VolantisApp = (() => {
   }
 
   fn.restData = () => {
-    scrollCorrection = volantis.dom.header ? volantis.dom.header.clientHeight + 16 : 80;
+    scrollCorrection = volantis.dom.header ? volantis.dom.header.clientHeight + REM : 80;
   }
 
   fn.setIsMobile = () => {
@@ -104,10 +176,17 @@ const VolantisApp = (() => {
   }
 
   // 校正页面定位（被导航栏挡住的区域）
-  fn.scrolltoElement = (elem, correction = scrollCorrection) => {
-    volantis.scroll.to(elem, {
+  fn.scrolltoElement = (elem, correction = scrollCorrection, behavior = null, observer = false) => {
+    let opt = {
       top: elem.getBoundingClientRect().top + document.documentElement.scrollTop - correction
-    })
+    };
+    if (behavior){
+      opt.behavior=behavior;
+    };
+    if (observer){
+      opt.observer=observer;
+    };
+    volantis.scroll.to(elem, opt);
   }
 
   // 滚动事件回调们
@@ -246,6 +325,7 @@ const VolantisApp = (() => {
     if (idname.length == 0) {
       idname = 'home';
     }
+    // 处理分页和索引页面
     var page = idname.match(/page\d{0,}$/g);
     if (page) {
       page = page[0];
@@ -256,8 +336,8 @@ const VolantisApp = (() => {
       index = index[0];
       idname = idname.split(index)[0];
     }
-    // 转义字符如 [, ], ~, #, @
-    idname = idname.replace(/(\[|\]|~|#|@)/g, '\\$1');
+    // 转义 CSS 选择器中的特殊字符
+    idname = CSS.escape(idname);
     if (idname && volantis.dom.headerMenu) {
       volantis.dom.headerMenu.forEach(element => {
         // idname 不能为数字开头, 加一个 action- 前缀
@@ -337,16 +417,16 @@ const VolantisApp = (() => {
       e.stopPropagation();
       volantis.dom.header.toggleClass('z_search-open'); // 激活移动端搜索框
       volantis.dom.switcher.toggleClass('active'); // 移动端搜索按钮
-    });
+    }, false); // false : pjax 不移除监听
     // 点击空白取消激活
     volantis.dom.$(document).click(function (e) {
       volantis.dom.header.removeClass('z_search-open');
       volantis.dom.switcher.removeClass('active');
-    });
+    }, false); // false : pjax 不移除监听
     // 移动端点击搜索框 停止事件传播
     volantis.dom.search.click(function (e) {
       e.stopPropagation();
-    });
+    }, false); // false : pjax 不移除监听
   }
 
   // 设置 tabs 标签  【移动端 PC】
@@ -369,18 +449,35 @@ const VolantisApp = (() => {
     })
   }
 
-  // hexo-reference 页脚跳转 https://github.com/volantis-x/hexo-theme-volantis/issues/647
-  fn.footnotes = () => {
-    let ref = document.querySelectorAll('#l_main .footnote-backref, #l_main .footnote-ref > a');
+  // mathjax 引用跳转
+  fn.mathjaxRef = () => {
+    let ref = document.querySelectorAll('mjx-container a[href]');
     ref.forEach(function (e, i) {
       ref[i].click = () => { }; // 强制清空原 click 事件
+      let targetID = decodeURIComponent(ref[i].getAttribute('href').split('#')[1]).replace(/\ /g, '-');
       volantis.dom.$(e).on('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
-        let targetID = decodeURI(e.target.hash.split('#')[1]).replace(/\ /g, '-');
         let target = document.getElementById(targetID);
         if (target) {
-          volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })
+          fn.scrolltoElement(target, scrollCorrection + REM, 'instant');
+        }
+      });
+    })
+  }
+
+  // hexo-reference 页脚跳转 https://github.com/volantis-x/hexo-theme-volantis/issues/647
+  fn.footnotes = () => {
+    let ref = document.querySelectorAll('#l_main a[rel=footnote],#footnotelist a[rev=footnote],#l_main .footnote-backref, #l_main .footnote-ref > a');
+    ref.forEach(function (e, i) {
+      ref[i].click = () => { }; // 强制清空原 click 事件
+      let targetID = decodeURIComponent(ref[i].getAttribute('href').split('#')[1]).replace(/\ /g, '-');
+      volantis.dom.$(e).on('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        let target = document.getElementById(targetID);
+        if (target) {
+          fn.scrolltoElement(target, scrollCorrection - REM, 'instant');
         }
       });
     })
@@ -656,6 +753,25 @@ const VolantisApp = (() => {
       fn.setScrollAnchor();
       fn.setTabs();
       fn.footnotes();
+      fn.mathjaxRef();
+    },
+    pjaxReload: () => {
+      fn.event();
+      fn.restData();
+      fn.setHeader();
+      fn.setHeaderMenuSelection();
+      fn.setPageHeaderMenuEvent();
+      fn.setScrollAnchor();
+      fn.setTabs();
+      fn.footnotes();
+      fn.mathjaxRef();
+
+      // 移除小尾巴的移除
+      document.querySelector("#l_header .nav-main").querySelectorAll('.list-v:not(.menu-phone)').forEach(function (e) {
+        e.removeAttribute("style")
+      })
+      document.querySelector("#l_header .menu-phone.list-v").removeAttribute("style");
+      messageCopyrightShow = 0;
     },
     utilCopyCode: fn.utilCopyCode,
     utilWriteClipText: fn.utilWriteClipText,
@@ -664,137 +780,153 @@ const VolantisApp = (() => {
     question: fn.question,
     hideMessage: fn.hideMessage,
     messageCopyright: fn.messageCopyright,
-    scrolltoElement: fn.scrolltoElement
+    scrolltoElement: fn.scrolltoElement,
+    getScrollCorrection: ()=>{
+      return scrollCorrection;
+    },
+    REM:REM
   }
 })()
 Object.freeze(VolantisApp);
 
-/* FancyBox */
-const VolantisFancyBox = (() => {
-  const fn = {};
+// 图片灯箱：FancyBox
+class VolantisFancyBox {
+  constructor(checkMain = true) {
+    this.option = {
+      Hash: false,
+      groupAll: true,
+      caption: (fancybox, slide) => slide.thumbEl?.alt || "",
+      contentClick: 'iterateZoom',
+      Thumbs: {
+        showOnStart: false
+      },
+      Images: {
+        content: (_ref, slide) => {
+          const imgElement = slide.thumbEl;
+          if (!imgElement) return '';
 
-  fn.loadFancyBox = (done) => {
-    volantis.css(volantis.GLOBAL_CONFIG.cdn.fancybox_css);
-    volantis.js(volantis.GLOBAL_CONFIG.cdn.fancybox_js).then(() => {
-      if (done) done();
-    })
-  }
+          const pictureElement = imgElement.closest('picture');
+          imgElement.classList.remove("content-in");
 
-  /**
-   * 加载及处理
-   * 
-   * @param {*} checkMain 是否只处理文章区域的文章
-   * @param {*} done      FancyBox 加载完成后的动作，默认执行分组绑定
-   * @returns 
-   */
-  fn.init = (checkMain = true, done = fn.groupBind) => {
-    if (!document.querySelector(".md .gallery img, .fancybox") && checkMain) return;
-    if (typeof Fancybox === "undefined") {
-      fn.loadFancyBox(done);
-    } else {
-      done();
+          // 处理懒加载图片
+          if (imgElement.hasAttribute('data-src')) {
+            imgElement.setAttribute('src', imgElement.getAttribute('data-src'));
+          }
+
+          if (pictureElement) {
+            pictureElement.classList.remove("lazy");
+            const sources = pictureElement.getElementsByTagName('source');
+            for (let i = 0; i < sources.length; i++) {
+              const source = sources[i];
+              if (source.hasAttribute('data-srcset')) {
+                source.setAttribute('srcset', source.getAttribute('data-srcset'));
+              }
+            }
+            return pictureElement.outerHTML;
+          } else {
+            return imgElement.outerHTML;
+          }
+        },
+        Panzoom: {
+          maxScale: 1
+        }
+      },
+      Toolbar: {
+        display: {
+          left: ["infobar"],
+          middle: [
+            "zoomIn",
+            "zoomOut",
+            "toggle1to1",
+            "rotateCCW",
+            "rotateCW",
+            "flipX",
+            "flipY",
+          ],
+          right: ["slideshow", "download", "thumbs", "close"],
+        },
+      }
+    };
+
+    if (checkMain) {
+      this.#init();
     }
   }
 
-  /**
-   * 图片元素预处理
-   * 
-   * @param {*} selectors 选择器
-   * @param {*} name      分组
-   */
-  fn.elementHandling = (selectors, name) => {
-    const nodeList = document.querySelectorAll(selectors);
-    nodeList.forEach($item => {
-      if ($item.hasAttribute('fancybox')) return;
-      $item.setAttribute('fancybox', '');
-      const $link = document.createElement('a');
-      $link.setAttribute('href', $item.src);
-      $link.setAttribute('data-caption', $item.alt);
-      $link.setAttribute('data-fancybox', name);
-      $link.classList.add('fancybox');
-      $link.append($item.cloneNode());
-      $item.replaceWith($link);
-    })
+  async #init() {
+    await this.loadFancybox();
+    if (document.querySelector(".md .gallery img, .fancybox")) {
+      this.groupBind();
+    }
   }
 
-  /**
-   * 原生绑定
-   * 
-   * @param {*} selectors 选择器
-   */
-  fn.bind = (selectors) => {
-    fn.init(false, () => {
-      Fancybox.bind(selectors, {
-        groupAll: true,
-        Hash: false,
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        },
-        caption: function (fancybox, carousel, slide) {
-          return slide.$trigger.alt || null
-        }
-      });
-    });
+  async loadFancybox() {
+    if (typeof Fancybox === "undefined") {
+      try {
+        await volantis.css(volantis.GLOBAL_CONFIG.cdn.fancybox_css);
+        await volantis.js(volantis.GLOBAL_CONFIG.cdn.fancybox_js);
+      } catch (error) {
+        console.error('Failed to load Fancybox:', error);
+      }
+    }
   }
 
-  /**
-   * 分组绑定
-   * 
-   * @param {*} groupName 分组名称
-   */
-  fn.groupBind = (groupName = null) => {
+  async bind(selectors) {
+    if (!selectors) return;
+
+    await this.loadFancybox();
+    if (typeof Fancybox !== 'undefined') {
+      Fancybox.unbind(selectors);
+      Fancybox.bind(selectors, this.option);
+      Fancybox.close();
+    }
+  }
+
+  async groupBind(selectors, groupName = 'default') {
+    await this.loadFancybox();
+    this.#elementHandling(selectors, groupName);
+
     const group = new Set();
-
-    document.querySelectorAll(".gallery").forEach(ele => {
+    const galleries = document.querySelectorAll('.gallery');
+    for (let i = 0; i < galleries.length; i++) {
+      const ele = galleries[i];
       if (ele.querySelector("img")) {
         group.add(ele.getAttribute('data-group') || 'default');
       }
-    })
+    }
 
-    if (!!groupName) group.add(groupName);
+    if (groupName) group.add(groupName);
 
-    for (const iterator of group) {
-      Fancybox.unbind('[data-fancybox="' + iterator + '"]');
-      Fancybox.bind('[data-fancybox="' + iterator + '"]', {
-        Hash: false,
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        }
+    if (typeof Fancybox !== 'undefined') {
+      group.forEach(name => {
+        Fancybox.unbind(`[data-fancybox="${name}"]`);
+        Fancybox.bind(`[data-fancybox="${name}"]`, this.option);
       });
     }
   }
 
-  return {
-    init: fn.init,
-    bind: fn.bind,
-    groupBind: (selectors, groupName = 'default') => {
-      try {
-        fn.elementHandling(selectors, groupName);
-        fn.init(false, () => {
-          fn.groupBind(groupName)
-        });
-      } catch (error) {
-        console.error(error)
-      }
+  #elementHandling(selectors, groupName) {
+    if (!selectors) return;
+
+    const items = document.querySelectorAll(selectors);
+    for (let i = 0; i < items.length; i++) {
+      const $item = items[i];
+      if ($item.hasAttribute('fancybox')) continue;
+
+      $item.setAttribute('fancybox', '');
+      const $link = document.createElement('a');
+      $link.setAttribute('href', $item.src || $item.dataset?.src);
+      $link.setAttribute('data-caption', $item.alt || '');
+      $link.setAttribute('data-fancybox', groupName);
+      $link.classList.add('fancybox');
+      $link.append($item.cloneNode());
+      $item.replaceWith($link);
     }
   }
-})()
-Object.freeze(VolantisFancyBox);
+}
 
-// highlightKeyWords 与 搜索功能搭配 https://github.com/next-theme/hexo-theme-next/blob/eb194a7258058302baf59f02d4b80b6655338b01/source/js/third-party/search/local-search.js
-// Question: 锚点稳定性未知
-// ToDo: 查找模式
-// 0. (/////////要知道浏览器自带全页面查找功能 CTRL + F)
-// 1. 右键开启查找模式 / 导航栏菜单开启?? / CTRL + F ???
-// 2. 查找模式面板 (可拖动? or 固定?)
-// 3. keyword mark id 从 0 开始编号 查找下一处 highlightKeyWords.scrollToNextHighlightKeywordMark() 查找上一处 scrollToPrevHighlightKeywordMark() 循环查找(取模%)
-// 4. 可输入修改 查找关键词 keywords(type:list)
-// 5. 区分大小写 caseSensitive (/ 全字匹配?? / 正则匹配??)
-// 6. 在选定区域中查找 querySelector ??
-// 7. 关闭查找模式
-// 8. 搜索跳转 (URL 入口) 自动开启查找模式 调用 scrollToNextHighlightKeywordMark()
+
+// 搜索关键字高亮 highlightKeyWords 与 搜索功能搭配 https://github.com/next-theme/hexo-theme-next/blob/eb194a7258058302baf59f02d4b80b6655338b01/source/js/third-party/search/local-search.js
 const highlightKeyWords = (() => {
   let fn = {}
   fn.markNum = 0
@@ -831,21 +963,21 @@ const highlightKeyWords = (() => {
     // Current target
     return target
   }
-  fn.scrollToPrevHighlightKeywordMark = (id) => {
-    // Prev Id
-    let input = id || (fn.markNextId - 1 + fn.markNum) % fn.markNum;
-    fn.markNextId = parseInt(input)
-    let target = document.getElementById("keyword-mark-" + fn.markNextId);
-    if (!target) {
-      fn.markNextId = (fn.markNextId - 1 + fn.markNum) % fn.markNum;
-      target = document.getElementById("keyword-mark-" + fn.markNextId);
-    }
-    if (target) {
-      volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })
-    }
-    // Current target
-    return target
-  }
+  // fn.scrollToPrevHighlightKeywordMark = (id) => {
+  //   // Prev Id
+  //   let input = id || (fn.markNextId - 1 + fn.markNum) % fn.markNum;
+  //   fn.markNextId = parseInt(input)
+  //   let target = document.getElementById("keyword-mark-" + fn.markNextId);
+  //   if (!target) {
+  //     fn.markNextId = (fn.markNextId - 1 + fn.markNum) % fn.markNum;
+  //     target = document.getElementById("keyword-mark-" + fn.markNextId);
+  //   }
+  //   if (target) {
+  //     volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })
+  //   }
+  //   // Current target
+  //   return target
+  // }
   fn.start = (keywords, querySelector) => {
     fn.markNum = 0
     if (!keywords.length || !querySelector || (keywords.length == 1 && keywords[0] == "null")) return;
@@ -953,30 +1085,30 @@ const highlightKeyWords = (() => {
     mark.style["font-weight"] = "bold";
     return mark
   }
-  fn.cleanHighlightStyle = () => {
-    document.querySelectorAll(".keyword").forEach(mark => {
-      mark.style.background = "transparent";
-      mark.style["border-bottom"] = null;
-      mark.style["color"] = null;
-      mark.style["font-weight"] = null;
-    })
-  }
+  // fn.cleanHighlightStyle = () => {
+  //   document.querySelectorAll(".keyword").forEach(mark => {
+  //     mark.style.background = "transparent";
+  //     mark.style["border-bottom"] = null;
+  //     mark.style["color"] = null;
+  //     mark.style["font-weight"] = null;
+  //   })
+  // }
   return {
-    start: (keywords, querySelector) => {
-      fn.start(keywords, querySelector)
-    },
+    // start: (keywords, querySelector) => {
+    //   fn.start(keywords, querySelector)
+    // },
     startFromURL: () => {
       fn.startFromURL()
     },
-    scrollToNextHighlightKeywordMark: (id) => {
-      fn.scrollToNextHighlightKeywordMark(id)
-    },
-    scrollToPrevHighlightKeywordMark: (id) => {
-      fn.scrollToPrevHighlightKeywordMark(id)
-    },
-    cleanHighlightStyle: () => {
-      fn.cleanHighlightStyle()
-    },
+    // scrollToNextHighlightKeywordMark: (id) => {
+    //   fn.scrollToNextHighlightKeywordMark(id)
+    // },
+    // scrollToPrevHighlightKeywordMark: (id) => {
+    //   fn.scrollToPrevHighlightKeywordMark(id)
+    // },
+    // cleanHighlightStyle: () => {
+    //   fn.cleanHighlightStyle()
+    // },
   }
 })()
 Object.freeze(highlightKeyWords);
@@ -1107,46 +1239,13 @@ const DOMController = {
 }
 Object.freeze(DOMController);
 
-const VolantisRequest = {
-  timeoutFetch: (url, ms, requestInit) => {
-    const controller = new AbortController()
-    requestInit.signal?.addEventListener('abort', () => controller.abort())
-    let promise = fetch(url, { ...requestInit, signal: controller.signal })
-    if (ms > 0) {
-      const timer = setTimeout(() => controller.abort(), ms)
-      promise.finally(() => { clearTimeout(timer) })
+const oneLineCopy = (id, msg) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.select();
+      document.execCommand("Copy");
+      if (msg && msg.length > 0) {
+        // 弹窗提示
+      }
     }
-    promise = promise.catch((err) => {
-      throw ((err || {}).name === 'AbortError') ? new Error(`Fetch timeout: ${url}`) : err
-    })
-    return promise
-  },
-
-  Fetch: async (url, requestInit, timeout = 15000) => {
-    const resp = await VolantisRequest.timeoutFetch(url, timeout, requestInit);
-    if (!resp.ok) throw new Error(`Fetch error: ${url} | ${resp.status}`);
-    let json = await resp.json()
-    if (!json.success) throw json
-    return json
-  },
-
-  POST: async (url, data) => {
-    const requestInit = {
-      method: 'POST',
-    }
-    if (data) {
-      const formData = new FormData();
-      Object.keys(data).forEach(key => formData.append(key, String(data[key])))
-      requestInit.body = formData;
-    }
-    const json = await VolantisRequest.Fetch(url, requestInit)
-    return json.data;
-  },
-
-  Get: async (url, data) => {
-    const json = await VolantisRequest.Fetch(url + (data ? (`?${new URLSearchParams(data)}`) : ''), {
-      method: 'GET'
-    })
-  }
 }
-Object.freeze(VolantisRequest);

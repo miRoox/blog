@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1'>
-  <meta name="generator" content="Hexo 5.4.2">
-  <meta name="Volantis" content="6.0.0-alpha.1">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.8.3'>
+  <meta name="generator" content="Hexo 8.1.2">
+  <meta name="Volantis" content="6.8.3">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
@@ -11,14 +11,12 @@
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
-      <link rel='dns-prefetch' href='https://cdn.bootcdn.net'>
-      <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
+    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https://giscus.app https://*.bilibili.com https://*.youtube.com https://*.163.com; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
   <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
@@ -33,14 +31,14 @@
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="/blog/images/favicon.png">
   <link rel="preload" href="/blog/css/style.css" as="style">
-  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
       <link rel="alternate" href="/blog/atom.xml" title="miRoox的博客" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>归档：2017/5 - miRoox的博客</title>
-  <meta name="keywords" content="编程 / 数理 / 小说">
+  <title>归档：2017&#x2F;5 - miRoox的博客</title>
+  <meta name="keywords" content="编程 &#x2F; 数理 &#x2F; 小说">
   <meta desc name="description" content="现役研究生 - miRoox - miRoox的博客">
   
 <meta property="og:type" content="website">
@@ -49,15 +47,75 @@
 <meta property="og:site_name" content="miRoox的博客">
 <meta property="og:description" content="现役研究生">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:author" content="miRoox">
 <meta property="article:tag" content="编程 &#x2F; 数理 &#x2F; 小说">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
     /* 首屏样式 */
     #safearea {
   display: none;
+}
+:root {
+  --blur-px: 12px;
+  --blur-bg: var(--bg-a50);
+  --blur-sat: 300%;
+}
+:root {
+  --hue: 166.53846153846155deg;
+  --sat: 67.24137931034481%;
+  --light: 54.509803921568626%;
+  --alpha: 1;
+  --theme: hsla(var(--hue) var(--sat) var(--light) / 1);
+  --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
+  --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
+  --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
+  --theme-a50: hsla(var(--hue) var(--sat) var(--light) / 0.5);
+  --theme-a90: hsla(var(--hue) var(--sat) var(--light) / 0.9);
+  --accent: #ff5722;
+  --link: hsla(206.47058823529412deg 84.29752066115704% 52.54901960784314% / 1);
+  --link-a20: hsla(206.47058823529412deg 84.29752066115704% 52.54901960784314% / 0.2);
+  --background: hsla(210deg 20% 98% / 1);
+  --card: #fff;
+  --bg-a20: hsla(210deg 0% 100% / 0.2);
+  --bg-a50: hsla(210deg 0% 100% / 0.5);
+  --bg-a60: hsla(210deg 0% 100% / 0.6);
+  --bg-a75: hsla(210deg 0% 100% / 0.75);
+  --bg-a100: hsla(210deg 0% 100% / 1);
+  --text: hsla(210deg 0% 0% / 1);
+  --text-reverse: hsla(210deg 0% 100% / 1);
+  --text-p1: hsla(210deg 0% 0% / 0.8);
+  --text-p2: hsla(210deg 0% 0% / 0.7);
+  --text-p3: hsla(210deg 0% 0% / 0.5);
+  --text-p4: hsla(210deg 0% 0% / 0.4);
+  --text-meta: hsla(210deg 0% 0% / 0.2);
+  --text-code: hsla(210deg 0% 0% / 0.9);
+  --text-a10: hsla(210deg 0% 0% / 0.1);
+  --text-a20: hsla(210deg 0% 0% / 0.2);
+  --block: hsla(210deg 50% 12% / 0.04);
+  --block-border: hsla(210deg 50% 12% / 0.06);
+}
+:root[color-scheme="light"] {
+  --background: hsla(210deg 20% 98% / 1);
+  --card: #fff;
+  --bg-a20: hsla(210deg 0% 100% / 0.2);
+  --bg-a50: hsla(210deg 0% 100% / 0.5);
+  --bg-a60: hsla(210deg 0% 100% / 0.6);
+  --bg-a75: hsla(210deg 0% 100% / 0.75);
+  --bg-a100: hsla(210deg 0% 100% / 1);
+  --text: hsla(210deg 0% 0% / 1);
+  --text-reverse: hsla(210deg 0% 100% / 1);
+  --text-p1: hsla(210deg 0% 0% / 0.8);
+  --text-p2: hsla(210deg 0% 0% / 0.7);
+  --text-p3: hsla(210deg 0% 0% / 0.5);
+  --text-p4: hsla(210deg 0% 0% / 0.4);
+  --text-meta: hsla(210deg 0% 0% / 0.2);
+  --text-code: hsla(210deg 0% 0% / 0.9);
+  --text-a10: hsla(210deg 0% 0% / 0.1);
+  --text-a20: hsla(210deg 0% 0% / 0.2);
+  --block: hsla(210deg 50% 12% / 0.04);
+  --block-border: hsla(210deg 50% 12% / 0.06);
 }
 :root {
   --color-site-body: #f4f4f4;
@@ -82,6 +140,33 @@
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
   --color-copyright-bkg: #f5f5f5;
+  --link-color: #00323c;
+  --color-text-a10: rgba(68,68,68,0.1);
+  --color-text-a50: rgba(68,68,68,0.5);
+  --color-text-a60: rgba(68,68,68,0.6);
+  --color-text-a70: rgba(68,68,68,0.7);
+  --color-text-a80: rgba(68,68,68,0.8);
+  --color-text-a85: rgba(68,68,68,0.85);
+  --color-text-a90: rgba(68,68,68,0.9);
+  --color-card-a50: rgba(255,255,255,0.5);
+  --color-card-a60: rgba(255,255,255,0.6);
+  --color-card-a70: rgba(255,255,255,0.7);
+  --color-card-a80: rgba(255,255,255,0.8);
+  --color-card-a90: rgba(255,255,255,0.9);
+  --color-card-darken2: #fafafa;
+  --color-card-lighten5: #fff;
+  --color-p-a20: rgba(68,68,68,0.2);
+  --color-p-a70: rgba(68,68,68,0.7);
+  --color-p-a75: rgba(68,68,68,0.75);
+  --color-block-lighten3: #fefefe;
+  --color-block-darken2: #f1f1f1;
+  --color-mix60-p-card: #8e8e8e;
+  --color-codeblock-darken6: #ffebcb;
+  --color-mix75-theme-text: #3eb399;
+  --color-mix90-block-text: #e4e4e4;
+}
+:root {
+  text-autospace: normal;
 }
 * {
   box-sizing: border-box;
@@ -99,13 +184,13 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
+  background: var(--theme);
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
+  background: var(--accent);
 }
 html {
   color: var(--color-text);
@@ -122,13 +207,13 @@ html >::-webkit-scrollbar-track-piece {
   background: transparent;
 }
 html >::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
+  background: var(--theme);
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
 html >::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
+  background: var(--accent);
 }
 body {
   background-color: var(--color-site-body);
@@ -151,7 +236,7 @@ body.modal-active {
   }
 }
 a {
-  color: #2092ec;
+  color: var(--link);
   cursor: pointer;
   text-decoration: none;
   transition: all 0.28s ease;
@@ -162,7 +247,7 @@ a {
   -ms-transition: all 0.28s ease;
 }
 a:hover {
-  color: #ff5722;
+  color: var(--accent);
 }
 a:active,
 a:hover {
@@ -205,6 +290,8 @@ input {
   color: inherit;
   font: inherit;
   margin: 0;
+  background: none;
+  border: none;
 }
 button {
   overflow: visible;
@@ -214,7 +301,7 @@ button {
 }
 @supports (backdrop-filter: blur(20px)) {
   .blur {
-    background: rgba(255,255,255,0.9) !important;
+    background: var(--color-card-a90) !important;
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
@@ -479,7 +566,7 @@ button {
   width: 32px;
   top: 0;
   left: 5px;
-  color: rgba(68,68,68,0.75);
+  color: var(--color-p-a75);
 }
 .cover-wrapper .cover-body .m_search .input {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -497,7 +584,7 @@ button {
   padding-left: 36px;
   border-radius: 1.4rem;
   -webkit-border-radius: 1.4rem;
-  background: rgba(255,255,255,0.6);
+  background: var(--color-card-a60);
   backdrop-filter: blur(10px);
   border: none;
   color: var(--color-text);
@@ -508,10 +595,10 @@ button {
   }
 }
 .cover-wrapper .cover-body .m_search .input:hover {
-  background: rgba(255,255,255,0.8);
+  background: var(--color-card-a80);
 }
 .cover-wrapper .cover-body .m_search .input:focus {
-  background: #fff;
+  background: var(--color-card);
 }
 .cover-wrapper .list-h {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -647,7 +734,7 @@ button {
   border-bottom: none;
   text-align: center;
   align-content: flex-end;
-  color: rgba(68,68,68,0.7);
+  color: var(--color-text-a70);
   font-size: 1.5rem;
 }
 @media screen and (max-width: 500px) {
@@ -679,7 +766,7 @@ button {
 .cover-wrapper.dock .menu .list-h a.active i+p,
 .cover-wrapper.featured .menu .list-h a.active i+p,
 .cover-wrapper.focus .menu .list-h a.active i+p {
-  color: #3dd9b6;
+  color: var(--theme);
 }
 .cover-wrapper.dock .menu .list-h a.active img+p,
 .cover-wrapper.featured .menu .list-h a.active img+p,
@@ -695,7 +782,7 @@ button {
   margin-bottom: 48px;
 }
 .cover-wrapper.dock .menu {
-  background: rgba(255,255,255,0.5);
+  background: var(--color-card-a50);
   position: absolute;
   bottom: 0;
   max-width: 100%;
@@ -724,18 +811,18 @@ button {
     background: transparent;
   }
   .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
-    background: #3dd9b6;
+    background: var(--theme);
     cursor: pointer;
     border-radius: 0;
     -webkit-border-radius: 0;
   }
   .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
+    background: var(--accent);
   }
 }
 @supports (backdrop-filter: blur(20px)) {
   .cover-wrapper.dock .menu {
-    background: rgba(255,255,255,0.5);
+    background: var(--color-card-a50);
     backdrop-filter: saturate(200%) blur(20px);
   }
 }
@@ -806,14 +893,14 @@ button {
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Varela Round';
-  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1761982841160/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1017,7 +1104,7 @@ button {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
-  color: #3dd9b6;
+  color: var(--theme);
 }
 .l_header .switcher >li >a:hover {
   border: none;
@@ -1129,7 +1216,7 @@ button {
   line-height: 1.3;
   width: 100%;
   color: var(--color-text);
-  background: #fafafa;
+  background: var(--color-card-darken2);
   box-shadow: none;
   -webkit-box-shadow: none;
   box-sizing: border-box;
@@ -1170,7 +1257,7 @@ button {
     width: 0;
     overflow: hidden;
     position: absolute;
-    background: #fff;
+    background: var(--color-card-lighten5);
     transition: all 0.28s ease;
     -webkit-transition: all 0.28s ease;
     -khtml-transition: all 0.28s ease;
@@ -1197,7 +1284,7 @@ ul.m-pc >li>a {
 }
 ul.m-pc >li>a:active,
 ul.m-pc >li>a.active {
-  border-bottom: 2px solid #3dd9b6;
+  border-bottom: 2px solid var(--theme);
 }
 ul.m-pc li:hover >ul.list-v,
 ul.list-v li:hover >ul.list-v {
@@ -1336,7 +1423,7 @@ ul.list-v >li>a:hover {
 }
 .l_header ul.nav-list-h>li >a:active,
 .l_header ul.nav-list-h>li >a.active {
-  color: #3dd9b6;
+  color: var(--theme);
 }
 .l_header ul.nav-list-h>li:hover>a {
   color: var(--color-list-hl);
@@ -1708,119 +1795,365 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  /************这个文件存放不需要重载的全局变量和全局函数*********/
-  window.volantis = {}; // volantis 全局变量
-  volantis.debug = "env"; // 调试模式
-  volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
-  /******************** volantis.dom.$ ********************************/
-  // 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
-  function volantisDom(ele) {
-    if (!ele) ele = document.createElement("div")
-    this.ele = ele;
-    // ==============================================================
-    this.ele.find = (c) => {
-      let q = this.ele.querySelector(c)
-      if (q)
-        return new volantisDom(q)
-    }
-    // ==============================================================
-    this.ele.hasClass = (c) => {
-      return this.ele.className.match(new RegExp('(\\s|^)' + c + '(\\s|$)'));
-    }
-    this.ele.addClass = (c) => {
-      this.ele.classList.add(c);
-      return this.ele
-    }
-    this.ele.removeClass = (c) => {
-      this.ele.classList.remove(c);
-      return this.ele
-    }
-    this.ele.toggleClass = (c) => {
-      if (this.ele.hasClass(c)) {
-        this.ele.removeClass(c)
-      } else {
-        this.ele.addClass(c)
+// source/js/global.js
+// global.js 此文件硬编码到head中
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+/**
+ * Volantis 主题全局变量
+ * 定义 window.volantis 全局对象和基础工具函数，需在所有其他脚本之前同步加载。
+ *
+ * 模块结构：
+ *   volantis.dom          - DOM 选择与封装
+ *   volantis.EventListener - 事件监听器管理（Pjax 清理）
+ *   volantis.pjax         - Pjax 生命周期回调
+ *   volantis.dark         - 暗色模式切换
+ *   volantis.js/css       - 动态脚本/样式加载（按需加载用）
+ *   volantis.scroll       - 滚动事件引擎
+ *   volantis.layoutHelper - 布局注入辅助
+ *   volantis.requestAnimationFrame - rAF 兼容封装
+ */
+// 全局变量和函数
+// window.volantis = {}; // volantis 全局变量
+/**
+ * 内存安全的全局 volantis 对象实现
+ * 特性：
+ * 1. 支持 window.volantis.xxx = yyy 直观赋值语法
+ * 2. 基于 WeakMap 存储数据，自动回收内存
+ * 3. 支持属性枚举（如 Object.keys(window.volantis)）
+ * 4. 支持删除属性（delete window.volantis.xxx）
+ */
+(function initializeVolantis() {
+  // 1. 初始化 WeakMap 存储实际数据（键：volantisProxy 实例，值：属性键值对）
+  const volantisDataStore = new WeakMap();
+
+  // 2. 创建 Proxy 代理处理属性访问
+  const volantisProxy = new Proxy({}, {
+    /**
+     * 拦截属性读取（如 window.volantis.dom）
+     * @param {Object} target - 代理目标对象（仅作为占位符，不存储数据）
+     * @param {string} prop - 访问的属性名
+     * @returns {any} 属性值或 undefined
+     */
+    get(target, prop) {
+      const data = volantisDataStore.get(volantisProxy);
+      return data?.[prop]; // 使用可选链避免数据未初始化时的错误
+    },
+
+    /**
+     * 拦截属性赋值（如 window.volantis.dom = "a"）
+     * @param {Object} target - 代理目标对象
+     * @param {string} prop - 赋值的属性名
+     * @param {any} value - 赋值的属性值
+     * @returns {boolean} 赋值是否成功
+     */
+    set(target, prop, value) {
+      // 初始化数据容器（若不存在）
+      if (!volantisDataStore.has(volantisProxy)) {
+        volantisDataStore.set(volantisProxy, Object.create(null)); // 使用无原型对象避免原型污染
       }
-      return this.ele
-    }
-    // ==============================================================
-    this.ele.on = (c, f) => {
-      this.ele.addEventListener(c, f, false)
-      return this.ele
-    }
-    this.ele.click = (f, r) => {
-      this.ele.on("click", f, r)
-      return this.ele
-    }
-    this.ele.scroll = (f, r) => {
-      this.ele.on("scroll", f, r)
-      return this.ele
-    }
-    // ==============================================================
-    this.ele.html = (c) => {
-      // if(c=== undefined){
-      //   return this.ele.innerHTML
-      // }else{
-      this.ele.innerHTML = c
-      return this.ele
-      // }
-    }
-    // ==============================================================
-    this.ele.hide = (c) => {
-      this.ele.style.display = "none"
-      return this.ele
-    }
-    this.ele.show = (c) => {
-      this.ele.style.display = "block"
-      return this.ele
-    }
-    // ==============================================================
-    return this.ele
-  }
-  volantis.dom.$ = (ele) => {
-    return !!ele ? new volantisDom(ele) : null;
-  }
-  /******************** RunItem ********************************/
-  function RunItem() {
-    this.list = []; // 存放回调函数
-    this.start = () => {
-      for (var i = 0; i < this.list.length; i++) {
-        this.list[i].run();
+      // 存储属性值
+      const data = volantisDataStore.get(volantisProxy);
+      data[prop] = value;
+      return true; // 符合 Proxy 规范，返回成功标志
+    },
+
+    /**
+     * 拦截属性删除（如 delete window.volantis.dom）
+     * @param {Object} target - 代理目标对象
+     * @param {string} prop - 要删除的属性名
+     * @returns {boolean} 删除是否成功
+     */
+    deleteProperty(target, prop) {
+      const data = volantisDataStore.get(volantisProxy);
+      if (!data || !Object.prototype.hasOwnProperty.call(data, prop)) {
+        return false; // 属性不存在，删除失败
       }
-    };
-    this.push = (fn, name, setRequestAnimationFrame = true) => {
-      let myfn = fn
-      if (setRequestAnimationFrame) {
-        myfn = () => {
-          volantis.requestAnimationFrame(fn)
-        }
+      delete data[prop];
+      // 若数据为空，清理 WeakMap 条目（优化内存回收）
+      if (Object.keys(data).length === 0) {
+        volantisDataStore.delete(volantisProxy);
       }
-      var f = new Item(myfn, name);
-      this.list.push(f);
-    };
-    this.remove = (name) => {
-      for (let index = 0; index < this.list.length; index++) {
-        const e = this.list[index];
-        if (e.name == name) {
-          this.list.splice(index, 1);
-        }
+      return true;
+    },
+
+    /**
+     * 拦截属性枚举（如 Object.keys(window.volantis)）
+     * @param {Object} target - 代理目标对象
+     * @returns {string[]} 可枚举的属性名数组
+     */
+    ownKeys(target) {
+      const data = volantisDataStore.get(volantisProxy);
+      return data ? Object.keys(data) : [];
+    },
+
+    /**
+     * 拦截属性描述符查询（如 Object.getOwnPropertyDescriptor）
+     * @param {Object} target - 代理目标对象
+     * @param {string} prop - 属性名
+     * @returns {PropertyDescriptor|undefined} 属性描述符
+     */
+    getOwnPropertyDescriptor(target, prop) {
+      const data = volantisDataStore.get(volantisProxy);
+      if (!data || !Object.prototype.hasOwnProperty.call(data, prop)) {
+        return undefined;
       }
-    }
-    // 构造一个可以run的对象
-    function Item(fn, name) {
-      // 函数名称
-      this.name = name || fn.name;
-      // run方法
-      this.run = () => {
-        try {
-          fn()
-        } catch (error) {
-          console.log(error);
-        }
+      return {
+        value: data[prop],
+        writable: true,
+        enumerable: true,
+        configurable: true
       };
     }
+  });
+
+  // 3. 挂载到 window 对象，暴露全局访问入口
+  Object.defineProperty(window, 'volantis', {
+    value: volantisProxy,
+    writable: true, // 允许后续手动设置为 null 触发清理
+    configurable: true,
+    enumerable: true
+  });
+
+})();
+// 页面DOM操作模块
+volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
+/******************** volantis.getFunctionHash ********************************/
+// 简易文本哈希
+volantis.simpleTextHash= (str) => {
+  // 初始哈希值：选择质数5381（DJB2算法推荐的起始值）
+  let hash = 5381;
+  // 遍历每个字符，更新哈希值
+  for (let i = 0; i < str.length; i++) {
+    // 等价于 hash = hash * 33 + charCode（位移运算更高效）
+    hash = (hash << 5) + hash + str.charCodeAt(i);
+    // 避免数值过大溢出（可选：取模2^32，模拟32位无符号整数）
+    hash = hash & hash; // 或 hash >>> 0（转换为无符号）
   }
-  /******************** RightMenu ********************************/
+  // 转换为十六进制字符串，确保至少8位（补前导零）
+  return hash.toString(16).padStart(8, '0');
+}
+
+// 获取函数内容的哈希
+volantis.getFunctionHash= (func) => {
+    // 提取函数源码字符串
+    const funcStr = func.toString();
+    // 计算哈希值
+    return volantis.simpleTextHash(funcStr);
+}
+
+// 测试示例
+//function sampleFunc(a, b) {
+//    return a * b + 10;
+//}
+//console.log(volantis.getFunctionHash(sampleFunc)); // 输出函数源码的哈希
+/******************** volantis.EventListener ********************************/
+// 事件监听器 see: /source/js/app.js
+// 事件监听器模块
+volantis.EventListener = {
+  list: [],
+
+  // 移除所有需要清理的事件监听器
+  remove() {
+    this.list.forEach(listener => {
+      listener.ele.removeEventListener(listener.type, listener.f, false);
+    });
+    this.list = [];
+  }
+};
+
+// 事件监听器构造函数
+class VolantisEventListener {
+  constructor(type, handler, element) {
+    this.type = type;
+    this.f = handler;
+    this.ele = element;
+  }
+}
+/******************** volantis.dom.$ ********************************/
+// 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
+// DOM 操作封装
+class VolantisDom {
+  constructor(ele) {
+    this._ele = ele || document.createElement('div');
+    return new Proxy(this, {
+      get(target, prop) {
+        if (target[prop] !== undefined) {
+          return target[prop];
+        }
+        if (target._ele[prop] !== undefined) {
+          if (typeof target._ele[prop] === 'function') {
+            return target._ele[prop].bind(target._ele);
+          }
+          return target._ele[prop];
+        }
+        return undefined;
+      },
+      set(target, prop, value) {
+        if (target._ele[prop] !== undefined) {
+          target._ele[prop] = value;
+          return true;
+        }
+        target[prop] = value;
+        return true;
+      }
+    });
+  }
+
+  // 自定义方法
+  find(selector) {
+    const found = this._ele.querySelector(selector);
+    return found ? new VolantisDom(found) : null;
+  }
+
+  hasClass(className) {
+    return this._ele.classList.contains(className);
+  }
+
+  addClass(classNames) {
+    if (typeof classNames !== 'string') return this;
+    classNames.split(' ').forEach(className => {
+      className && this._ele.classList.add(className);
+    });
+    return this;
+  }
+
+  removeClass(classNames) {
+    if (typeof classNames !== 'string') return this;
+    classNames.split(' ').forEach(className => {
+      className && this._ele.classList.remove(className);
+    });
+    return this;
+  }
+
+  toggleClass(classNames) {
+    if (typeof classNames !== 'string') return this;
+    classNames.split(' ').forEach(className => {
+      className && this._ele.classList.toggle(className);
+    });
+    return this;
+  }
+
+  on(event, handler, removeOnPjax = true) {
+    if (typeof handler !== 'function') return this;
+    this._ele.addEventListener(event, handler, false);
+    if (removeOnPjax) {
+      volantis.EventListener.list.push(
+        new VolantisEventListener(event, handler, this._ele)
+      );
+    }
+    return this;
+  }
+
+  click(handler, removeOnPjax) {
+    return this.on('click', handler, removeOnPjax);
+  }
+
+  scroll(handler, removeOnPjax) {
+    return this.on('scroll', handler, removeOnPjax);
+  }
+
+  html(content) {
+    if (content === undefined) {
+      return this._ele.innerHTML;
+    }
+    this._ele.innerHTML = content;
+    return this;
+  }
+
+  hide() {
+    this._ele.classList.remove('show');
+    this._ele.style.removeProperty('display');
+    return this;
+  }
+
+  show() {
+    this._ele.classList.add('show');
+    this._ele.style.removeProperty('display');
+    return this;
+  }
+}
+// DOM 选择工厂函数
+volantis.dom.$ = (ele) => {
+  if (!ele) return null;
+  if (ele instanceof VolantisDom) {
+    return ele;
+  }
+  if (ele instanceof NodeList || ele instanceof HTMLCollection) {
+    return Array.from(ele).map(item => new VolantisDom(item));
+  }
+  if (ele instanceof Node) {
+    return new VolantisDom(ele);
+  }
+  return null;
+};
+/******************** RunItem ********************************/
+// 任务执行管理器
+class RunItem {
+  constructor() {
+    this.list = [];
+  }
+
+  start() {
+    this.list.forEach(item => item.run());
+  }
+
+  // name 存在时同名替换，否则追加
+  push(fn, name, useRequestAnimationFrame = true) {
+    if (typeof fn !== 'function') return;
+
+    let taskFn = fn;
+    if (useRequestAnimationFrame) {
+      taskFn = () => {
+        volantis.requestAnimationFrame(fn);
+      };
+    }
+
+    name = name || volantis.getFunctionHash(fn)
+    const idx = this.list.findIndex(item => item.name === name);
+    if (idx !== -1) {
+      this.list[idx] = new TaskItem(taskFn, name);
+      return;
+    }
+    this.list.push(new TaskItem(taskFn, name));
+  }
+
+  remove(name) {
+    if (typeof name !== 'string') return;
+    this.list = this.list.filter(item => item.name !== name);
+  }
+}
+
+class TaskItem {
+  constructor(fn, name) {
+    this.name = name || volantis.getFunctionHash(fn);
+    this.fn = fn;
+  }
+
+  run() {
+    try {
+      this.fn();
+    } catch (error) {
+      console.error(`Error executing task ${this.name}:`, error);
+    }
+  }
+}
+/******************** Pjax ********************************/
+// /layout/_plugins/pjax/index.ejs
+// volantis.pjax.send(callBack[,"callBackName"]) 传入pjax:send回调函数
+// volantis.pjax.push(callBack[,"callBackName"]) 传入pjax:complete回调函数
+// volantis.pjax.error(callBack[,"callBackName"]) 传入pjax:error回调函数
+volantis.pjax = {};
+volantis.pjax.method = {
+  complete: new RunItem(),
+  error: new RunItem(),
+  send: new RunItem()
+};
+volantis.pjax = Object.assign(volantis.pjax, {
+  push: volantis.pjax.method.complete.push.bind(volantis.pjax.method.complete),
+  error: volantis.pjax.method.error.push.bind(volantis.pjax.method.error),
+  send: volantis.pjax.method.send.push.bind(volantis.pjax.method.send)
+});
+/******************** RightMenu ********************************/
   // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
   // 可在 volantis.mouseEvent 处获取右键事件
   volantis.rightmenu = {};
@@ -1828,20 +2161,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     handle: new RunItem(),
   }
   volantis.rightmenu = Object.assign(volantis.rightmenu, {
-    handle: volantis.rightmenu.method.handle.push,
+    handle: volantis.rightmenu.method.handle.push.bind(volantis.rightmenu.method.handle),
   });
-  /********************  Dark Mode  ********************************/
+/********************  Dark Mode  ********************************/
   // /layout/_partial/scripts/darkmode.ejs
   // volantis.dark.mode 当前模式 dark or light
   // volantis.dark.toggle() 暗黑模式触发器
   // volantis.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
-  volantis.dark = {};
-  volantis.dark.method = {
-    toggle: new RunItem(),
-  };
-  volantis.dark = Object.assign(volantis.dark, {
-    push: volantis.dark.method.toggle.push,
-  });
+volantis.dark = {};
+volantis.dark.method = {
+  toggle: new RunItem()
+};
+volantis.dark = Object.assign(volantis.dark, {
+  push: volantis.dark.method.toggle.push.bind(volantis.dark.method.toggle)
+});
   /********************  Message  ********************************/
   // VolantisApp.message
   /********************  isMobile  ********************************/
@@ -1858,57 +2191,81 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   //     await volantis.js("...theme.plugins.aplayer.js.meting...")
   // })();
 
-  // 已经加入了setTimeout
-  volantis.js = (src, cb) => {
-    return new Promise(resolve => {
-      setTimeout(function () {
-        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
-        var script = document.createElement("script");
-        script.setAttribute("type", "text/javascript");
-        if (cb) {
-          if (JSON.stringify(cb)) {
-            for (let p in cb) {
-              if (p == "onload") {
-                script[p] = () => {
-                  cb[p]()
-                  resolve()
-                }
-              } else {
-                script[p] = cb[p]
-                script.onload = resolve
-              }
-            }
-          } else {
-            script.onload = () => {
-              cb()
-              resolve()
-            };
-          }
+// 脚本动态加载（按需加载用）
+// volantis.js(src, cb)  cb: onload 回调或属性对象 {defer:true, onload:()=>{}}
+// volantis.css(src)
+volantis.js = (src, cb) => {
+  const escapeSelector = str => str.replace(/[#".'()[\]]/g, '\\$&');
+  return new Promise((resolve, reject) => {
+    setTimeout(function () {
+    const existingScript = document.querySelector(`script[src="${escapeSelector(src)}"]`);
+    if (existingScript) {
+      resolve();
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = src;
+
+    const handleLoad = () => {
+      if (typeof cb === 'function') cb();
+      resolve();
+    };
+
+    script.onload = handleLoad;
+    script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+
+    if (cb && typeof cb === 'object' && !Array.isArray(cb)) {
+      for (const p in cb) {
+        if (!cb.hasOwnProperty(p)) continue;
+        if (p === 'onload') {
+          script.onload = () => {
+            cb[p]();
+            resolve();
+          };
+        } else if (p === 'pjax') {
+          script.setAttribute('pjax', '');
+          script.setAttribute('data-pjax', '');
+        } else if (cb[p] === true) {
+          script.setAttribute(p, '');
         } else {
-          script.onload = resolve
+          script.setAttribute(p, cb[p]);
         }
-        script.setAttribute("src", src);
-        HEAD.appendChild(script);
-      });
+      }
+    }
+
+    (document.head || document.documentElement).appendChild(script);
     });
-  }
-  volantis.css = (src) => {
-    return new Promise(resolve => {
-      setTimeout(function () {
-        var link = document.createElement('link');
-        link.rel = "stylesheet";
-        link.href = src;
-        link.onload = resolve;
-        document.getElementsByTagName("head")[0].appendChild(link);
-      });
+  });
+};
+
+volantis.css = (src) => {
+  const escapeSelector = str => str.replace(/[#".'()[\]]/g, '\\$&');
+  return new Promise((resolve, reject) => {
+   setTimeout(function () {
+    const existingLink = document.querySelector(`link[href="${escapeSelector(src)}"]`);
+    if (existingLink) {
+      resolve();
+      return;
+    }
+    const link = document.createElement('link');
+    Object.assign(link, {
+      rel: 'stylesheet',
+      href: src,
+      onload: () => resolve(),
+      onerror: () => reject(new Error(`Failed to load CSS: ${src}`))
     });
-  }
+    document.head.appendChild(link);
+    });
+  });
+};
+
+
   /********************按需加载的插件********************************/
   // volantis.import.jQuery().then(()=>{})
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js")
+        return volantis.js(volantis.GLOBAL_CONFIG.cdn.jquery)
       } else {
         return new Promise(resolve => {
           resolve()
@@ -1916,38 +2273,80 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     }
   }
+  /********************** 节流和防抖 ********************************/
+  // 节流函数：确保指定时间内仅执行一次 时间戳版本的节流实现
+  volantis.throttle = (func, delay = 200) => {
+    let lastTime = 0;
+    return function (...args) {
+      const now = Date.now();
+      if (now - lastTime >= delay) {
+        func.apply(this, args);
+        lastTime = now;
+      }
+    };
+  };
+  // 防抖函数 setTimeout实现
+  volantis.debounce = (func, wait = 200) => {
+    let timer = null;
+    return function () {
+      if (timer) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(() => {
+        func.apply(this, arguments)
+        timer = null
+      }, wait)
+    };
+  };
   /********************** requestAnimationFrame ********************************/
   // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
   // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
   volantis.requestAnimationFrame = (fn) => {
     if (!window.requestAnimationFrame) {
-      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (callback) {
+        return window.setTimeout(callback, 1000 / 60);
+      };
     }
-    window.requestAnimationFrame(fn)
-  }
-  /************************ layoutHelper *****************************************/
-  volantis.layoutHelper = (helper, html, opt) => {
-    opt = Object.assign({ clean: false}, opt)
-    function myhelper(helper, html, clean) {
-      volantis.tempDiv = document.createElement("div");
-      volantis.tempDiv.innerHTML = html;
-      let layoutHelper = document.querySelector("#layoutHelper-" + helper)
-      if (layoutHelper) {
-        if (clean) {
-          layoutHelper.innerHTML = ""
-        }
-        layoutHelper.append(volantis.tempDiv);
+    return window.requestAnimationFrame(fn);
+  };
+  // 3. 基于 requestAnimationFrame 的节流函数
+  volantis.rafThrottle = (fn) => {
+      let rafId = null
+      return (...args) => {
+        if (rafId) return
+        rafId = volantis.requestAnimationFrame(() => {
+          fn(...args)
+          rafId = null
+        })
       }
+  };
+/************************ layoutHelper *****************************************/
+// Layout Helper
+volantis.layoutHelper = (helper, html, opt = {}) => {
+  const { clean = false, pjax = true } = { ...opt };
+  const handleLayout = () => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+    const layoutHelper = document.querySelector(`#layoutHelper-${helper}`);
+    if (layoutHelper) {
+      if (clean) layoutHelper.innerHTML = '';
+      layoutHelper.append(tempDiv);
     }
-    myhelper(helper, html, opt.clean)
+  };
+
+  handleLayout();
+  if (pjax) {
+    volantis.pjax.push(handleLayout, `layoutHelper-${helper}`);
   }
-  /****************************** 滚动事件处理 ****************************************/
-  volantis.scroll = {
+};
+/****************************** 滚动事件处理 ****************************************/
+// 滚动事件处理
+volantis.scroll = {
     engine: new RunItem(),
     unengine: new RunItem(),
   };
   volantis.scroll = Object.assign(volantis.scroll, {
-    push: volantis.scroll.engine.push,
+    push: volantis.scroll.engine.push.bind(volantis.scroll.engine),
   });
   // 滚动条距离顶部的距离
   volantis.scroll.getScrollTop = () => {
@@ -1968,7 +2367,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     )
   }
   volantis.scroll.offsetHeight = function () {
-    return Math.max(
+    return Math.min(
       document.body.offsetHeight,
       document.documentElement.offsetHeight,
       document.body.clientHeight,
@@ -2011,7 +2410,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // 默认配置
     opt = {
       top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
-      behavior: "smooth"
+      behavior: volantis.GLOBAL_CONFIG.scroll_behavior
     }
     // 定义配置
     if ("top" in option) {
@@ -2059,41 +2458,122 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       })
     }
   }
-  /******************************************************************************/
-  /******************************************************************************/
-  /******************************************************************************/
-  //图像加载出错时的处理
-  function errorImgAvatar(img) {
-    img.src = "https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
-    img.onerror = null;
-  }
-  function errorImgCover(img) {
-    img.src = "https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
-    img.onerror = null;
-  }
-  /******************************************************************************/
-</script>
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+//图像加载出错时的处理
+// 图片错误降级
+function errorImgAvatar(img) {
+  img.src = volantis.GLOBAL_CONFIG.default.avatar;
+  img.srcset = volantis.GLOBAL_CONFIG.default.avatar;
+  img.onerror = null;
+}
 
+function errorImgCover(img) {
+  img.src = volantis.GLOBAL_CONFIG.default.cover;
+  img.srcset = volantis.GLOBAL_CONFIG.default.cover;
+  img.onerror = null;
+}
+/******************************************************************************/
+// Hack Interval
+// 保存原生定时器方法
+const nativeSetTimeout = window.setTimeout;
+const nativeSetInterval = window.setInterval;
+const nativeClearTimeout = window.clearTimeout;
+const nativeClearInterval = window.clearInterval;
+
+// 存储活动定时器ID的数组
+volantis.activeTimeout = [];
+volantis.activeInterval = [];
+
+// 重写setTimeout：执行后自动移除ID
+window.setTimeout = function(callback, delay, ...args) {
+  // 包装回调函数，执行后从列表移除ID
+  const wrappedCallback = function(...innerArgs) {
+    try {
+      // 执行原始回调（保持this指向和参数传递）
+      return callback.apply(this, innerArgs);
+    } finally {
+      // 无论回调是否报错，均移除ID
+      const index = volantis.activeTimeout.indexOf(timerId);
+      if (index !== -1) volantis.activeTimeout.splice(index, 1);
+    }
+  };
+  
+  // 调用原生setTimeout获取ID
+  const timerId = nativeSetTimeout(wrappedCallback, delay, ...args);
+  // 添加到活动列表
+  volantis.activeTimeout.push(timerId);
+  return timerId;
+};
+
+// 重写setInterval：需显式清除才移除ID
+window.setInterval = function(callback, delay, ...args) {
+  const timerId = nativeSetInterval(callback, delay, ...args);
+  volantis.activeInterval.push(timerId);
+  return timerId;
+};
+
+// 重写清除方法：同步移除ID列表记录
+window.clearTimeout = function(timerId) {
+  nativeClearTimeout(timerId);
+  const index = volantis.activeTimeout.indexOf(timerId);
+  if (index !== -1) volantis.activeTimeout.splice(index, 1);
+};
+
+window.clearInterval = function(timerId) {
+  nativeClearInterval(timerId);
+  const index = volantis.activeInterval.indexOf(timerId);
+  if (index !== -1) volantis.activeInterval.splice(index, 1);
+};
+volantis.getActiveInterval = function () {
+  return [...volantis.activeInterval];
+}
+volantis.getActiveTimeout = function () {
+  return [...volantis.activeTimeout];
+}
+volantis.clearAllTimers = function (){
+  volantis.getActiveInterval().forEach(function(i) {
+    clearInterval(i);
+  });
+  volantis.getActiveTimeout().forEach(function(i) {
+    clearTimeout(i);
+  });
+}
+volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
+/******************************************************************************/
+// DOMContentLoaded：缓存 DOM 引用
+document.addEventListener('DOMContentLoaded', function () {
+  /******************** volantis.dom ********************************/
+  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
+  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
+  volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
+  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
+  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
+  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
+  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
+  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
+  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
+});
+/******************************************************************************/
+
+</script>
 <script>
-  window.pdata={}
-  pdata.ispage=false;
-  pdata.commentPath="";
-  pdata.commentPlaceholder="";
-  pdata.commentConfig={};
-  volantis.GLOBAL_CONFIG ={
-    root: '/blog/',
+  volantis.debug = "env"; // 调试模式
+  volantis.GLOBAL_CONFIG = {
+    root: "/blog/",
     debug: "env",
-    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1729002805235),
+    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1761982841160/media/placeholder/image/2659360.svg","topic":"https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/10433048.png","project":"https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2779789.png","banner":"https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/banner/books.jpg","loading":"https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd","image_onerror":"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E"},
+    lastupdate: new Date(1792334198453),
+    scroll_behavior: "smooth",
     cdn: {
-      izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
-      izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
-      fancybox_css: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.min.css',
-      fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
+      jquery: "https://unpkg.com/jquery@3.7.1/dist/jquery.min.js",
+      izitoast_css: "https://unpkg.com/izitoast@1.4.0/dist/css/iziToast.min.css",
+      izitoast_js: "https://unpkg.com/izitoast@1.4.0/dist/js/iziToast.min.js",
+      fancybox_css: "https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css",
+      fancybox_js: "https://unpkg.com/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"
     },
     sidebar: {
-      for_page: ["blogger","bulletin","category","tagcloud"],
-      for_post: ["toc"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -2106,20 +2586,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     },
     plugins: {
-      message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      message: {"enable":null,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":null,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":null,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
       aplayer: {
         id: 592343641,
-        enable:true
+        enable: true
       },
       
       
+    },
+    tag_plugins: {
+      chat: {"api":"https://siteinfo.listentothewind.cn/api/v1"},
     },
     search: {
       
 
       
-        dataPath: (("/blog/" || "/").endsWith("/") ? "/blog/" || "/" : "/blog//" || "/") + "content.json",
+        dataPath: "/blog/content.json",
       
 
       
@@ -2129,11 +2612,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         search: {
           hits_empty: "找不到您查询的内容：${query}",
           hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒",
-        }
+          normal: "输入关键词搜索",
+          hits_found: "找到 ${totalResults} 个相关结果",
+          history: "搜索历史",
+          no_history: "暂无搜索历史",
+          clear_history: "清除历史",
+          filter_all: "全部",
+          filter_posts: "文章",
+          filter_pages: "页面",
+          filter_tags: "标签",
+          searching: "搜索中...",
+          placeholder: "搜索文章、标签或分类...",
+          label_posts: "文章",
+          label_pages: "页面",
+          label_tags: "标签"
+        },
       
+      search: {
+        no_title: "无标题",
+        config_invalid: "搜索配置无效，请检查设置。"
+      }
     }
   }
 </script>
+
+
+    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"miRoox的博客","url":"http://miRoox.github.io/blog/blog/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"miRoox","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://miRoox.github.io/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"现役研究生"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://miRoox.github.io/blog/blog/","name":"miRoox的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://miRoox.github.io/blog/blog/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://miRoox.github.io/blog/blog/archives/2017/","name":"2017年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://miRoox.github.io/blog/blog/archives/2017/5/","name":"5月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"miRoox的博客","url":"http://miRoox.github.io/blog/blog/","keywords":"编程 / 数理 / 小说","description":"现役研究生","author":{"@type":"Person","name":"miRoox","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://miRoox.github.io/blog/blog/","description":"现役研究生"},"publisher":{"@type":"Organization","name":"miRoox的博客","url":"http://miRoox.github.io/blog/blog/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://miRoox.github.io/blog?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"现役研究生","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"miRoox","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://miRoox.github.io/blog/blog/"},"publisher":{"@type":"Organization","name":"miRoox的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
   <!-- import head_end begin -->
   <!-- import head_end end -->
   <!-- Custom Files headEnd begin-->
@@ -2151,7 +2655,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone'>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" title="comment"></a></li>
         
           <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" title="toc"></a></li>
@@ -2163,7 +2667,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/blog/'>
           
-            <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+            <img no-lazy alt="logo" class='logo' src='https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/Logo-NavBar@3x.png'/>
           
           
           
@@ -2603,9 +3107,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
-    
-      <div class="cover-wrapper  dock" id='half'>
+      
         
+          <div class="cover-wrapper  dock" id='half'>
+            
   <div id="parallax-window"></div>
 
 <div class='cover-body'>
@@ -2670,14 +3175,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </div>
 
-      </div>
-    
+          </div>
+        
+      
   
 </div>
 
       <div id="safearea">
         <div class="body-wrapper">
           
+
+
+
+
+
+
+
 <div id="l_main" class=''>
 	
 		
@@ -2693,67 +3206,125 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+            
+
+<!-- 文章预览卡片容器，使用schema.org的Article类型进行结构化数据标记 -->
+<div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <!-- 标记文章的主要页面链接 -->
   <link itemprop="mainEntityOfPage" href="http://miroox.github.io/blog/2017/05/TheAlgebraOfADT-I/">
+  
+  <!-- 隐藏的发布者信息，使用schema.org的Organization类型 -->
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="miRoox的博客">
   </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="miRoox的博客">
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="name" content="【翻译】代数数据类型的代数结构（上）">
     <meta itemprop="description" content="现役研究生">
   </span>
+
+  <!-- 显示置顶图标（如果计算得出需要显示） -->
   
   
+  <!-- 显示文章头图（如果存在） -->
   
+    <!-- 如果没有头图，使用主题配置的默认图片作为结构化数据 -->
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1761982841160/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
+
+  <!-- 一般场景 -->
   
+    <!-- 文章标题区域，使用schema.org的name和headline属性 -->
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/blog/2017/05/TheAlgebraOfADT-I/"  itemprop="url">
-        【翻译】代数数据类型的代数结构（上）
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      <h2 class="article-title" itemprop="name headline">
+        <a href="/blog/2017/05/TheAlgebraOfADT-I/" itemprop="url">
+          【翻译】代数数据类型的代数结构（上）
+        </a>
+      </h2>
     
-      <p><a target="_blank" rel="noopener" href="http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/">原文链接</a></p>
+    <!-- 文章摘要/描述区域，使用schema.org的articleBody属性 -->
+    <div class="md article-desc" itemprop="articleBody">
+      
+        <!-- 显示文章摘要 -->
+        <p><a target="_blank" rel="noopener" href="http://chris-taylor.github.io/blog/2013/02/10/the-algebra-of-algebraic-data-types/">原文链接</a></p>
 <hr />
 <p><em>我以此题目在2012年11月的伦敦Haskell会议上做了演讲。演讲的视频见 <a target="_blank" rel="noopener" href="http://www.youtube.com/watch?v=YScIPA8RbVE">YouTube</a> ，幻灯片见 <a target="_blank" rel="noopener" href="https://github.com/chris-taylor/LondonHUG">GitHub</a> 。</em></p>
 <p>在本系列文章中，我将在不提及范畴论和高等数学的情况下解释Haskell的数据类型为什么被称为 <em>代数的</em>。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2017-05-27T21:44:34+08:00">2017-05-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/blog/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/">代码编程</a><span class="sep"></span><a class="category-link" href="/blog/categories/%E7%BF%BB%E8%AF%91%E4%BD%9C%E5%93%81/">翻译作品</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/" itemprop="url"><span itemprop="name">代码编程</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/blog/categories/%E7%BF%BB%E8%AF%91%E4%BD%9C%E5%93%81/" itemprop="url"><span itemprop="name">翻译作品</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/blog/2017/05/TheAlgebraOfADT-I/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
       
     </div>
-  
+    
+    <!-- 元信息区域（作者、日期、分类、标签等），仅在需要显示其中至少一项时才渲染 -->
+    
+      <div class="meta-v3" line_style='solid'>
+        <div>
+          <!-- 显示作者信息（如果主题设置启用） -->
+          
+            <!-- 作者结构化数据，使用schema.org的Person类型 -->
+            <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <meta itemprop="image" content="/blog/images/avatar.jpg">
+              <meta itemprop="name" content="miRoox">
+              <meta itemprop="url" content="https://miroox.github.io/">
+            </span>
 
+          
+          <!-- 显示文章更新时间，使用schema.org的dateModified属性 -->
+          <time class="update-time" itemprop="dateModified" 
+                datetime="2020-01-22T22:41:40+08:00" 
+                title="2020年1月22日">
+            2020-01-22
+          </time>
+          
+          <!-- 显示文章分类（如果需要显示） -->
+          
+            <span class="dot"></span>
+            <a class="category-link" href="/blog/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/">代码编程</a><span class="sep"></span><a class="category-link" href="/blog/categories/%E7%BF%BB%E8%AF%91%E4%BD%9C%E5%93%81/">翻译作品</a>
+            
+            <!-- 分类的结构化数据 -->
+            
+              <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/blog/categories/%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A8%8B/" itemprop="url"><span itemprop="name">代码编程</span></a>
+              </span>
+            
+              <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/blog/categories/%E7%BF%BB%E8%AF%91%E4%BD%9C%E5%93%81/" itemprop="url"><span itemprop="name">翻译作品</span></a>
+              </span>
+            
+          
+          
+          <!-- 显示文章标签（如果需要显示） -->
+          
+            <span class="dot"></span>
+            <a class="category-link" href="/blog/tags/Haskell/">Haskell</a><span class="sep"></span><a class="category-link" href="/blog/tags/%E7%A7%91%E6%99%AE/">科普</a><span class="sep"></span><a class="category-link" href="/blog/tags/%E7%BF%BB%E8%AF%91/">翻译</a>
+            
+            <!-- 标签的结构化数据 -->
+            
+              <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/blog/tags/%E7%A7%91%E6%99%AE/" itemprop="url"><span itemprop="name">科普</span></a>
+              </span>
+            
+              <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/blog/tags/%E7%BF%BB%E8%AF%91/" itemprop="url"><span itemprop="name">翻译</span></a>
+              </span>
+            
+              <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/blog/tags/Haskell/" itemprop="url"><span itemprop="name">Haskell</span></a>
+              </span>
+            
+          
+        </div>
+        
+        <!-- 阅读更多按钮 -->
+        
+          <div>
+            <a class='readmore' href='/blog/2017/05/TheAlgebraOfADT-I/'>
+              阅读全文
+            </a>
+          </div>
+        
+      </div>
+    
+  
 </div>
 
           </div>
@@ -2775,12 +3346,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile ">
+
+<section class="widget blogger desktop mobile shadow floatable blur pjax">
   <div class='content'>
     
       
         <a class='avatar flat-box rectangle' href='/blog/about/'>
-          <img no-lazy src='/blog/images/avatar.jpg'/>
+          <img no-lazy src='/blog/images/avatar.jpg' alt='avatar' />
         </a>
       
     
@@ -2854,7 +3426,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget text desktop mobile">
+
+<section class="widget text desktop mobile shadow floatable blur pjax">
   
 
   <div class='content'>
@@ -2873,7 +3446,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
   
-  <section class="widget category desktop">
+
+  <section class="widget category desktop shadow floatable blur pjax">
     
   <header>
     
@@ -2923,7 +3497,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
   
-  <section class="widget tagcloud desktop mobile">
+
+  <section class="widget tagcloud desktop mobile shadow floatable blur pjax">
     
   <header>
     
@@ -2942,15 +3517,50 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-<div class="widget-sticky">
+<div class="widget-sticky pjax">
 
 </div>
+
+
+<div class="widget pjax"><!-- pjax占位 qrcode--></div>
+
+<div class="widget pjax"><!-- pjax占位 webinfo--></div>
+
+<div class="widget pjax"><!-- pjax占位 lastupdate--></div>
+
+<div class="widget pjax"><!-- pjax占位 recent--></div>
+
+<div class="widget pjax"><!-- pjax占位 tree--></div>
+
+<div class="widget pjax"><!-- pjax占位 related--></div>
+
+<div class="widget pjax"><!-- pjax占位 tagtree--></div>
+
+<div class="widget pjax"><!-- pjax占位 artalk--></div>
+
+<div class="widget pjax"><!-- pjax占位 memos_carousel--></div>
+
 
   <!-- Custom Files side begin -->
   
   <!-- Custom Files side end -->
 </aside>
 
+
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<pjax>
+<script>
+  window.pdata={}
+  pdata.ispage=false;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  pdata.commentConfig={};
+  //  see: /layout/_logic/_cover_ctrl.ejs
+  
+</script>
+</pjax>
 
         </div>
         
@@ -3055,7 +3665,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
@@ -3076,22 +3686,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
     </div>
     <div>
-      <script>
-  /******************** volantis.dom ********************************/
-  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
-  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
-  volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
-  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
-  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
-  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
-  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
-  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
-  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
-</script>
-
+      
 <script>
   
-  volantis.css("https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+  volantis.css("https://unpkg.com/@fortawesome/fontawesome-free@6.6.0/css/all.min.css");
   
   
   
@@ -3101,8 +3699,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- internal -->
-
-<script src="/blog/blog/js/app.js"></script>
+<!-- 这里不能使用 Hexo 内置的 helper: js(theme.cdn.volantis_app) ， 会导致多加一个 config.site_root -->
+<script src="/blog/js/app.js"></script>
 
 
 
@@ -3126,6 +3724,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     
     
+      const fpostsjs = document.getElementById('fposts-api');
+      if (fpostsjs != undefined && typeof FpostsJS === 'undefined') {
+        volantis.js("/blog/js/plugins/tags/fposts.js")
+      }
+    
+    
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
         volantis.js("/blog/js/plugins/tags/contributors.js")
@@ -3133,12 +3737,159 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
   };
   loadIssuesJS()
+  volantis.pjax.push(()=>{
+    loadIssuesJS();
+  },"loadIssuesJS")
+
 </script>
 
 
 
+<script>
+function loadDataService(){
+  const cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+  if (cardlinks?.length > 0) {
+    volantis.js("/blog/js/plugins/tags/siteinfo.js", { defer: true }).then(function () {
+      setCardLink(cardlinks);
+    });
+  }
+  const timelinecard = document.querySelector(".tag-plugin.timeline.ds-timeline");
+  if (timelinecard){
+    volantis.js("https://unpkg.com/marked@14.1.2/marked.min.js").then(function () {
+      volantis.js("/blog/js/plugins/tags/timeline.js", { defer: true });
+    });
+  }
+  const voiceAudios = document.querySelectorAll('.voice>audio');
+  if (voiceAudios?.length > 0) {
+    volantis.js("/blog/js/plugins/tags/chat/voice.js", { defer: true }).then(function () {
+      createVoiceDom(voiceAudios);
+    });
+  }
+  const videos = document.querySelectorAll('.video>video');
+  if (videos?.length > 0) {
+    volantis.js("/blog/js/plugins/tags/chat/video.js", { defer: true }).then(function () {
+      videoEvents(videos);
+    });
+  }
+  const files = document.querySelectorAll('.chat-file');
+  if (files?.length > 0) {
+    volantis.js("/blog/js/plugins/tags/chat/download-file.js", { defer: true }).then(function () {
+      downloadFileEvent(files);
+    });
+  }
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+    let firstAdjustInterval = null;
+    let mainInterval = null;
 
-  <script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.js"></script>
+    if (phoneTimes.length > 0) {
+      NowTime();
+      const date = new Date();
+      const sec = date.getSeconds();
+      firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+      
+
+      function firstAdjustTime() {
+        NowTime();
+        if (firstAdjustInterval) {
+          clearInterval(firstAdjustInterval);
+          firstAdjustInterval = null;
+        }
+        mainInterval = setInterval(NowTime, 1000 * 60);
+        
+      }
+
+      function NowTime() {
+        for (let i = 0; i < phoneTimes.length; ++i) {
+          const timeSpan = phoneTimes[i];
+          const date = new Date();
+          const hour = date.getHours();
+          const min = date.getMinutes();
+          timeSpan.innerHTML = check(hour) + ":" + check(min);
+        }
+      };
+
+      function check(val) {
+        if (val < 10) {
+          return ("0" + val);
+        }
+        return (val);
+      }
+    }
+
+    // chat quote - 存储事件监听器以便清理
+    const quoteClickHandlers = new Map();
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      const handler = function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      };
+      quote.addEventListener('click', handler);
+      quoteClickHandlers.set(quote, handler); // 保存处理器引用
+    });
+
+volantis.pjax.send(()=>{
+      // 断开观察器
+      if (chat_quote_obverser) {
+        chat_quote_obverser.disconnect();
+      }
+      
+      // 移除所有 click 事件监听器
+      quoteClickHandlers.forEach((handler, quote) => {
+        quote.removeEventListener('click', handler);
+      });
+      quoteClickHandlers.clear();
+},"chatQuotes");
+
+
+
+
+
+
+
+
+
+
+
+};
+loadDataService();
+volantis.pjax.push(()=>{
+    loadDataService();
+},"loadDataService");
+</script>
+
+
+
+  <script defer src="https://unpkg.com/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -3159,6 +3910,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   document.addEventListener('DOMContentLoaded', function () {
     lazyLoadInstance.update();
   });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
 </script>
 
 
@@ -3174,7 +3928,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 	hoverDelay: 0
   };
 </script>
-<script defer src="https://unpkg.com/volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1761982841160/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -3182,14 +3936,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script>
-  volantis.css("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css");
+  
+    <script>
+  volantis.css("https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css");
 
   
     (async () => {
       // APlayer 需要在  MetingJS 之前加载
-      await volantis.js("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js")
-      await volantis.js("https://unpkg.com/meting@2/dist/Meting.min.js")
+      await volantis.js("https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js")
+      await volantis.js("https://unpkg.com/meting@2.0.1/dist/Meting.min.js")
     
     })();
 
@@ -3203,48 +3958,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         })
         // message see: /layout/_plugins/message/script.ejs
         
-          try {
-            setTimeout(() => {
-              Metings.forEach((item, index) => {
-                const aplayerItem = item.aplayer; if(!aplayerItem) return;
-                const rightAplayerCheck = 'true' === 'true'
-                  && item.meta.id === '592343641';
-                if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
-                if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
-                  aplayerItem.on('play', function messagePlay() {
-                    let index = aplayerItem.list.index;
-                    let title = aplayerItem.list.audios[index].title;
-                    let artist = aplayerItem.list.audios[index].artist;
-                    setTimeout(() => {
-                      VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                        icon: 'fa-solid fa-play',
-                        transitionIn: 'flipInX',
-                        transitionOut: 'flipOutX'
-                      });
-                    }, 100)
-                  });
-                }
-                if(aplayerItem.events.events.pause.every(item => {return item.name !== 'messagePause'})) {
-                  aplayerItem.on('pause', function messagePause() {
-                    let index = aplayerItem.list.index;
-                    let title = aplayerItem.list.audios[index].title;
-                    let artist = aplayerItem.list.audios[index].artist;
-                    setTimeout(() => {
-                      // 歌曲播放结束也会触发 pause 事件，为了避免错误提示，等待一会儿
-                      if(aplayerItem.paused) {
-                        VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                          icon: 'fa-solid fa-pause',
-                          transitionIn: 'flipInX',
-                          transitionOut: 'flipOutX'
-                        });
-                      }
-                    }, 100)
-                  });
-                }
-              });
-            }, 500)
-          } catch (error) { console.error(error); }
-        
       }else{
         volantis.requestAnimationFrame(SetAPlayerPlugin)
       }
@@ -3253,15 +3966,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     document.addEventListener("DOMContentLoaded", ()=>{
       SetAPlayerPlugin();
     });
+    volantis.pjax.push(SetAPlayerPlugin,"SetAPlayerPlugin");
   
 </script>
 
+    
+  
+  
 
 
 
       <script type="text/javascript">
   volantis.layoutHelper("comments",`<div id="gitalk-container"></div>`)
-  function p_gitalk() {
+  function pjax_gitalk() {
     if(!document.querySelector("#gitalk-container"))return;
     let path = pdata.commentPath;
     if (path.length == 0) {
@@ -3280,7 +3997,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       gitalk.render('gitalk-container');
     }
   }
-  volantis.js('https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.js').then(p_gitalk)
+  volantis.js('https://unpkg.com/gitalk@1.8.0/dist/gitalk.min.js').then(pjax_gitalk)
+  volantis.pjax.push(pjax_gitalk,"gitalk");
 </script>
 
     
@@ -3349,16 +4067,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  function p_highlightjs_copyCode(){
+  function pjax_highlightjs_copyCode(){
     if (!(document.querySelector(".highlight .code pre") ||
       document.querySelector(".article pre code"))) {
       return;
     }
     VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
   }
-  volantis.requestAnimationFrame(p_highlightjs_copyCode)
+  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
+  volantis.pjax.push(pjax_highlightjs_copyCode,"pjax_highlightjs_copyCode")
 
 </script>
+
 
 
 
@@ -3414,6 +4134,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     volantis.js('/blog/js/plugins/parallax.js').then(()=>{
       parallax()
     })
+    volantis.pjax.send(()=>{
+      clearInterval(IntervalParallax)
+    },"clearIntervalParallax");
+    volantis.pjax.push(parallax,"parallax");
   }
 </script>
 
@@ -3422,21 +4146,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <script>
   function load_swiper() {
-    if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css");
-    volantis.js("https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js").then(() => {
-      p_swiper();
+    if (!document.querySelector(".swiper-container")) return;
+    volantis.css("https://unpkg.com/swiper@11.1.14/swiper-bundle.min.css");
+    volantis.js("https://unpkg.com/swiper@11.1.14/swiper-bundle.min.js").then(() => {
+      pjax_swiper();
     });
   }
 
   load_swiper();
 
-  function p_swiper() {
+  function pjax_swiper() {
+    const effect = document.querySelector(".swiper-container").getAttribute('effect') || 'cards';
     volantis.swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
       spaceBetween: 8,
       centeredSlides: true,
-      loop: true,
+      effect: effect,
+      rewind: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -3448,29 +4174,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     });
   }
 
+  volantis.pjax.push(() => {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    if (typeof volantis.swiper === "undefined") {
+      load_swiper();
+    } else {
+      pjax_swiper();
+    }
+  },"swiper");
 </script>
 
 
 
-  <script>
-  volantis.css("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.min.css");
-  volantis.js("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js").then(() => {
-    Pace.options.restartOnPushState = false;
-    // 阅读进度
-    volantis.scroll.push(() => {
-      Pace.stop();
-      Pace.trigger('start');
-      Pace.bar.update(volantis.scroll.progress() * 100);
-      document.body.className = document.body.className.replaceAll("pace-running ","");
-    },"阅读进度")
-    // todo：配置项开关, 哪些页面添加阅读进度
-  })
-</script>
 
 
 
+
+
+<!-- pjax -->
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
 
 <script>
+  // 发现一个问题：手动写的h2标记会进入toc，但是没有锚点定位
   function listenSidebarTOC() {
     const navItems = document.querySelectorAll(".toc li");
     if (!navItems.length) return;
@@ -3478,7 +4208,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     const sections = Array.from(navItems).forEach((element) => {
       const link = element.querySelector(".toc-link");
       const target = document.getElementById(
-        link.getAttribute("href") ? decodeURI(link.getAttribute("href")).replace("#", "") : link.getAttribute("toc-action").split("toc-")[1] // 兼容 hexo-blog-encrypt
+        link.getAttribute("href") ? decodeURI(link.getAttribute("href")).replace("#", "") : link.getAttribute("toc-action")?.split("toc-")[1] // 兼容 hexo-blog-encrypt
       );
       targets.push(target)
       // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
@@ -3517,7 +4247,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     volantis.activateNavIndex = 0
     activateNavByIndex(navItems[volantis.activateNavIndex])
     if (targets[0]) {
-      volantis.scroll.push(() => {
+      volantis.scroll.push(volantis.debounce(() => {
         if (targets[0].getBoundingClientRect().top >= 0) {
           volantis.activateNavIndex = 0
         } else if (targets[targets.length - 1].getBoundingClientRect().top < 0) {
@@ -3533,7 +4263,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           }
         }
         activateNavByIndex(navItems[volantis.activateNavIndex])
-      })
+      }),"sidebar-toc")
     }
 
     // 方案二：
@@ -3581,6 +4311,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   document.addEventListener("DOMContentLoaded", () => {
     volantis.requestAnimationFrame(listenSidebarTOC)
   });
+  volantis.pjax.push(listenSidebarTOC,"listenSidebarTOC");
 </script>
 
 
@@ -3603,7 +4334,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"miRoox的博客","url":"http://miRoox.github.io/blog/blog/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"miRoox","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://miRoox.github.io/blog/blog/","sameAs":["https://github.com/volantis-x"],"description":"现役研究生"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://miRoox.github.io/blog/blog/","name":"miRoox的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://miRoox.github.io/blog/blog/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://miRoox.github.io/blog/blog/archives/2017/","name":"2017年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://miRoox.github.io/blog/blog/archives/2017/5/","name":"5月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"miRoox的博客","url":"http://miRoox.github.io/blog/blog/","keywords":"编程 / 数理 / 小说","description":"现役研究生","author":{"@type":"Person","name":"miRoox","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://miRoox.github.io/blog/blog/","description":"现役研究生"},"publisher":{"@type":"Organization","name":"miRoox的博客","url":"http://miRoox.github.io/blog/blog/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://miRoox.github.io/blog?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"现役研究生","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"miRoox","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://miRoox.github.io/blog/blog/"},"publisher":{"@type":"Organization","name":"miRoox的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+
+
 
 
 
