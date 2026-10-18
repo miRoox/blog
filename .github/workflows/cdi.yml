@@ -14,22 +14,22 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0 # fetch all history to get correct updated date
           submodules: true
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24.x'
       - run: npm ci
       - run: npm run build
-      - name: Validate public HTML 
+      - name: Validate public HTML
         run: |
           grep -qr --include '*.html' '[^[:space:]]' public/
           npm run validate-public
       - name: Deploy
-        if: github.event_name != 'pull_request' 
-        uses: JamesIves/github-pages-deploy-action@v4
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
           folder: public
