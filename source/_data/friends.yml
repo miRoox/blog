@@ -2,8 +2,8 @@
   icon: fas fa-user-friends
   items:
     - title: Raptazure
-      avatar: https://cdn.jsdelivr.net/gh/raptazure/cdn/blog/flandre-scarlet.png
-      url: https://tinyurl.com/raptazure
+      avatar: https://avatars.githubusercontent.com/u/44319278?v=4
+      url: https://raptazure.github.io/
       keywords:
       - Rust
       - 生活
@@ -40,7 +40,7 @@
       - 软件
       - 生活
     - title: iamyukino
-      avatar: https://iamyukino.github.io/index/wp-content/work/images/global/avatar.png
+      avatar: https://avatars.githubusercontent.com/u/93854079?v=4
       url: https://iamyukino.github.io/
       keywords:
       - 编程
@@ -48,7 +48,7 @@
       - 生活
       - 二次元相关
     - title: Asuka Minato
-      avatar: https://wuyudi.github.io/images/avatar.png
+      avatar: https://avatars.githubusercontent.com/u/30024051?v=4
       url: https://asukaminato.eu.org/
       keywords:
       - 数学
@@ -81,7 +81,7 @@
       - 科普
       - 数学
     - title: Liam Huang
-      avatar: https://liam.page/images/avatar/avatar.webp
+      avatar: https://liam.page/images/avatar/avatar-3.jpg
       url: https://liam.page/
       keywords:
       - TeX
